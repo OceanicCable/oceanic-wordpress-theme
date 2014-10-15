@@ -27,9 +27,9 @@
 	<div id="footer-container" class="container">
 		<footer id="colophon" class="row" role="contentinfo">
 			<div id="footer-widgets" class="col_7 column">
-				<?php get_sidebar( 'footer' ); ?>	
+				<?php get_sidebar( 'footer' ); ?>
 			</div>
-			<div class="col_5 column">				
+			<div class="col_5 column">
 				<div id="connect-with-us" class="col_12 column">
 					<h3 class="widget-title">Connect With Us</h3>
 					<div id="footer-social">
@@ -37,35 +37,41 @@
 						<a href="http://instagram.com/oceaniccable" title="Follow Us on Instagram" id="social-instagram" target="_blank"></a>
 						<a href="http://www.youtube.com/OceanicCable" title="Subscribe to Our Channel" id="social-youtube" target="_blank"></a>
 						<a href="https://twitter.com/OceanicCable" title="Follow Us on Twitter" id="social-twitter" target="_blank"></a>
-					</div>					
+					</div>
 					<?php wp_nav_menu( array( 'menu' => 'footer', 'sort_column' => 'menu_order', 'container_class' => 'nav-footer' ) ); ?>
 					<div id="site-info"><span>&copy; 1997 - <?php echo date('Y'); ?> Oceanic Time Warner Cable. </span><span>All rights reserved.</span></div>
 				</div>
 
-			</div>			
+			</div>
 		</footer><!-- #colophon -->
 		<div class="cb"></div>
 	</div><!-- #footer-container .container -->
 </div><!-- #page -->
 
 <!-- Pop up -->
-<div class="md-modal md-effect-1" id="modal-1">
-	<div class="md-content">
-		<h4>Start Shopping</h4>
-		<div>
-			<div class="col_6 column">
-				<h5>New Customer</h5>
-				<a href="http://order.timewarnercable.com/" title="Get Started" class="rm" target="_blank">Get Started<span class="icon"></span></a>
-			</div>
-			<div class="col_6 column">
-				<h5>Already A Customer?</h5>
-				<a href="http://order.oceanic.com/" title="Add Services" class="rm" target="_blank">Add Services<span class="icon"></span></a>
-			</div>
-			<button class="md-close">Close me!</button>
-		</div>
-	</div>
-</div>
-<div class="md-overlay"></div><!-- the overlay element -->
+
+<div class="modal fade" role="dialog" aria-labelledby="shoppingLabel" aria-hidden="true" id="start-shopping">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-body">
+				<h4 id='shoppingLabel'>Start Shopping</h4>
+				<div class='shopping-cta'>
+					<div class="col_6 column">
+						<h5>New Customer</h5>
+						<a href="http://order.timewarnercable.com/" title="Get Started" class="rm" target="_blank">Get Started<span class="icon"></span></a>
+					</div>
+					<div class="col_6 column">
+						<h5>Already A Customer?</h5>
+						<a href="http://order.oceanic.com/" title="Add Services" class="rm" target="_blank">Add Services<span class="icon"></span></a>
+					</div>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div><!--/.shopping-cta-->
+
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <script>
 	// this is important for IEs
@@ -92,7 +98,7 @@
 <script type="text/javascript">
 	jQuery(document).ready(function(){
     	jQuery('#header-container').css({backgroundSize:"cover"});
-	});	
+	});
 </script>
 
 <?php include('scripts.php'); ?>

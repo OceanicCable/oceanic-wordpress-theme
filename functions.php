@@ -74,10 +74,10 @@ function twentytwelve_setup() {
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
-	if ( function_exists( 'add_image_size' ) ) { 
+	if ( function_exists( 'add_image_size' ) ) {
 		add_image_size( 'around-hawaii', 290, 9999, false );
 	}
-	
+
 }
 add_action( 'after_setup_theme', 'twentytwelve_setup' );
 
@@ -471,33 +471,33 @@ function add_css(){
 		wp_enqueue_style('fontawesomeie', get_template_directory_uri() . '/css/font-awesome-ie7.min.css',false,'1.1','all');
 		wp_enqueue_style('flexslider-css', get_template_directory_uri() . '/css/flexslider.css',false,'1.1','all');
 		wp_enqueue_style('modal-css', get_template_directory_uri() . '/css/modal.css',false,'1.1','all');
-		if(is_front_page()){		
+		if(is_front_page()){
 			wp_enqueue_style('tabs-css', get_template_directory_uri() . '/css/tabs.css',false,'1.1','all');
 		}
-   	}   
+   	}
 }
 add_action('wp_enqueue_scripts','add_css');
 
-function add_scripts() {    
+function add_scripts() {
 
     if (!is_admin()) {
 
     	// wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', '', '1.0', false);
 
     	wp_enqueue_script('jquery-ui', '//code.jquery.com/ui/1.10.4/jquery-ui.js', '', '1.0', true);
-    	
+
 		wp_enqueue_script('flexnav-js', get_template_directory_uri() . '/js/jquery.flexnav.min.js', '', '1.0', true);
 		//wp_enqueue_script('mediaqueries', get_template_directory_uri() . '/js/css3-mediaqueries.js', '', '1.0', true);
 		wp_enqueue_script('flexslider-js', get_template_directory_uri() . '/js/jquery.flexslider.js', '', '1.0', true);
 		// wp_enqueue_script('browser-js', get_template_directory_uri() . '/js/jquery.browser.min.js', '', '1.0', true);
-		
+
 		wp_enqueue_script('classie-js', get_template_directory_uri() . '/js/classie.js', '', '1.0', true);
-		wp_enqueue_script('modaleffects-js', get_template_directory_uri() . '/js/modalEffects.js', '', '1.0', true);
+		wp_enqueue_script('modals', get_template_directory_uri() . '/js/modals.js', '', '1.0', true);
 		// wp_enqueue_script('cssparser-js', get_template_directory_uri() . '/js/cssParser.js', '', '1.0', true);
 		// wp_enqueue_script('css-filters-polyfill-js', get_template_directory_uri() . '/js/css-filters-polyfill.js', '', '1.0', true);
 		if(is_front_page()){
 			wp_enqueue_script('tabs-js', get_template_directory_uri() . '/js/tabs.js', '', '1.0', true);
-		}		
+		}
 	}
 }
 add_action('wp_enqueue_scripts', 'add_scripts');
@@ -532,9 +532,9 @@ add_action('admin_menu', 'mytheme_add_box');
 // Add meta box
 function mytheme_add_box() {
     global $custom_meta_box;
-    
+
     foreach ($custom_meta_box['pages'] as $screen) {
-    	add_meta_box($custom_meta_box['id'], $custom_meta_box['title'], 'mytheme_show_box', $screen, 
+    	add_meta_box($custom_meta_box['id'], $custom_meta_box['title'], 'mytheme_show_box', $screen,
 
 $custom_meta_box['context'], $custom_meta_box['priority']);
     }
@@ -554,12 +554,12 @@ function mytheme_show_box() {
                 '<td>';
         switch ($field['type']) {
             case 'text':
-                echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" 
+                echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '"
 
 size="30" style="width:97%" />', '<br />', $field['desc'];
                 break;
             case 'textarea':
-                echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ? 
+                echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ?
 
 $meta : $field['std'], '</textarea>', '<br />', $field['desc'];
                 break;
@@ -572,7 +572,7 @@ $meta : $field['std'], '</textarea>', '<br />', $field['desc'];
                 break;
             case 'radio':
                 foreach ($field['options'] as $option) {
-                    echo '<input type="radio" name="', $field['id'], '" value="', $option['value'], '"', $meta == $option['value'] ? ' 
+                    echo '<input type="radio" name="', $field['id'], '" value="', $option['value'], '"', $meta == $option['value'] ? '
 
 checked="checked"' : '', ' />', $option['name'];
                 }
@@ -669,7 +669,7 @@ function from_around_hawaii(){
                 the_post_thumbnail('around-hawaii');
             echo '</a>';
             echo '</div>';
-            echo '<h4>'.get_the_title($post->ID).'</h4>';            
+            echo '<h4>'.get_the_title($post->ID).'</h4>';
             echo '</div>';
         endwhile;
     }
@@ -694,7 +694,7 @@ function special_offers($catid, $limit){
     	echo '<ul class="slides">';
         while ($my_query->have_posts()) : $my_query->the_post();
        		echo '<li>';
-            echo '<div class="special-offer">';            
+            echo '<div class="special-offer">';
             echo '<a href="'.get_permalink($post->ID).'" title="'.get_the_title($post->ID).'">';
                 the_post_thumbnail('fullsize');
             echo '</a>';
@@ -708,7 +708,7 @@ function special_offers($catid, $limit){
 }
 
 function whats_hot_tabs() {
-	$args = array (    
+	$args = array (
     'type' => 'post',
     'parent' => 80,
     'orderby' => 'id',
@@ -718,7 +718,7 @@ function whats_hot_tabs() {
 	$categories = get_categories( $args );
 	$i = 1;
 	foreach ($categories as $category) {
-	    echo '<li id="tabHeader_'.$i.'" title="'.$category->name.'">';	    
+	    echo '<li id="tabHeader_'.$i.'" title="'.$category->name.'">';
 	    if (function_exists('z_taxonomy_image_url')) {
 	    	$icon = z_taxonomy_image_url($category->cat_ID);
 	    	if(!empty($icon)){
@@ -773,7 +773,7 @@ function whats_hot_tabs_content() {
 	    $my_query = new WP_Query($post_args);
 	    if( $my_query->have_posts() ) {
 
-	        while ($my_query->have_posts()) : $my_query->the_post();	       		
+	        while ($my_query->have_posts()) : $my_query->the_post();
 	            echo '<div>';
 	            // $tab_title = get_the_title();
 	            // $title_len = strlen($tab_title);
@@ -829,17 +829,17 @@ function playing_now($atts){
             $output .='<div class="now-playing">';
             $output .='<strong>';
             $output .= get_the_title($post->ID);
-            $output .='</strong>';            
+            $output .='</strong>';
             $output .='<div class="movie-thumb">';
-            $output .='<a href="'.get_permalink($post->ID).'" title="'.get_the_title($post->ID).'">';			            
+            $output .='<a href="'.get_permalink($post->ID).'" title="'.get_the_title($post->ID).'">';
             $output .= get_the_post_thumbnail($post->ID,'fullsize');
-			$output .='</a>';			
+			$output .='</a>';
             if($showdate == 1){
             	$output .='<strong class="item-date">'.get_the_date('F j').'</strong>';
             }
             $output .='</div>';
             if(!empty($pay_per_view)){
-				$output.='<img src="'.get_bloginfo('stylesheet_directory').'/images/ppv.gif" alt="" />';		
+				$output.='<img src="'.get_bloginfo('stylesheet_directory').'/images/ppv.gif" alt="" />';
 			}
 			if($showcontent == 1){
 				$gtcontent = get_the_content();
@@ -852,7 +852,7 @@ function playing_now($atts){
         $output .='</div>';
         return $output;
     }
-    wp_reset_query();  // Restore global post data stomped by the_post().	
+    wp_reset_query();  // Restore global post data stomped by the_post().
 }
 add_shortcode('now_playing', 'playing_now');
 
@@ -877,8 +877,8 @@ function show_monthly($atts){
     	$output .='<div id="monthly-show">';
         while ($my_query->have_posts()) : $my_query->the_post();
         	$pay_per_view = get_post_meta($post->ID, "rb-pay-per-view", true);
-            $output .='<div class="show">';            
-            $output .='<a href="'.get_permalink($post->ID).'" title="'.get_the_title($post->ID).'">';			            
+            $output .='<div class="show">';
+            $output .='<a href="'.get_permalink($post->ID).'" title="'.get_the_title($post->ID).'">';
             $output .= get_the_post_thumbnail($post->ID,'thumbnail');
 			$output .='</a>';
 			$output .='<p>'.get_the_title($post->ID).'</p>';
@@ -887,7 +887,7 @@ function show_monthly($atts){
         $output .='</div>';
         return $output;
     }
-    wp_reset_query();  // Restore global post data stomped by the_post().	
+    wp_reset_query();  // Restore global post data stomped by the_post().
     wp_reset_postdata();
 }
 add_shortcode('monthly_show', 'show_monthly');
@@ -897,7 +897,7 @@ function top_questions($slug){
     $args=array(
 	'tag' => $slug,
     'cat' => 39,
-    'post_type' => 'any',      
+    'post_type' => 'any',
     'post_status' => 'publish',
     'posts_per_page' => 3,
     'caller_get_posts'=> 1
@@ -906,17 +906,17 @@ function top_questions($slug){
     $my_query = new WP_Query($args);
     $output = "";
     if( $my_query->have_posts() ) {
-        while ($my_query->have_posts()) : $my_query->the_post();        	
+        while ($my_query->have_posts()) : $my_query->the_post();
       //   	$posttags = get_the_tags($post->ID);
 		    // if ($posttags) {
 		    //     foreach($posttags as $tag) {
 		    //         $output .= $tag->name;
 		    //     }
 		    // }
-			$output .= '<li><p>';			
+			$output .= '<li><p>';
 			$output .= get_the_title($post->ID);
 			$output .= '</p>';
-			$output .= '<div class="flyout">';			
+			$output .= '<div class="flyout">';
 			$output .= '<a href="#" title="Close" class="close">Close</a>';
 			$output .= '<div class="flyout-box">';
 			$output .= '<strong>'.get_the_title($post->ID).'</strong>';
@@ -927,7 +927,7 @@ function top_questions($slug){
         endwhile;
         return $output;
     }
-    wp_reset_query();  // Restore global post data stomped by the_post().	
+    wp_reset_query();  // Restore global post data stomped by the_post().
 }
 
 function get_current_url() {
@@ -944,7 +944,7 @@ function sidebar_subposts($parent) {
     );
     $my_query = null;
     $my_query = new WP_Query($args);
-    if( $my_query->have_posts() ) {        
+    if( $my_query->have_posts() ) {
         echo '  <ul>';
                     while ($my_query->have_posts()) : $my_query->the_post();
                         echo '<li>';
@@ -953,7 +953,7 @@ function sidebar_subposts($parent) {
                     endwhile;
         echo '  </ul>';
     }
-    wp_reset_query();  // Restore global post data stomped by the_post().	
+    wp_reset_query();  // Restore global post data stomped by the_post().
 }
 
 function get_the_slug( $id=null ){
@@ -969,7 +969,7 @@ function get_the_slug( $id=null ){
 }
 
 add_action( 'init', 'register_oceanic_menus' );
-function register_oceanic_menus() {  
+function register_oceanic_menus() {
     register_nav_menus(
         array(
             'sidebar' => __( 'Sidebar Menu' )
@@ -1026,12 +1026,12 @@ class MY_Widget extends WP_Widget {
 
 	function MY_Widget() {
 		$widget_ops = array( 'classname' => 'example', 'description' => __('Custom Flexslider Widget ', 'example') );
-		
+
 		$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'example-widget' );
-		
+
 		$this->WP_Widget( 'example-widget', __('Example Widget', 'example'), $widget_ops, $control_ops );
 	}
-	
+
 	function widget( $args, $instance ) {
 		extract( $args );
 
@@ -1042,7 +1042,7 @@ class MY_Widget extends WP_Widget {
 
 		echo $before_widget;
 
-		// Display the widget title 
+		// Display the widget title
 		if ( $title ) {
 			echo $before_title . $title . $after_title;
 		}
@@ -1056,16 +1056,16 @@ class MY_Widget extends WP_Widget {
 		}
 
 		special_offers($categoryid, $limit);
-		
+
 		echo $after_widget;
 	}
 
-	//Update the widget 
-	 
+	//Update the widget
+
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
-		//Strip tags from title and name to remove HTML 
+		//Strip tags from title and name to remove HTML
 		$instance['title'] = strip_tags( $new_instance['title'] );
 		$instance['categoryid'] = strip_tags( $new_instance['categoryid'] );
 		$instance['limit'] = strip_tags( $new_instance['limit'] );
@@ -1073,7 +1073,7 @@ class MY_Widget extends WP_Widget {
 		return $instance;
 	}
 
-	
+
 	function form( $instance ) {
 
 		//Set up some default widget settings.
@@ -1092,7 +1092,7 @@ class MY_Widget extends WP_Widget {
 			<input id="<?php echo $this->get_field_id( 'categoryid' ); ?>" name="<?php echo $this->get_field_name( 'categoryid' ); ?>" value="<?php echo $instance['categoryid']; ?>" style="width:100%;" />
 		</p>
 
-		
+
 		<!-- Checkbox. -->
 		<p>
 			<label for="<?php echo $this->get_field_id( 'limit' ); ?>"><?php _e('Limit:', 'example'); ?></label>
