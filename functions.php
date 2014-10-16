@@ -711,9 +711,9 @@ function whats_hot_tabs() {
 	$args = array (
     'type' => 'post',
     'parent' => 80,
-    'orderby' => 'id',
+    'orderby' => 'slug',
     'taxonomy' => 'category',
-    'hide_empty' => 0 //shows empty categories
+    'hide_empty' => 1 //shows empty categories
 	);
 	$categories = get_categories( $args );
 	$i = 1;
@@ -749,9 +749,9 @@ function whats_hot_tabs_content() {
     'type' => 'post',
     'parent' => 80,
     'order' => 'asc',
-    'orderby' => 'id',
+    'orderby' => 'slug',
     'taxonomy' => 'category',
-    'hide_empty' => 0 //shows empty categories
+    'hide_empty' => 1 //shows empty categories
 	);
 	$categories = get_categories( $args );
 	$i = 1;

@@ -19,33 +19,12 @@ get_header(); ?>
 			<div id="hot-deals" class="purejs-tabs">
 				<div class="tabs">
 					<h1>What's Hot</h1>
-					<ul><!-- 
-						<li id="tabHeader_1"><span></span>Special Offers</li>
-						<li id="tabHeader_2"><span></span>Movies On Demand</li>
-						<li id="tabHeader_3"><span></span>Pay-Per-View</li>
-						<li id="tabHeader_4"><span></span>Apps &amp; More</li>
-						 -->
+					<ul>
 						<?php whats_hot_tabs(); ?>
 					</ul>
 					
 				</div>
 				<div class="tabscontent">
-					<!-- <div class="tabpage" id="tabpage_1">
-						<h2>Special Offers</h2>
-						<p>Pellentesque habitant morbi tristique senectus...</p>
-					</div>
-					<div class="tabpage" id="tabpage_2">
-						<h2>Movies On Demand</h2>
-						<p>Pellentesque habitant morbi tristique senectus...</p>
-					</div>
-					<div class="tabpage" id="tabpage_3">
-						<h2>Pay-Per-View</h2>
-						<p>Pellentesque habitant morbi tristique senectus...</p>
-					</div>
-					<div class="tabpage" id="tabpage_4">
-						<h2>Apps &amp; More</h2>
-						<p>Pellentesque habitant morbi tristique senectus...</p>
-					</div> -->
 					<?php whats_hot_tabs_content(); ?>
 			    </div>
 			</div><!-- #hot-deals -->
