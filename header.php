@@ -37,6 +37,24 @@
    <script type="text/javascript" src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 
+<!--[if lt IE 7 ]>
+<style>
+.modal {
+  /* Netscape 4, IE 4.x-5.0/Win and other lesser browsers will use this */
+  position: absolute; left:20%; right:20%; width: 60%; bottom: 10px;
+  filter:alpha(opacity=100) !important;
+}
+.modal-content{
+	height:220px;
+}
+.modal-content button.md-close {
+display:block;
+float: right;
+color:#000000;
+}
+</style>
+<![endif]-->
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -57,7 +75,7 @@
 			</div>
 			<div id="logo" class="column">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="" /></a>
-			</div> <!-- #logo -->			
+			</div> <!-- #logo -->
 
 			<?php $header_image = get_header_image();
 			if ( ! empty( $header_image ) ) : ?>
@@ -85,7 +103,7 @@
 					);
 					breadcrumb_trail($args); ?>
 		</div>
-	</div>		
+	</div>
 	<?php endif; ?>
 
 	<?php if(is_front_page()) : ?>
@@ -134,7 +152,7 @@
 						<h4>Top Questions</h4>
 						<ul>
 							<?php
-							$tag = $post->post_name."-question";							
+							$tag = $post->post_name."-question";
 							echo top_questions($tag); ?>
 						</ul>
 						<div>

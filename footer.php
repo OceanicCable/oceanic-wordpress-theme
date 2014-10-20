@@ -65,7 +65,7 @@
 						<h5>Already A Customer?</h5>
 						<a href="http://order.oceanic.com/" title="Add Services" class="rm" target="_blank">Add Services<span class="icon"></span></a>
 					</div>
-					<button class="md-close">Close me!</button>
+					<button class="md-close" data-dismiss="modal">Close me!</button>
 				</div>
 			</div><!--/.shopping-cta-->
 
@@ -99,7 +99,9 @@
 	jQuery(document).ready(function(){
     	jQuery('#header-container').css({backgroundSize:"cover"});
 	});
+
 </script>
+
 
 <?php include('scripts.php'); ?>
 
