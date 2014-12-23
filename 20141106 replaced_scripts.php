@@ -20,16 +20,6 @@
         animationSpeed: 1000,        
       });
 
-      // Community
-      jQuery("#community").flexslider({
-        slideshow: true,
-        slideshowSpeed: 7000,
-        animationSpeed: 1000,
-        controlNav: false,
-        directionNav: false,
-      });
-
-
       // Resize, can be inside Load or Ready
       jQuery(window).trigger('resize',function(){
         alert("sdfassdfa");
@@ -51,7 +41,6 @@
         // Set the effect type
         var effect = 'slide';
      
-
         // Set the options for the effect type chosen
         var options = { direction: 'right' };
      
@@ -65,7 +54,7 @@
         jQuery(this).parent('.flyout').hide(500);
       });
     <?php endif; ?>
-	
+
     // Special Offers Carousel
     jQuery("#offers").flexslider({
       slideshow: false,
