@@ -20,7 +20,11 @@ get_header(); ?>
 				<div class="tabs">
 					<h1>What's Hot</h1>
 					<ul>
+<<<<<<< HEAD
 					<?php whats_hot_tabs(); ?>
+=======
+						<?php whats_hot_tabs(); ?>
+>>>>>>> origin/master
 					</ul>
 				</div>
 				<div class="tabscontent">

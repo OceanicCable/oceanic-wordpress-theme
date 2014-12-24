@@ -75,7 +75,7 @@ color:#000000;
 			</div>
 			<div id="logo" class="column">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="" /></a>
-			</div> <!-- #logo -->			
+			</div> <!-- #logo -->
 
 			<?php $header_image = get_header_image();
 			if ( ! empty( $header_image ) ) : ?>
@@ -103,7 +103,7 @@ color:#000000;
 					);
 					breadcrumb_trail($args); ?>
 		</div>
-	</div>		
+	</div>
 	<?php endif; ?>
 
 	<?php if(is_front_page()) : ?>
@@ -152,7 +152,7 @@ color:#000000;
 						<h4>Top Questions</h4>
 						<ul>
 							<?php
-							$tag = $post->post_name."-question";							
+							$tag = $post->post_name."-question";
 							echo top_questions($tag); ?>
 						</ul>
 						<div>

@@ -597,9 +597,11 @@
 	jQuery(document).ready(function(){
     	jQuery('#header-container').css({backgroundSize:"cover"});
 	});
+
 </script>
 
 
+<<<<<<< HEAD
 <script type="text/javascript">
 	jQuery(document).ready(function(){
     
@@ -1066,6 +1068,9 @@
     <?php endif; ?>
 	});	
 </script>
+=======
+<?php include('scripts.php'); ?>
+>>>>>>> origin/master
 
 <?php if(!is_front_page()) : ?>
 <span id="toTop"></span>
