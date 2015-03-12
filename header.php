@@ -37,6 +37,24 @@
    <script type="text/javascript" src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 
+<!--[if lt IE 7 ]>
+<style>
+.modal {
+  /* Netscape 4, IE 4.x-5.0/Win and other lesser browsers will use this */
+  position: absolute; left:20%; right:20%; width: 60%; bottom: 10px;
+  filter:alpha(opacity=100) !important;
+}
+.modal-content{
+	height:220px;
+}
+.modal-content button.md-close {
+display:block;
+float: right;
+color:#000000;
+}
+</style>
+<![endif]-->
+
 </head>
 
 <body <?php body_class(); ?>>

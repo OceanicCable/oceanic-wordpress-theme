@@ -73,9 +73,11 @@ function twentytwelve_setup() {
 
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
+		set_post_thumbnail_size( 200, 200, true ); 
+
 	if ( function_exists( 'add_image_size' ) ) {
 		add_image_size( 'around-hawaii', 290, 9999, false );
+		add_image_size( 'gallery-crop', 200, 200, true );
 	}
 
 }
@@ -653,25 +655,27 @@ function from_around_hawaii(){
 	global $post;
     // Category Parameters
 	$args = array(
-	      'category__in' => 26, // Category ID
-	      'post_type' => 'post',
-	      'post_status' => 'publish',
-	      'posts_per_page' => 1,
-	      'caller_get_posts'=> 1
-	      );
+		'post_type' => 'page', 
+		'post_parent' => 23,
+		//  'posts_per_page' => 5,
+		//  'caller_get_posts'=> 1
+	);
     $my_query = null;
     $my_query = new WP_Query($args);
     if( $my_query->have_posts() ) {
+    	echo '<div id="community" class="flexslider">';
+    	echo '<ul class="slides">';
         while ($my_query->have_posts()) : $my_query->the_post();
+       		echo '<li>';
             echo '<div class="around-hawaii">';
-            echo '<div class="thumb">';
-            echo '<a href="'.get_permalink($post->ID).'" title="'.get_the_title($post->ID).'">';
-                the_post_thumbnail('around-hawaii');
+            echo '<a href="'. get_the_permalink() .'" title="'. get_the_title() .'">';
+                the_post_thumbnail( array(190, 100) );
             echo '</a>';
             echo '</div>';
-            echo '<h4>'.get_the_title($post->ID).'</h4>';
-            echo '</div>';
+            echo '</li>';
         endwhile;
+        echo '</ul>';
+        echo '</div>';
     }
     wp_reset_query();  // Restore global post data stomped by the_post().
 }
@@ -711,9 +715,9 @@ function whats_hot_tabs() {
 	$args = array (
     'type' => 'post',
     'parent' => 80,
-    'orderby' => 'id',
+    'orderby' => 'slug',
     'taxonomy' => 'category',
-    'hide_empty' => 0 //shows empty categories
+    'hide_empty' => 1 //shows empty categories
 	);
 	$categories = get_categories( $args );
 	$i = 1;
@@ -749,9 +753,9 @@ function whats_hot_tabs_content() {
     'type' => 'post',
     'parent' => 80,
     'order' => 'asc',
-    'orderby' => 'id',
+    'orderby' => 'slug',
     'taxonomy' => 'category',
-    'hide_empty' => 0 //shows empty categories
+    'hide_empty' => 1 //shows empty categories
 	);
 	$categories = get_categories( $args );
 	$i = 1;
@@ -788,7 +792,7 @@ function whats_hot_tabs_content() {
 	            if($excerpt) {
 	            	echo '<p>'.$excerpt.'</p>';
 	            }
-	            echo '<a href="'.get_permalink().'" title="'.get_the_title().'" class="rm">Learn More <span class="icon"></span></a>';
+	            echo '<a href="'.get_permalink().'" title="'.get_the_title().'" id="learn-more-id-'.get_the_id().'" class="rm">Learn More <span class="icon"></span></a>';
 	            if ( is_user_logged_in() ) {
 	            	echo '<a href="'.get_edit_post_link().'" title="Edit '.get_the_title().'" class="edit-post">Edit</a>';
 	        	}
@@ -976,6 +980,15 @@ function register_oceanic_menus() {
         )
     );
 }
+
+
+	// This theme uses a custom image size for featured images, displayed on "standard" posts.
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 300, 300, true ); 
+	add_image_size( 'around-hawaii', 290, 9999, false );
+	add_image_size( 'thumb', 300, 300, true );
+
+
 
 // CATEGORY URL FEATURE
 
