@@ -597,9 +597,14 @@
 	jQuery(document).ready(function(){
     	jQuery('#header-container').css({backgroundSize:"cover"});
 	});
+
 </script>
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
 <script type="text/javascript">
 	jQuery(document).ready(function(){
     
@@ -1066,6 +1071,12 @@
     <?php endif; ?>
 	});	
 </script>
+<<<<<<< HEAD
+=======
+=======
+<?php include('scripts.php'); ?>
+>>>>>>> origin/master
+>>>>>>> origin/master
 
 <?php if(!is_front_page()) : ?>
 <span id="toTop"></span>
