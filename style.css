@@ -3,7 +3,7 @@ Theme Name: Oceanic
 Theme URI: http://rbplugin.com/themes/
 Author: ClearlyM
 Author URI: http://clearlym.com/
-Description: RB OptimizedResponsiveTheme, a Twenty Twelve Child Theme.
+Description: RB OptimizedResponsiveTheme, a Twenty Twelve Child Theme. Github
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,12 +14,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-<<<<<<< HEAD
-=======
 #learn-more-id-6619 { display: none; }
-
->>>>>>> origin/master
-
 
 /* =Notes
 --------------------------------------------------------------
@@ -2356,7 +2351,7 @@ img.mfp-img {
 .mfp-ie7 .mfp-close {
   top: 0;
   right: 0;
-<<<<<<< HEAD
+
   padding-top: 0; }
 
 
@@ -2471,6 +2466,3 @@ border-bottom-left-radius:2em;
 @media only screen and (max-width: 767px) {
 	.packages .package-box { min-height: 50px; }
 }
-=======
-  padding-top: 0; }
->>>>>>> origin/master
