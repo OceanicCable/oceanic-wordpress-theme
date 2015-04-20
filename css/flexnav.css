@@ -73,7 +73,8 @@
   .nav-menu li ul li a {
     display: block;     }  
   .nav-menu ul li ul li ul li a {
-    background: #cbcbc9; }
+    /*background: #cbcbc9;*/
+     }
   .nav-menu .touch-button {
     position: absolute;
     z-index: 999;
@@ -127,6 +128,23 @@
       color: #fff; }
 
 @media all and (min-width: 768px) {
+
+
+  .nav-menu li ul li ul li:hover,
+  .nav-menu li ul li ul.show li:hover {
+    background: #eee;
+  }
+
+  .nav-menu li {
+    overflow: visible!important;
+  }
+  .nav-menu.show li,
+  .nav-menu li ul li ul.show li {
+    background: #fff;
+  }
+  .nav-menu.show > li {
+    background: transparent;
+  }
 
   /* color normal */
   .nav-menu > li {
@@ -199,9 +217,10 @@
       padding: 8px 15px;
       line-height: 30px;
     }
-    .nav-menu > li.item-with-ul:hover > ul {
+    #menu-main li.item-with-ul:hover > ul {
       display: block!important;
     }
+
     .nav-menu li > ul {
       position: absolute;
       top: auto;
@@ -227,6 +246,9 @@
 
   .menu-button {
     display: none; }
+
+    .nav-menu li ul.show,
+    .nav-menu li ul.open { display: none!important; }
 }
 .oldie body.one-page {
   padding-top: 70px; }

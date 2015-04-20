@@ -110,7 +110,7 @@ color:#000000;
 	<div id="slider-container" class="container">
 		<div class="row">
 			<div class="col_12 column">
-			<?php custom_flexslider( 'main-slider', 'main-slides', 'asc', 'id', -1 ); ?>
+				<?php custom_flexslider( 'main-slider', 'main-slides', 'asc', 'id', -1 ); ?>
 			</div>
 			<span id="ls"></span>
 			<span id="rs"></span>
@@ -126,20 +126,20 @@ color:#000000;
 
 	<?php if(is_page_template('main.php')) : ?>
 		<div id="subpage" class="container">
-		<div class="row">
-		<div class="col_12 column">
-			<?php
-			if($post->post_parent)
-				$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0&depth=1&link_before=<span>&link_after=</span>");
-			else
-				$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0&depth=1&link_before=<span>&link_after=</span>");
-			if ($children) { ?>
-			<ul>
-				<?php echo $children; ?>
-			</ul>
-			<?php } ?>
-		</div>
-		</div>
+			<div class="row">
+				<div class="col_12 column">
+					<?php
+					if($post->post_parent)
+						$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0&depth=1&link_before=<span>&link_after=</span>");
+					else
+						$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0&depth=1&link_before=<span>&link_after=</span>");
+					if ($children) { ?>
+					<ul>
+						<?php echo $children; ?>
+					</ul>
+					<?php } ?>
+				</div>
+			</div>
 		</div>
 		<?php $thumb_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 		<div id="banner-page" class="container" style="background-image: url(<?php echo $thumb_url; ?>)">

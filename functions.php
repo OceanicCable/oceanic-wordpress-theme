@@ -482,21 +482,15 @@ add_action('wp_enqueue_scripts','add_css');
 
 function add_scripts() {
 
-    if (!is_admin()) {
-
-    	// wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', '', '1.0', false);
+    if (!is_admin()) {   	
 
     	wp_enqueue_script('jquery-ui', '//code.jquery.com/ui/1.10.4/jquery-ui.js', '', '1.0', true);
 
 		wp_enqueue_script('flexnav-js', get_template_directory_uri() . '/js/jquery.flexnav.min.js', '', '1.0', true);
-		//wp_enqueue_script('mediaqueries', get_template_directory_uri() . '/js/css3-mediaqueries.js', '', '1.0', true);
 		wp_enqueue_script('flexslider-js', get_template_directory_uri() . '/js/jquery.flexslider.js', '', '1.0', true);
-		// wp_enqueue_script('browser-js', get_template_directory_uri() . '/js/jquery.browser.min.js', '', '1.0', true);
-
 		wp_enqueue_script('classie-js', get_template_directory_uri() . '/js/classie.js', '', '1.0', true);
 		wp_enqueue_script('modals', get_template_directory_uri() . '/js/modals.js', '', '1.0', true);
-		// wp_enqueue_script('cssparser-js', get_template_directory_uri() . '/js/cssParser.js', '', '1.0', true);
-		// wp_enqueue_script('css-filters-polyfill-js', get_template_directory_uri() . '/js/css-filters-polyfill.js', '', '1.0', true);
+
 		if(is_front_page()){
 			wp_enqueue_script('tabs-js', get_template_directory_uri() . '/js/tabs.js', '', '1.0', true);
 		}
@@ -590,6 +584,7 @@ checked="checked"' : '', ' />', $option['name'];
 }
 
 add_action('save_post', 'mytheme_save_data');
+
 // Save data from meta box
 function mytheme_save_data() {
 	global $post;
@@ -669,7 +664,8 @@ function from_around_hawaii(){
        		echo '<li>';
             echo '<div class="around-hawaii">';
             echo '<a href="'. get_the_permalink() .'" title="'. get_the_title() .'">';
-                the_post_thumbnail( array(190, 100) );
+                // the_post_thumbnail( array(190, 100) );
+                the_post_thumbnail('around-hawaii');
             echo '</a>';
             echo '</div>';
             echo '</li>';
@@ -714,7 +710,7 @@ function special_offers($catid, $limit){
 function whats_hot_tabs() {
 	$args = array (
     'type' => 'post',
-    'parent' => 80,
+    'parent' => 125,
     'orderby' => 'slug',
     'taxonomy' => 'category',
     'hide_empty' => 1 //shows empty categories
@@ -751,7 +747,7 @@ function whats_hot_tabs() {
 function whats_hot_tabs_content() {
 	$args = array (
     'type' => 'post',
-    'parent' => 80,
+    'parent' => 125,
     'order' => 'asc',
     'orderby' => 'slug',
     'taxonomy' => 'category',
@@ -911,7 +907,7 @@ function top_questions($slug){
     $output = "";
     if( $my_query->have_posts() ) {
         while ($my_query->have_posts()) : $my_query->the_post();
-      //   	$posttags = get_the_tags($post->ID);
+      		//$posttags = get_the_tags($post->ID);
 		    // if ($posttags) {
 		    //     foreach($posttags as $tag) {
 		    //         $output .= $tag->name;
@@ -961,15 +957,15 @@ function sidebar_subposts($parent) {
 }
 
 function get_the_slug( $id=null ){
-  if( empty($id) ):
-    global $post;
+  	if( empty($id) ):
+    	global $post;
     if( empty($post) )
-      return ''; // No global $post var available.
-    $id = $post->ID;
-  endif;
+      	return ''; // No global $post var available.
+    	$id = $post->ID;
+  	endif;
 
-  $slug = basename( get_permalink($id) );
-  return $slug;
+  	$slug = basename( get_permalink($id) );
+  	return $slug;
 }
 
 add_action( 'init', 'register_oceanic_menus' );
@@ -981,14 +977,11 @@ function register_oceanic_menus() {
     );
 }
 
-
-	// This theme uses a custom image size for featured images, displayed on "standard" posts.
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 300, 300, true ); 
-	add_image_size( 'around-hawaii', 290, 9999, false );
-	add_image_size( 'thumb', 300, 300, true );
-
-
+// This theme uses a custom image size for featured images, displayed on "standard" posts.
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 300, 300, true ); 
+add_image_size( 'around-hawaii', 290, 9999, false );
+add_image_size( 'thumb', 300, 300, true );
 
 // CATEGORY URL FEATURE
 
@@ -999,19 +992,20 @@ add_action ( 'edit_category_form_fields', 'extra_category_fields');
 function extra_category_fields( $tag ) {    //check for existing featured ID
     $t_id = $tag->term_id;
     $cat_meta = get_option( "category_$t_id");
-?>
-<tr class="form-field">
-	<th scope="row" valign="top"><label for="cat_Image_url"><?php _e('Category Url'); ?></label></th>
-	<td><input type="text" name="Cat_meta[cat_url]" id="Cat_meta[img]" size="3" style="width:60%;" value="<?php echo $cat_meta['cat_url'] ? $cat_meta['cat_url'] : ''; ?>"><br />
-        <span class="description"><?php _e('Url for category'); ?></span>
-	</td>
-</tr>
-<?php
+	?>
+	<tr class="form-field">
+		<th scope="row" valign="top"><label for="cat_Image_url"><?php _e('Category Url'); ?></label></th>
+		<td><input type="text" name="Cat_meta[cat_url]" id="Cat_meta[img]" size="3" style="width:60%;" value="<?php echo $cat_meta['cat_url'] ? $cat_meta['cat_url'] : ''; ?>"><br />
+	        <span class="description"><?php _e('Url for category'); ?></span>
+		</td>
+	</tr>
+	<?php
 }
 
 // save extra category extra fields hook
 add_action ( 'edited_category', 'save_extra_category_fileds');
-   // save extra category extra fields callback function
+
+// save extra category extra fields callback function
 function save_extra_category_fileds( $term_id ) {
     if ( isset( $_POST['Cat_meta'] ) ) {
         $t_id = $term_id;
@@ -1074,7 +1068,6 @@ class MY_Widget extends WP_Widget {
 	}
 
 	//Update the widget
-
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
@@ -1086,7 +1079,7 @@ class MY_Widget extends WP_Widget {
 		return $instance;
 	}
 
-
+	//Form UI
 	function form( $instance ) {
 
 		//Set up some default widget settings.
