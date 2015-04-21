@@ -490,6 +490,9 @@
 		<h1>Download Now</h1>
 		<a href="https://itunes.apple.com/us/app/golf-live-extra/id586379597?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/golf-live-extra/id586379597?mt=8', '']);" title="Golf Live Extra on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
 		<a href="https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en', '']);" title="Golf Live Extra on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
+		<a href="" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en', '']);" title="Golf Live Extra on Android" target="_blank"><img src="/wp-content/uploads/2014/01/kindle-btn.png" alt=""></a>
+		<a href="" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en', '']);" title="Golf Live Extra on Android" target="_blank"><img src="/wp-content/uploads/2015/04/win-phone-btn.png" alt=""></a>
+		<a href="" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en', '']);" title="Golf Live Extra on Android" target="_blank"><img src="/wp-content/uploads/2015/04/win-tablet-btn.png" alt=""></a>
 		<a title="Golf Live Extra online" href="Your favorite Golf Channel content on the go, anytime and anywhere. TWC ID required." target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
 	</div>
 

@@ -14,7 +14,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-#learn-more-id-6619 { display: none; }
+/*#learn-more-id-6619 { display: none; }*/
 
 /* =Notes
 --------------------------------------------------------------
@@ -2373,6 +2373,9 @@ img.mfp-img {
 
 .evens { min-height: 420px; }
 .ezcol-one-quarter .btn { display: block; width: 90%; height: auto; text-align: center; line-height: 1.4; }
+#post-265 .ezcol img.alignleft { margin: 0; }
+#post-265 .ezcol.ezcol-three-quarter { width: 77%; }
+#post-265 .ezcol.ezcol-one-quarter { margin-right: 1%; }
 
 /* PACKAGES */
 .packages { margin-top: 15px; margin-left: -15px; margin-right: -15px; overflow: hidden; }
