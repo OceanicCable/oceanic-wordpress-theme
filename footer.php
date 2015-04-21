@@ -490,10 +490,17 @@
 		<h1>Download Now</h1>
 		<a href="https://itunes.apple.com/us/app/golf-live-extra/id586379597?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/golf-live-extra/id586379597?mt=8', '']);" title="Golf Live Extra on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
 		<a href="https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en', '']);" title="Golf Live Extra on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en', '']);" title="Golf Live Extra on Android" target="_blank"><img src="/wp-content/uploads/2014/01/kindle-btn.png" alt=""></a>
-		<a href="" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en', '']);" title="Golf Live Extra on Android" target="_blank"><img src="/wp-content/uploads/2015/04/win-phone-btn.png" alt=""></a>
-		<a href="" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en', '']);" title="Golf Live Extra on Android" target="_blank"><img src="/wp-content/uploads/2015/04/win-tablet-btn.png" alt=""></a>
 		<a title="Golf Live Extra online" href="Your favorite Golf Channel content on the go, anytime and anywhere. TWC ID required." target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
+	</div>
+
+	<div id="ncaa-march-madness-live" class="white-popup mfp-hide">
+		<h1>Download Now</h1>
+		<a href="https://itunes.apple.com/us/app/ncaa-march-madness-live/id423246594" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/ncaa-march-madness-live/id423246594', 'iTunes']);"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
+		<a href="https://play.google.com/store/apps/details?id=com.ncaa.mmlive.app" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.ncaa.mmlive.app', 'Google Play']);"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
+		<a href="http://www.amazon.com/gp/product/B00IRN4K2Q" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.amazon.com/gp/product/B00IRN4K2Q', 'Kindle Fire']);"><img src="/wp-content/uploads/2014/01/kindle-btn.png" alt=""></a>
+		<a href="http://www.windowsphone.com/en-us/store/app/ncaa-march-madness-live/9c582d19-6189-48dc-8125-05cc5c856c8b" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.windowsphone.com/en-us/store/app/ncaa-march-madness-live/9c582d19-6189-48dc-8125-05cc5c856c8b', 'Windows Phone']);"><img src="/wp-content/uploads/2015/04/win-phone-btn.png" alt=""></a>
+		<a href="http://apps.microsoft.com/windows/en-us/app/ncaa-march-madness-live/1701c6d9-fc79-4fe5-abc5-ff439efeffd9" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://apps.microsoft.com/windows/en-us/app/ncaa-march-madness-live/1701c6d9-fc79-4fe5-abc5-ff439efeffd9', 'Windows Tablet']);"><img src="/wp-content/uploads/2015/04/win-tablet-btn.png" alt=""></a>
+		<a href="http://www.ncaa.com/march-madness-live" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.ncaa.com/march-madness-live', 'Watch Online']);"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>	
 	</div>
 
 	<div id="fox-business" class="white-popup mfp-hide">
@@ -996,6 +1003,10 @@
 			});
 
 			jQuery('a[title="Golf Live Extra"]').magnificPopup({
+				type:'inline'
+			});
+
+			jQuery('a[title="NCAA March Madness Live"]').magnificPopup({
 				type:'inline'
 			});
 
