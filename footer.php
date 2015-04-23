@@ -598,23 +598,23 @@
 
 		// Set Background Size
 		jQuery('#header-container').css({backgroundSize:"cover"});
-    
+	
 		// Flexnav
 		jQuery("#menu-main").flexNav();
 
-	    // Add breakpoint attribute to main menu
-	    jQuery("#menu-main").attr('data-breakpoint','768');
+		// Add breakpoint attribute to main menu
+		jQuery("#menu-main").attr('data-breakpoint','768');
 
 
-	    <?php if(is_front_page()) : ?>
+		<?php if(is_front_page()) : ?>
 
-	    	// Main Slider
-	      	jQuery("#main-slider").flexslider({
-		        slideshow: true,
-		        animation: "slide",
-		        slideshowSpeed: 7000,
-		        animationSpeed: 1000,        
-	      	});			
+			// Main Slider
+			jQuery("#main-slider").flexslider({
+				slideshow: true,
+				animation: "slide",
+				slideshowSpeed: 7000,
+				animationSpeed: 1000,        
+			});			
 
 			// Resize, can be inside Load or Ready
 			jQuery(window).trigger('resize',function(){
@@ -630,9 +630,9 @@
 			// console.log('position'+finalpos);
 			jQuery('#main-slider .flex-control-nav').css('margin-left',finalpos);
 
-	    <?php endif; ?>
+		<?php endif; ?>
 
-	    // Community
+		// Community
 		jQuery("#community").flexslider({
 			slideshow: true,
 			slideshowSpeed: 7000,
@@ -641,27 +641,27 @@
 			directionNav: false,
 		});
 
-	    <?php if(is_page_template('main.php')) : ?>
-	      	jQuery('#top-questions ul li p').click(function(){
-		        // Set the effect type
-		        var effect = 'slide';
-		     
-		        // Set the options for the effect type chosen
-		        var options = { direction: 'right' };
-		     
-		        // Set the duration (default: 400 milliseconds)
-		        var duration = 750;
-		        jQuery(this).parent('li').siblings().find('.flyout').hide(500);
-		        jQuery(this).next('.flyout').toggle(effect, options, duration);
-	      	});
+		<?php if(is_page_template('main.php')) : ?>
+			jQuery('#top-questions ul li p').click(function(){
+				// Set the effect type
+				var effect = 'slide';
+			 
+				// Set the options for the effect type chosen
+				var options = { direction: 'right' };
+			 
+				// Set the duration (default: 400 milliseconds)
+				var duration = 750;
+				jQuery(this).parent('li').siblings().find('.flyout').hide(500);
+				jQuery(this).next('.flyout').toggle(effect, options, duration);
+			});
 
 			jQuery('#top-questions ul li a.close').click(function(){
 				jQuery(this).parent('.flyout').hide(500);
 			});
-	    <?php endif; ?>
+		<?php endif; ?>
 
-	    // Special Offers Carousel
-	    jQuery("#offers").flexslider({
+		// Special Offers Carousel
+		jQuery("#offers").flexslider({
 			slideshow: false,
 			animation: "slide",
 			controlNav: true,
@@ -669,23 +669,23 @@
 			maxItems: 3,
 			minItems: 1,
 			move: 3
-	    });    
+		});    
 
-	    // Search Field
+		// Search Field
 		jQuery('.search-text').click(function() {
-	    	if (this.value == this.defaultValue) {
-	      		this.value = '';
-	    	}
-	    });
-	  	jQuery('.search-text').blur(function() {
-	    	if (this.value == '') {
-	      		this.value = this.defaultValue;
-	    	}
-	    });
+			if (this.value == this.defaultValue) {
+				this.value = '';
+			}
+		});
+		jQuery('.search-text').blur(function() {
+			if (this.value == '') {
+				this.value = this.defaultValue;
+			}
+		});
 
-	    equalheight = function(container){
+		equalheight = function(container){
 
-		    var currentTallest = 0,
+			var currentTallest = 0,
 			currentRowStart = 0,
 			rowDivs = new Array(),
 			jQueryel,
@@ -712,11 +712,11 @@
 					rowDivs[currentDiv].height(currentTallest);
 				}
 			});
-	    }
+		}
 
-	    equalheight('#now-playing .now-playing');
+		equalheight('#now-playing .now-playing');
 
-	    <?php if(!is_front_page()) : ?>
+		<?php if(!is_front_page()) : ?>
 
 			jQuery(window).scroll(function() {
 				if (jQuery(this).scrollTop()) {
@@ -741,9 +741,9 @@
 				jQuery(this).removeClass("active");									
 			});
 
-	    <?php endif; ?>
+		<?php endif; ?>
 
-	    <?php if(is_page(388)) : ?>
+		<?php if(is_page(388)) : ?>
 			// package details collapsible
 			jQuery('#packages a.details').click(function(){    
 				if(jQuery(this).text()=='View Details'){
@@ -759,7 +759,7 @@
 			jQuery('#packages .details-panel a.close').click(function(){    
 				jQuery(this).parent('.details-panel').stop(true,true).hide(500);
 				jQuery('#packages .view-details a.details').text('View Details');
-			  	return false;
+				return false;
 			});
 
 			jQuery('a[title="NBC Sports Live Extra"]').magnificPopup({
@@ -1060,9 +1060,9 @@
 
 			jQuery('a[title="EPIX"]').magnificPopup({
 				type:'inline'
-			});  
-	    <?php endif; ?>
-	});	
+			});
+		<?php endif; ?>
+	});
 </script>
 
 <?php if(!is_front_page()) : ?>
@@ -1070,6 +1070,6 @@
 <?php endif; ?>
 
 <a href="http://www.oceanicsurvey.com/WEB/" target="_blank" title="" class="feedback-callout"></a>
-
+<script type="text/javascript">_satellite.pageBottom();</script>
 </body>
 </html>

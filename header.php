@@ -29,6 +29,8 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/validation.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/page.js" type="text/javascript"></script>
 
+<script src="//assets.adobedtm.com/a011e94b6ba81cdcfdf24acdb480b5e4204c4dea/satelliteLib-16b76ef096b5bd53366bd75fb0cfa83784dce635.js"></script>
+
 <?php wp_head(); ?>
 
 <!-- <script src="<?php //echo get_template_directory_uri(); ?>/js/css3-mediaqueries.js"></script> -->
