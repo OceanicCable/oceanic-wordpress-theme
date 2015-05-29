@@ -112,7 +112,7 @@ color:#000000;
 	<div id="slider-container" class="container">
 		<div class="row">
 			<div class="col_12 column">
-				<?php custom_flexslider( 'main-slider', 'main-slides', 'asc', 'id', -1 ); ?>
+				<?php custom_flexslider( 'main-slider', 'main-slides', 'asc', 'menu_order', -1 ); ?>
 			</div>
 			<span id="ls"></span>
 			<span id="rs"></span>
