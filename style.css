@@ -2452,6 +2452,9 @@ img.mfp-img {
 }
 @media only screen and (min-width: 768px) {
 	.special-packages .package:nth-child(odd) { clear: left; }
+	.nav-menu li ul li a { min-height: 15px!important; padding: 8px 15px!important; line-height: 20px!important; }
+	.nav-menu li#menu-item-11713 ul.sub-menu { width: 250px; }
+	.nav-menu li#menu-item-3277 ul.sub-menu { width: 225px; }
 }
 @media only screen and (max-width: 767px) {
 	.packages .package-box { min-height: 50px; }
