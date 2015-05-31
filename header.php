@@ -31,6 +31,28 @@
 
 <script src="//assets.adobedtm.com/a011e94b6ba81cdcfdf24acdb480b5e4204c4dea/satelliteLib-16b76ef096b5bd53366bd75fb0cfa83784dce635.js"></script>
 
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "Organization",
+	"url": "http://www.oceanic.com",
+	"logo": "http://www.oceanic.com/wp-content/themes/oceanic/images/logo.png",
+	"contactPoint" : [
+		{ "@type" : "ContactPoint",
+			"telephone" : "+1-808-643-2100",
+			"contactType" : ["Sales","Customer Service"],
+			"contactOption" : "TollFree",
+			"availableLanguage" : ["English"]
+		} ],
+	"sameAs" : [
+		"https://en.wikipedia.org/wiki/Oceanic_Time_Warner_Cable",
+		"https://www.facebook.com/OceanicCable",
+		"https://twitter.com/OceanicCable",
+		"http://www.youtube.com/OceanicCable"
+	]
+}
+</script>
+
 <?php wp_head(); ?>
 
 <!-- <script src="<?php //echo get_template_directory_uri(); ?>/js/css3-mediaqueries.js"></script> -->
@@ -71,7 +93,7 @@ color:#000000;
 				</div>
 				<div id="header-search">
 					<form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
-					  	<input class="search-text" type="text" value="Search" name="s" id="s" />
+						<input class="search-text" type="text" value="Search" name="s" id="s" />
 					</form>
 				</div>
 			</div>
