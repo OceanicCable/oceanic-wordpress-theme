@@ -2433,6 +2433,22 @@ img.mfp-img {
 .regular-packages .package-box .package-description ul { margin-bottom: 0px; }
 .regular-packages .package-box .package-links p { margin-bottom: 0px; }
 
+
+/* Accordion Menu */
+#secondary aside[id^="dc_jqaccordion"] {
+	padding: 15px;
+	border-radius: 3px;
+	background-color: #fff;	
+}
+#secondary aside[id^="dc_jqaccordion"] h2 {
+	font-weight: bold;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #eee;
+}
+#secondary aside[id^="dc_jqaccordion"] li a {
+	border-bottom: 1px solid #eee;
+}
+
 @media only screen and (max-width: 1023px) {
 	.regular-packages .package-box h3 { font-size: 18px; }
 	.packages .package-box .package-links { padding-left: 0px; clear: both; }
