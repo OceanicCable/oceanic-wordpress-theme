@@ -520,6 +520,11 @@ $custom_meta_box = array(
             'name' => 'Banner Text',
             'id' => $meta_prefix . 'banner-text',
             'type' => 'textarea'
+        ),
+        array(
+            'name' => 'Promo Video Url',
+            'id' => $meta_prefix . 'promo_vid',
+            'type' => 'text'
         )
     )
 );
@@ -1107,4 +1112,35 @@ class MY_Widget extends WP_Widget {
 
 	<?php
 	}
+}
+
+function promo($id) {	
+
+	$post_7 = get_post($id); 
+	$title = $post_7->post_title;
+	$content = $post_7->post_content;
+	$promo_vid = get_post_meta($id, "rb-promo_vid", true);
+	$edit_link = get_edit_post_link($id);
+
+	echo'<div id="maxx-promo">';
+    echo'    <h4>' . $title . '</h4>';
+	echo'	<div id="promo-video">';
+    echo'		<video controls>';
+    echo'       	<source src="'.$promo_vid.'" type="video/mp4">';
+    echo'        	Your browser does not support the video tag.';
+    echo'    	</video>';
+    echo'	</div>';
+    echo'	<div id="promo-info">';
+    echo			autop($content);
+    if(is_user_logged_in()){
+    	echo '<a href="'.$edit_link.'" title="'.$title.'" class="edit-link">Edit Promo</a>';
+    }    
+    echo'	</div>';
+	echo '</div>';
+}
+
+function autop($raw) {
+  $fcontent = apply_filters( 'the_content', $raw );
+  $pcontent = str_replace( ']]>', ']]&gt;', $fcontent );
+  return $pcontent;
 }

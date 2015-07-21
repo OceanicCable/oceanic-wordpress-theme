@@ -1718,6 +1718,26 @@ body.home #offers .flex-viewport:after { background: #F2F4F6; }
 #offers .flex-control-nav li { margin: 0px 3px; }
 #offers .flex-control-nav li a { width: 7px; height: 7px; }
 
+/* Promo */
+#maxx-promo { background: #fff; max-width: 960px; margin: 15px auto; border-radius: 3px; box-shadow: 0 1px 5px rgba(0,0,0,.2); overflow: hidden; padding-top: 15px; }
+#maxx-promo h4 { text-align: center; margin: 10px 0; }
+#promo-video, #promo-info { float: left; padding: 10px 15px 15px 15px; width: 50%; box-sizing: border-box; }            
+#promo-info { position: relative; }
+#promo-info p { margin-bottom: 15px; line-height: 15px; font-size: small; font-family: 'twc_roundbook'; }
+#promo-info p:last-child { margin-bottom: 0; }
+#promo-info p strong { margin-bottom: 5px; display: inline-block; }
+#promo-video { text-align: center; }
+#promo-video video { width: auto; height: auto; max-width: 100%; }
+#promo-info a.btn { background: #1b5084; border: 0; padding: 0 10px; font-weight: bold; font-size: smaller; cursor: pointer; display: inline-block; }
+#promo-info a.btn:hover { color: #fff;background: #2e659b; }
+#promo-info a.edit-link { position: absolute; right: 15px; bottom: 15px; font-size: small; }
+@media only screen and (max-width: 767px) {
+    #promo-video, #promo-info {
+        width: auto;
+        float: none;                    
+    }
+}
+
 /* Widget Search */
 .widget-area .widget_search { padding: 10px; background: #eee; }
 

@@ -14,6 +14,8 @@
 global $grid_content;
 get_header(); ?>
 
+	<?php promo(12285); ?>
+
 	<div id="primary" class="site-content col_9 column">
 		<div id="hot-deals-tab">
 			<div id="hot-deals" class="purejs-tabs">
