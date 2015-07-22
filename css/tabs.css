@@ -3,7 +3,8 @@
 	width: 30.33333%;
 	min-height: 330px;
 	padding-bottom: 15px;
-	background: #16599d url(../images/gradient-blue-black.jpg) left bottom repeat-x;
+	/*background: #16599d url(../images/gradient-blue-black.jpg) left bottom repeat-x;*/
+	background: #16599d url(../images/ocean.jpg) left bottom no-repeat;
 }
 
 .tabs > ul {

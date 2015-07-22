@@ -508,8 +508,14 @@ a:hover {
 	margin: 60px 0 0;
 }
 
-body.home .site-content, body.home .widget-area {
+body.home .site-content {
 	margin: 30px 0 0;
+	padding-left: 0;
+}
+
+body.home .widget-area {
+	padding: 0;
+	margin: 0;
 }
 
 /* Header */
@@ -1677,13 +1683,13 @@ img#wpstats {
 #hot-deals-tab { border-bottom: 1px solid #e0e1e1; overflow: hidden; border-radius: 3px; background: #fff; box-shadow: 0 1px 5px rgba(0,0,0,.2); }
 #hot-deals .tabs { min-height: 400px; }
 #hot-deals .tabscontent { padding: 20px 20px 0px 20px; }
-#hot-deals .tabs h1 { color: #fff; text-align: center; margin-top: 45px; }
-.front-widgets { margin-top: 35px; }
+#hot-deals .tabs h1 { color: #fff; text-align: center; margin-top: 30px; }
+.front-widgets { margin-top: 30px; }
 .widget-area .front-widgets .widget p,
 .widget-area .front-widgets .widget li,
 .widget-area .front-widgets .widget .textwidget,
 .widget-area .front-widgets .widget a { font-weight: bold; color: #3376b2; }
-.widget-area .front-widgets .widget h2 { color: #000; font-family: 'twc_roundbook'; font-size: 28px; }
+/*.widget-area .front-widgets .widget h2 { color: #000; font-family: 'twc_roundbook'; font-size: 28px; }*/
 #hot-deals .tabpage > div { margin: 0px -10px; }
 #hot-deals .tabpage div div { float: left; width: 50%; padding: 0px 10px; margin-bottom: 15px; position: relative; }
 #hot-deals .tabpage div div p b { font-weight: bolder; font-size: 17px; }
@@ -1751,9 +1757,9 @@ body.home #offers .flex-viewport:after { background: #F2F4F6; }
 /* Widget Share */
 #share-module * { line-height: normal; font-size: 0px; }
 #share-module > div,
-#share-module > a { padding: 0px 15px; background: #4f799f; border-radius: 3px; display: inline-block; height: 30px; margin-bottom: 5px; }
+#share-module > a { padding: 0px 15px; /*background: #4f799f;*/ background-color: #08284A; background-image: url(images/bg-widget.jpg); background-repeat: no-repeat; border-radius: 3px; display: inline-block; height: 30px; margin-bottom: 5px; }
 #share-module > div:hover,
-#share-module > a:hover { background: #265a83; }
+#share-module > a:hover { /* background: #265a83;*/ text-decoration: underline; color: #fff; }
 #share-module h3,
 #share-module > a { color: #d4dadf; font-size: 11px; font-weight: normal; text-transform: uppercase; display: inline-block; line-height: 30px; }
 #share-module a { color: #d4dadf; font-size: 11px; font-weight: normal; text-transform: uppercase; display: inline-block; padding-top: 0px!important; padding-bottom: 0px!important; }
@@ -2456,7 +2462,8 @@ img.mfp-img {
 
 
 /* Accordion Menu */
-#secondary aside[id^="dc_jqaccordion"] {
+#secondary aside[id^="dc_jqaccordion"],
+#secondary .front-widgets .widget_nav_menu {
 	padding: 15px;
 	padding-top: 0;
 	border-radius: 3px;
@@ -2468,7 +2475,8 @@ img.mfp-img {
 	  -moz-border-radius: 5px;
 	/*border: 2px solid #08284A;*/
 }
-#secondary aside[id^="dc_jqaccordion"] h2 {
+#secondary aside[id^="dc_jqaccordion"] h2,
+#secondary .front-widgets .widget_nav_menu h2 {
 	font-weight: bold;
 	padding-bottom: 10px;	
 	margin: 0 -15px;
@@ -2480,7 +2488,8 @@ img.mfp-img {
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 }
-#secondary aside[id^="dc_jqaccordion"] li a {
+#secondary aside[id^="dc_jqaccordion"] li a,
+#secondary .front-widgets .widget_nav_menu li a {
 	border-bottom: 1px solid #eee;
 }
 .widget-area .widget-share-module { margin-bottom: 15px; }
