@@ -640,6 +640,11 @@
 			controlNav: false,
 			directionNav: false,
 		});
+		
+		jQuery( "#pricing-grid .pricing .inner .footer .view-details" ).click(function() {
+		  jQuery(this).siblings(".includes").slideToggle(400);
+		  return false;
+		});
 
 		<?php if(is_page_template('main.php')) : ?>
 			jQuery('#top-questions ul li p').click(function(){

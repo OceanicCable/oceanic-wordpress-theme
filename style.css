@@ -2461,6 +2461,50 @@ img.mfp-img {
 .regular-packages .package-box .package-links p { margin-bottom: 0px; }
 
 
+/* Pricing Grid */
+#pricing-grid { margin: 0 -7px; }
+#pricing-grid .pricing { display: inline-block; vertical-align: top; width: 33.33333333333333%; padding: 7px; box-sizing: border-box; }
+#pricing-grid .pricing .inner { background: #747679; border: 2px solid #acacac; }
+#pricing-grid .pricing .inner header { padding: 10px; overflow: hidden; }
+#pricing-grid .pricing .inner header a { color: #fff; position: relative; top: -1px; }
+#pricing-grid .pricing .inner header fieldset { float: left; }
+#pricing-grid .pricing .inner header.single { background: #0352a1; }
+#pricing-grid .pricing .inner header.double { background: #747679; }
+#pricing-grid .pricing .inner header.triple { background: #5b1f69; }
+#pricing-grid .pricing .inner header .type { float: right; color: #fff; font-weight: bold; }
+#pricing-grid .pricing .inner .details { background: #fff; padding: 0 10px; text-align: center; }
+#pricing-grid .pricing .inner .details > div { padding: 10px 0; line-height: normal; min-height: 50px; }
+#pricing-grid .pricing .inner .details > div a { font-weight: bold; }
+#pricing-grid .pricing .inner .details > hr { border-top: 1px solid #e1e1e1; border-bottom: 1px solid white; margin-bottom: 0; margin-top: 0; }
+#pricing-grid .pricing .inner .details .price { padding: 5px 0; }
+#pricing-grid .pricing .inner .details .price .h4 { font-family: 'twc_roundbook'; }
+#pricing-grid .pricing .inner .details .price .h4 .dollar-sign { position: relative; font-size: 20px; top: -18px; }
+#pricing-grid .pricing .inner .details .price .h4 .dollars { font-size: 46px; }
+#pricing-grid .pricing .inner .details .price .h4 .cents { font-size: 20px; position: relative; top: -18px; }
+#pricing-grid .pricing .inner .details .price .term { font-size: 9px; position: relative; left: -20px; top: 2px; display: inline-block; width: 60px; text-align: left; line-height: 9px; }
+#pricing-grid .pricing .inner .details .price .term span { color: #3376b2; border-bottom: 1px dotted #3376b2; cursor: pointer; }
+#pricing-grid .pricing .inner .details .price .term span:hover { color: #1b405d; border-bottom: 1px dotted #1b405d; }
+#pricing-grid .pricing .inner .details .offer { min-height: 55px; background: url(images/bg-offer.png); background-repeat: repeat-y; background-position: center center; font-family: 'twc_roundbook'; background-size: contain; }
+#pricing-grid .pricing .inner .details .offer p { font-size: 20px; line-height: normal; margin-bottom: 0; }
+#pricing-grid .pricing .inner .details .offer small { font-size: xx-small; }
+#pricing-grid .pricing .inner .details .offer > div { float: left; width: 50%; text-align: center; padding-top: 10px; }
+#pricing-grid .pricing .inner .details .offer > div h2 { font-weight: normal; color: #333; margin-top: 0; margin-bottom: 0; }
+#pricing-grid .pricing .inner .details .offer .price-before { position: relative; }
+#pricing-grid .pricing .inner .details .offer .price-before .dollar-sign,
+#pricing-grid .pricing .inner .details .offer .price-before .cents { font-size: 16px; position: relative; top: -13px; }
+#pricing-grid .pricing .inner .details .offer .price-before .dollars { font-size: 36px; }
+#pricing-grid .pricing .inner .details .offer .price-before .strike { width: 75px; height: 3px; background: red; position: absolute; left: 50%; top: 55%; margin-left: -37px; -ms-transform: rotate(175deg); /* IE 9 */  -webkit-transform: rotate(175deg); /* Safari */ transform: rotate(175deg); }
+
+#pricing-grid .pricing .inner .footer { background: #fff; padding: 13px 20px; overflow: hidden; position: relative; }
+#pricing-grid .pricing .inner .footer a { padding: 8px 13px; border-radius: 3px; font-weight: bold; font-size: small; }
+#pricing-grid .pricing .inner .footer .edit { position: absolute; right: 0; bottom: 0; padding: 5px 7px; font-size: x-small; font-weight: normal; background: #acacac; color: #000; border-radius: 0; }
+#pricing-grid .pricing .inner .footer .view-details { border: 1px solid #0252a1; color: #0252a1; float: left; }
+#pricing-grid .pricing .inner .footer .order-now { color: #fff; background-color: #0252a1; float: right; }
+#pricing-grid .pricing .inner .footer .includes { clear: both; overflow: hidden; display: none; }
+#pricing-grid .pricing .inner .footer .includes h3 { margin-top: 15px; font-size: large; font-weight: normal; color: #333; }
+#pricing-grid .pricing .inner .footer .includes ul { font-size: small; margin-bottom: 0; }
+
+
 /* Accordion Menu */
 #secondary aside[id^="dc_jqaccordion"],
 #secondary .front-widgets .widget_nav_menu {

@@ -501,125 +501,14 @@ add_action('wp_enqueue_scripts', 'add_scripts');
 $grid_content = 8;
 $grid_sidebar = 4;
 
-// Custom Meta Box
-$meta_prefix = 'rb-';
-$screens = array( 'post', 'page', 'product' );
-$custom_meta_box = array(
-    'id' => 'my-meta-box', // Metabox ID
-    'title' => 'Oceanic Metabox', // Meta Box Name
-    'pages' => $screens, // Meta Box Display Area
-    'context' => 'normal',
-    'priority' => 'high',
-    'fields' => array(
-        array(
-            'name' => 'Pay Per View',
-            'id' => $meta_prefix . 'pay-per-view',
-            'type' => 'checkbox'
-        ),
-        array(
-            'name' => 'Banner Text',
-            'id' => $meta_prefix . 'banner-text',
-            'type' => 'textarea'
-        ),
-        array(
-            'name' => 'Promo Video Url',
-            'id' => $meta_prefix . 'promo_vid',
-            'type' => 'text'
-        )
-    )
-);
+// Metabox
+include('metabox.php');
 
-add_action('admin_menu', 'mytheme_add_box');
-// Add meta box
-function mytheme_add_box() {
-    global $custom_meta_box;
-
-    foreach ($custom_meta_box['pages'] as $screen) {
-    	add_meta_box($custom_meta_box['id'], $custom_meta_box['title'], 'mytheme_show_box', $screen,
-
-$custom_meta_box['context'], $custom_meta_box['priority']);
-    }
-}
-
-// Callback function to show fields in meta box
-function mytheme_show_box() {
-    global $custom_meta_box, $post;
-    // Use nonce for verification
-    echo '<input type="hidden" name="mytheme_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
-    echo '<table class="form-table">';
-    foreach ($custom_meta_box['fields'] as $field) {
-        // get current post meta data
-        $meta = get_post_meta($post->ID, $field['id'], true);
-        echo '<tr>',
-                '<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
-                '<td>';
-        switch ($field['type']) {
-            case 'text':
-                echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '"
-
-size="30" style="width:97%" />', '<br />', $field['desc'];
-                break;
-            case 'textarea':
-                echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ?
-
-$meta : $field['std'], '</textarea>', '<br />', $field['desc'];
-                break;
-            case 'select':
-                echo '<select name="', $field['id'], '" id="', $field['id'], '">';
-                foreach ($field['options'] as $option) {
-                    echo '<option ', $meta == $option ? ' selected="selected"' : '', '>', $option, '</option>';
-                }
-                echo '</select>';
-                break;
-            case 'radio':
-                foreach ($field['options'] as $option) {
-                    echo '<input type="radio" name="', $field['id'], '" value="', $option['value'], '"', $meta == $option['value'] ? '
-
-checked="checked"' : '', ' />', $option['name'];
-                }
-                break;
-            case 'checkbox':
-                echo '<input type="checkbox" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' checked="checked"' : '', ' />';
-                break;
-        }
-        echo     '</td><td>',
-            '</td></tr>';
-    }
-    echo '</table>';
-}
-
-add_action('save_post', 'mytheme_save_data');
-
-// Save data from meta box
-function mytheme_save_data() {
-	global $post;
-    global $custom_meta_box;
-    // verify nonce
-    if (!wp_verify_nonce($_POST['mytheme_meta_box_nonce'], basename(__FILE__))) {
-        return $post->ID;
-    }
-    // check autosave
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-        return $post->ID;
-    }
-    // check permissions
-    if ('page' == $_POST['post_type']) {
-        if (!current_user_can('edit_page', $post->ID)) {
-            return $post->ID;
-        }
-    } elseif (!current_user_can('edit_post', $post->ID)) {
-        return $post->ID;
-    }
-    foreach ($custom_meta_box['fields'] as $field) {
-		$arr[] = $field;
-        $old = get_post_meta($post->ID, $field['id'], true);
-        $new = $_POST[$field['id']];
-		$arr2[] = $_POST[$field['id']];
-        if ($new && $new != $old) {
-            update_post_meta($post->ID, $field['id'], $new);
-        } elseif ('' == $new && $old) {
-            delete_post_meta($post->ID, $field['id'], $old);
-        }
+// Initialize the metabox class
+add_action( 'init', 'be_initialize_cmb_meta_boxes', 9999 );
+function be_initialize_cmb_meta_boxes() {
+    if ( !class_exists( 'cmb_Meta_Box' ) ) {
+        require_once( 'lib/metabox/init.php' );
     }
 }
 
@@ -1144,3 +1033,120 @@ function autop($raw) {
   $pcontent = str_replace( ']]>', ']]&gt;', $fcontent );
   return $pcontent;
 }
+
+function pricing_grid($atts){
+
+	extract(shortcode_atts(array(
+      'order' => 0,
+      'orderby' => 'ID',
+      'limit' => -1,
+   	), $atts));
+
+	$output = '';
+	// Arguments
+	$args=array(
+	    'post_type' => 'packages',
+	    'order' => $order,
+	    'orderby' => $orderby,
+	    'post_status' => 'publish',
+	    'posts_per_page' => $limit,
+	    'caller_get_posts'=> 1
+	  );
+
+	// The Query
+	$the_query = new WP_Query( $args );
+
+	// The Loop
+	if ( $the_query->have_posts() ) {
+	  $output .= '<div id="pricing-grid">';
+	  while ( $the_query->have_posts() ) {
+	    $the_query->the_post();
+
+	    $posttags = get_the_tags();
+		if ($posttags) {
+			$i = 0;
+			$tags = "";
+			$comma = "";
+		  	foreach($posttags as $tag) {
+		  		$i++;		  				  		
+				$tags .= $tag->name;
+				$tags .= ($i < count($posttags) ? ',':'');
+		  	}
+		}
+		if($i == 1){
+			$header_class = "single";
+		} else if($i == 2) {
+			$header_class = "double";
+		} else {
+			$header_class = "triple";
+		}
+
+		$post_id = get_the_ID();
+
+		$price ="";
+		$price_before ="";
+
+		$price = get_post_meta( get_the_ID(), 'rb-pgrid_price', true );
+		$price_before = get_post_meta( get_the_ID(), 'rb-pgrid_price_before', true );
+		$_price_before = explode(".", $price_before);
+		$price = explode(".", $price);
+
+	    $output .= '<div class="pricing">';
+	    $output .= '	<div class="inner">';
+	    $output .= '		<header class="'.$header_class.'">';
+	    $output .= '			<fieldset>';
+	    $output .= '				<input type="checkbox" />';
+	    $output .= '				<a href="">Compare</a>';
+	    $output .= '			</fieldset>';
+	    $output .= '			<div class="type">';
+		$output .=					$tags;
+	    $output .=				'</div>';
+	    $output .= '		</header>';
+	    $output .= '		<div class="details">';
+	    $output .= '			<div class="desc">';
+	    $output .= 				get_the_content();
+	    $output .= '			</div>';
+	    $output .= '			<hr />';
+	    $output .= '			<div class="price">';
+	    $output .= '				<span class="h4">';
+        $output .= '           			<sup class="dollar-sign">$</sup><span class="dollars">'.$price[0].'</span><sup class="cents">'.$price[1].'</sup>';
+        $output .= '            	</span>';
+        $output .= '            	<span class="term">per month for<br>12 <span>months</span></span>';
+	    $output .= '			</div>';
+	    $output .= '			<hr />';
+	    $output .= '			<div class="offer">';
+	    							if($price_before) {
+		$output .= '					<div class="price-before">';
+		$output .= '           				<sup class="dollar-sign">$</sup><span class="dollars">'.$_price_before[0].'</span><sup class="cents">'.$_price_before[1].'</sup><span class="strike"></span>';
+		$output .= '					</div>';
+		$output .= '					<div class="price-label"><h2>New Lower Price</h2></div>';
+	    							} else {
+	    $output .= '					<p>'.get_post_meta( $post_id, 'rb-pgrid_esp_offer', true ).'</p>';
+									}
+	    $output .= '				<small>'.get_post_meta( $post_id, 'rb-pgrid_remarks', true ).'</small>';
+	    $output .= '			</div>';
+	    $output .= '			<hr />';
+	    $output .= '		</div>';
+	    $output .= '		<footer class="footer">';
+	    $output .= '			<a href="" title="View Details" class="view-details">View Details</a>';
+	    $output .= '			<a href="" title="Order Now" class="order-now">Order Now</a>';	    
+	    						if(is_user_logged_in()) {
+	    $output .= '				<a href="'. get_edit_post_link($post_id).'" title="" class="edit" target="_blank">Edit</a>';							
+	    						}
+	    $output .= '			<div class="includes">';
+	    $output .= '			<h3>Includes:</h3>';
+	    $output .= 				get_post_meta( $post_id, 'rb-pgrid_inclusions', true );
+	    $output .= '			</div>';
+	    $output .= '		</footer>';
+	    $output .= '	</div>';
+	    $output .= '</div>';
+	  }
+	  $output .= '</div>';
+	  return $output;
+	} else {
+	  return '<h3>No Packages Found<h3>';
+	}
+	/* Restore original Post Data */
+	wp_reset_postdata();
+}
+add_shortcode('pricing-grid', 'pricing_grid');
