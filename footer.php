@@ -646,6 +646,25 @@
 		  return false;
 		});
 
+		var nav = jQuery('#sort-filter'),
+		animateTime = 500,
+		navLink = jQuery('#sort-filter .toggle');
+		navLink.click(function(){
+			if(nav.height() === 24){
+				autoHeightAnimate(nav, animateTime);
+			} else {
+				nav.stop().animate({ height: '24px' }, animateTime);
+			}
+		});
+
+		function autoHeightAnimate(element, time){
+		var curHeight = element.height(), // Get Default Height
+			autoHeight = element.css('height', 'auto').height(); // Get Auto Height
+			element.height(curHeight); // Reset to Default Height
+			element.stop().animate({ height: autoHeight }, parseInt(time)); // Animate to Auto Height
+		}
+		
+
 		<?php if(is_page_template('main.php')) : ?>
 			jQuery('#top-questions ul li p').click(function(){
 				// Set the effect type

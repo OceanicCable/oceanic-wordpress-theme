@@ -1058,6 +1058,23 @@ function pricing_grid($atts){
 
 	// The Loop
 	if ( $the_query->have_posts() ) {
+	  $output .= '<div id="sort-filter">';
+	  $output .= '	<h2>Select and Compare Services</h2>';
+	  $output .= '	<div class="filter">';
+	  $output .= '		<label><input id="tv-filter" type="checkbox" name="tv-filter" value="tv"> TV</label>';
+	  $output .= '		<label><input id="tv-filter" type="checkbox" name="internet-filter" value="tv"> Internet</label>';
+	  $output .= '		<label><input id="tv-filter" type="checkbox" name="phone-filter" value="tv"> Phone</label>';
+	  $output .= '		<label><input id="tv-filter" type="checkbox" name="all-filter" value="tv"> All Packages</label>';
+	  $output .= '	</div>';
+	  $output .= '	<div class="sort">';
+	  $output .= '		<select name="sort-items">';
+	  $output .= '			<option value="recommended" selected="">Recommended</option>';
+	  $output .= '			<option value="lowToHigh">Price Low To High</option>';
+	  $output .= '			<option value="highToLow">Price High To Low</option>';
+	  $output .= '		</select>';
+	  $output .= '	</div>';
+	  $output .= '	<span class="toggle"></span>';
+	  $output .= '</div>';
 	  $output .= '<div id="pricing-grid">';
 	  while ( $the_query->have_posts() ) {
 	    $the_query->the_post();
@@ -1150,3 +1167,152 @@ function pricing_grid($atts){
 	wp_reset_postdata();
 }
 add_shortcode('pricing-grid', 'pricing_grid');
+
+function compare_packages($package_ids){
+
+	$output = '';
+
+	$output .='<table id="compare-packages">';
+	$output .='	<thead>';
+	$output .='		<tr>';
+	$output .='			<td class="package triple">';
+	$output .='				<h3>TV,Internet,Phone</h3>';
+	$output .= '				<div class="price">';
+    $output .= '					<span class="h4">';
+    $output .= '           				<sup class="dollar-sign">$</sup><span class="dollars">89</span><sup class="cents">99</sup>';
+    $output .= '            		</span>';
+    $output .= '            		<span class="term">per month for<br>12 <span>months</span></span>';
+    $output .= '				</div>';
+    $output .= '			<div class="new-plan"><a href="/" title="Compare New Plan">Compare New Plan</a></div>';
+    $output .= '			<div class="order-now"><a href="/" title="Order Now">Order Now</a></div>';
+	$output .='			</td>';
+	$output .='			<td class="package double">';
+	$output .='				<h3>TV,Internet</h3>';
+	$output .= '				<div class="price">';
+    $output .= '					<span class="h4">';
+    $output .= '           				<sup class="dollar-sign">$</sup><span class="dollars">49</span><sup class="cents">99</sup>';
+    $output .= '            		</span>';
+    $output .= '            		<span class="term">per month for<br>12 <span>months</span></span>';
+    $output .= '				</div>';
+    $output .= '			<div class="new-plan"><a href="/" title="Compare New Plan">Compare New Plan</a></div>';
+    $output .= '			<div class="order-now"><a href="/" title="Order Now">Order Now</a></div>';
+	$output .='			</td>';	
+	$output .='		</tr>';
+	$output .='	</thead>';
+	$output .='	<tbody>';
+	$output .='		<tr class="special-offers"><th colspan="2">Special Offers</th></tr>';
+	$output .='		<tr>';
+	$output .=' 		<td class="special-offer"><p>LIMITED TIME OFFER: Get a $300 Visa gift card.*</p><small>* NYC and Hudson Valley only.</small></td>';
+	$output .=' 		<td class="special-offer"><p>LIMITED TIME OFFER: Get a $300 Visa gift card.*</p><small>* NYC and Hudson Valley only.</small></td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="type">'; // heading
+	$output .=' 		<td colspan="2">TV</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Plans</td></tr>'; // label Plans
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>Prefered TV</td>';
+	$output .=' 		<td>Starter TV</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="type">'; // heading
+	$output .=' 		<td>TV</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Channels</td></tr>'; // label Channels
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>200+</td>';
+	$output .=' 		<td>20+</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Channel Packages</td></tr>'; // label Channel Packages
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>EPIX®</td>';
+	$output .=' 		<td>HBO® & SHOWTIME®</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">DVR Service</td></tr>'; // label DVR Service
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td></td>';
+	$output .=' 		<td></td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Equipment</td></tr>'; // label Equipment
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>HD Box</td>';
+	$output .=' 		<td>Required, for an additional charge</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">TWC TV® App Access</td></tr>'; // label TWC TV® App Access
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>Check</td>';
+	$output .=' 		<td>Check</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Start Over®</td></tr>'; // label Start Over®
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>Check</td>';
+	$output .=' 		<td>Check</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Caller ID on TV</td></tr>'; // label Caller ID on TV
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>Check</td>';
+	$output .=' 		<td></td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">On Demand</td></tr>'; // label On Demand
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>A monthly library of 19,000 On Demand hit TV shows and blockbuster movies from any genre. </td>';
+	$output .=' 		<td>A monthly library of 19,000 On Demand hit TV shows and blockbuster movies from any genre. </td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="type">'; // heading Internet
+	$output .=' 		<td colspan="2">TV</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Plans</td></tr>'; // label Plans
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>Extreme</td>';
+	$output .=' 		<td>Standard</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Internet Speeds</td></tr>'; // label Internet Speeds
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>up to 30/5Mbps</td>';
+	$output .=' 		<td>up to 15/1Mbps</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Home WiFi</td></tr>'; // label Home WiFi
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>Check (Pay for modem only)</td>';
+	$output .=' 		<td>Check (Pay for modem only)</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">WiFi Hotspots</td></tr>'; // label WiFi Hotspots
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>Access to 400,000+ TWC WiFi® Hotspots nationwide</td>';
+	$output .=' 		<td>Access to 400,000+ TWC WiFi® Hotspots nationwide</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Internet Security & Parental Controls</td></tr>'; // label Internet Security & Parental Controls
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>Check</td>';
+	$output .=' 		<td>Check</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="type">'; // heading Phone
+	$output .=' 		<td colspan="2">TV</td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Plans</td></tr>'; // label Plans
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>Home Phone National</td>';
+	$output .=' 		<td></td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Included Calls</td></tr>'; // label Included Calls
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>Unlimited calling to the U.S., Canada, Mexico, China, Hong Kong, India and U.S. territories</td>';
+	$output .=' 		<td></td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">Voicemail</td></tr>'; // label Voicemail
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>Check</td>';
+	$output .=' 		<td></td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">13 Calling Features</td></tr>'; // label 13 Calling Features
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td>Check</td>';
+	$output .=' 		<td></td>';
+	$output .=' 	</tr>';
+	$output .=' 	<tr class="label"><td colspan="2">International Calling Plans (for an additional charge)</td></tr>'; // label International Calling Plans (for an additional charge)
+	$output .=' 	<tr>'; // field
+	$output .=' 		<td><p>Global Penny Phone Plan</p><p>International OnePrice®</p></td>';
+	$output .=' 		<td></td>';
+	$output .='	</tbody>';
+	$output .='</table>';
+
+	return $output;
+}

@@ -2462,6 +2462,15 @@ img.mfp-img {
 
 
 /* Pricing Grid */
+
+#sort-filter { padding: 15px; background: #4578af; border-radius: 5px; margin-bottom: 10px; position: relative; overflow: hidden; }
+#sort-filter h2 { color: #fff; font-weight: normal; margin-top: 0; font-size: 24px; }
+#sort-filter .toggle { width: 16px; height: 16px; position: absolute; right: 15px; top: 20px; background: url(images/icon-plus.png) no-repeat; cursor: pointer; }
+#sort-filter .filter { float: left; }
+#sort-filter .filter label { color: #fff; font-size: 24px; margin-right: 15px; font-family: 'twc_roundlight'; font-weight: lighter; }
+#sort-filter .filter label:last-child { margin-right: 0; }
+#sort-filter .sort { float: right; }
+#sort-filter .sort select { padding: 5px 10px; font-size: 16px; border-radius: 3px; border: none; }
 #pricing-grid { margin: 0 -7px; }
 #pricing-grid .pricing { display: inline-block; vertical-align: top; width: 33.33333333333333%; padding: 7px; box-sizing: border-box; }
 #pricing-grid .pricing .inner { background: #747679; border: 2px solid #acacac; }
@@ -2504,6 +2513,30 @@ img.mfp-img {
 #pricing-grid .pricing .inner .footer .includes h3 { margin-top: 15px; font-size: large; font-weight: normal; color: #333; }
 #pricing-grid .pricing .inner .footer .includes ul { font-size: small; margin-bottom: 0; }
 
+
+/* Compare Packages */
+#compare-packages { text-align: center; }
+#compare-packages h3 { font-size: large; padding: 10px 0; color: #fff; margin: 0; }
+#compare-packages th,
+#compare-packages td { text-align: center; }
+#compare-packages .single h3 { background: #0352a1; }
+#compare-packages .double h3 { background: #747679; }
+#compare-packages .triple h3 { background: #5b1f69; }
+#compare-packages .package { padding: 0; text-align: center; font-family: 'twc_roundbook'; }
+#compare-packages .package .price { padding: 10px 0; }
+#compare-packages .package .price .h4 { font-family: 'twc_roundbook'; color: #333; line-height: normal; }
+#compare-packages .package .price .h4 .dollar-sign { position: relative; font-size: 20px; top: -18px; }
+#compare-packages .package .price .h4 .dollars { font-size: 46px; }
+#compare-packages .package .price .h4 .cents { font-size: 20px; position: relative; top: -18px; }
+#compare-packages .package .price .term { font-size: 9px; position: relative; left: -20px; top: 2px; display: inline-block; width: 60px; text-align: left; line-height: 9px; }
+#compare-packages .package .price .term span { color: #3376b2; border-bottom: 1px dotted #3376b2; cursor: pointer; }
+#compare-packages .package .price .term span:hover { color: #1b405d; border-bottom: 1px dotted #1b405d; }
+#compare-packages .package .new-plan a,
+#compare-packages .package .order-now a { display: inline-block; padding: 3px 15px; font-weight: bold; font-size: 15px; border-radius: 3px; margin-bottom: 10px; }
+#compare-packages .package .new-plan a { border: 1px solid #00559f; }
+#compare-packages .package .order-now a { background: #00559f; color: #fff; }
+#compare-packages .special-offers th { font-size: 16px; color: #fff; font-weight: bold; background-color: #13446d; }
+#compare-packages .label td { font-size: 14px; color: #fff; font-weight: bold; background-color: #4f6f88; }
 
 /* Accordion Menu */
 #secondary aside[id^="dc_jqaccordion"],
