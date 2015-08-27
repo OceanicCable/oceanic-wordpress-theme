@@ -1168,151 +1168,218 @@ function pricing_grid($atts){
 }
 add_shortcode('pricing-grid', 'pricing_grid');
 
-function compare_packages($package_ids){
+function compare_packages($id_arr, $_echo = false){
 
-	$output = '';
+	global $post;
 
-	$output .='<table id="compare-packages">';
-	$output .='	<thead>';
-	$output .='		<tr>';
-	$output .='			<td class="package triple">';
-	$output .='				<h3>TV,Internet,Phone</h3>';
-	$output .= '				<div class="price">';
-    $output .= '					<span class="h4">';
-    $output .= '           				<sup class="dollar-sign">$</sup><span class="dollars">89</span><sup class="cents">99</sup>';
-    $output .= '            		</span>';
-    $output .= '            		<span class="term">per month for<br>12 <span>months</span></span>';
-    $output .= '				</div>';
-    $output .= '			<div class="new-plan"><a href="/" title="Compare New Plan">Compare New Plan</a></div>';
-    $output .= '			<div class="order-now"><a href="/" title="Order Now">Order Now</a></div>';
-	$output .='			</td>';
-	$output .='			<td class="package double">';
-	$output .='				<h3>TV,Internet</h3>';
-	$output .= '				<div class="price">';
-    $output .= '					<span class="h4">';
-    $output .= '           				<sup class="dollar-sign">$</sup><span class="dollars">49</span><sup class="cents">99</sup>';
-    $output .= '            		</span>';
-    $output .= '            		<span class="term">per month for<br>12 <span>months</span></span>';
-    $output .= '				</div>';
-    $output .= '			<div class="new-plan"><a href="/" title="Compare New Plan">Compare New Plan</a></div>';
-    $output .= '			<div class="order-now"><a href="/" title="Order Now">Order Now</a></div>';
-	$output .='			</td>';	
-	$output .='		</tr>';
-	$output .='	</thead>';
-	$output .='	<tbody>';
-	$output .='		<tr class="special-offers"><th colspan="2">Special Offers</th></tr>';
-	$output .='		<tr>';
-	$output .=' 		<td class="special-offer"><p>LIMITED TIME OFFER: Get a $300 Visa gift card.*</p><small>* NYC and Hudson Valley only.</small></td>';
-	$output .=' 		<td class="special-offer"><p>LIMITED TIME OFFER: Get a $300 Visa gift card.*</p><small>* NYC and Hudson Valley only.</small></td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="type">'; // heading
-	$output .=' 		<td colspan="2">TV</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Plans</td></tr>'; // label Plans
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>Prefered TV</td>';
-	$output .=' 		<td>Starter TV</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="type">'; // heading
-	$output .=' 		<td>TV</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Channels</td></tr>'; // label Channels
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>200+</td>';
-	$output .=' 		<td>20+</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Channel Packages</td></tr>'; // label Channel Packages
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>EPIX®</td>';
-	$output .=' 		<td>HBO® & SHOWTIME®</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">DVR Service</td></tr>'; // label DVR Service
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td></td>';
-	$output .=' 		<td></td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Equipment</td></tr>'; // label Equipment
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>HD Box</td>';
-	$output .=' 		<td>Required, for an additional charge</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">TWC TV® App Access</td></tr>'; // label TWC TV® App Access
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>Check</td>';
-	$output .=' 		<td>Check</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Start Over®</td></tr>'; // label Start Over®
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>Check</td>';
-	$output .=' 		<td>Check</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Caller ID on TV</td></tr>'; // label Caller ID on TV
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>Check</td>';
-	$output .=' 		<td></td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">On Demand</td></tr>'; // label On Demand
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>A monthly library of 19,000 On Demand hit TV shows and blockbuster movies from any genre. </td>';
-	$output .=' 		<td>A monthly library of 19,000 On Demand hit TV shows and blockbuster movies from any genre. </td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="type">'; // heading Internet
-	$output .=' 		<td colspan="2">TV</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Plans</td></tr>'; // label Plans
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>Extreme</td>';
-	$output .=' 		<td>Standard</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Internet Speeds</td></tr>'; // label Internet Speeds
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>up to 30/5Mbps</td>';
-	$output .=' 		<td>up to 15/1Mbps</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Home WiFi</td></tr>'; // label Home WiFi
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>Check (Pay for modem only)</td>';
-	$output .=' 		<td>Check (Pay for modem only)</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">WiFi Hotspots</td></tr>'; // label WiFi Hotspots
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>Access to 400,000+ TWC WiFi® Hotspots nationwide</td>';
-	$output .=' 		<td>Access to 400,000+ TWC WiFi® Hotspots nationwide</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Internet Security & Parental Controls</td></tr>'; // label Internet Security & Parental Controls
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>Check</td>';
-	$output .=' 		<td>Check</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="type">'; // heading Phone
-	$output .=' 		<td colspan="2">TV</td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Plans</td></tr>'; // label Plans
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>Home Phone National</td>';
-	$output .=' 		<td></td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Included Calls</td></tr>'; // label Included Calls
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>Unlimited calling to the U.S., Canada, Mexico, China, Hong Kong, India and U.S. territories</td>';
-	$output .=' 		<td></td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">Voicemail</td></tr>'; // label Voicemail
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>Check</td>';
-	$output .=' 		<td></td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">13 Calling Features</td></tr>'; // label 13 Calling Features
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td>Check</td>';
-	$output .=' 		<td></td>';
-	$output .=' 	</tr>';
-	$output .=' 	<tr class="label"><td colspan="2">International Calling Plans (for an additional charge)</td></tr>'; // label International Calling Plans (for an additional charge)
-	$output .=' 	<tr>'; // field
-	$output .=' 		<td><p>Global Penny Phone Plan</p><p>International OnePrice®</p></td>';
-	$output .=' 		<td></td>';
-	$output .='	</tbody>';
-	$output .='</table>';
+	$j = 0;
+	$output = '';	
 
-	return $output;
+	$args = array(
+	'order' => 'asc',
+	'post_type' => 'packages',
+	'post__in' => $id_arr
+	);
+
+	$no_of_packages = count($id_arr);
+	$the_query = "";
+
+	$the_query = new WP_Query($args);
+
+	
+	
+	
+	
+	if ( $the_query->have_posts() ) {
+		
+		$_comparePlans = array();
+		$_planID = array();
+		while ( $the_query->have_posts() ) {
+			$the_query->the_post();
+			$_postID = (int)$the_query->post->ID;
+			//get all the custom meta value and pass to array with the key of POST ID
+			$_comparePlans[$_postID] = get_post_meta($_postID,'',true);
+			$_planID[] = $_postID;
+
+		}
+		
+		//loop base how many package to compare
+		/* foreach($_comparePlans as $_package){
+			print_r($_package);
+			echo '<hr>';
+		} */
+
+		$header_class =array('','single','double','triple');
+		
+		$output .='<table id="compare-packages" class="col-'.$no_of_packages.'">';
+		
+		//title structure
+		$output .='	<thead><tr>';
+		foreach($_comparePlans as $_package){
+		
+			$x++;
+			$price ="";
+			$price_before ="";
+
+			
+
+			$_price = explode(".", $_package['rb-pgrid_price'][0]); //be sure all data have array zero bec all value was array
+			$_price_before = explode(".", $_package['rb-pgrid_price_before'][0]);
+			$posttags = get_the_tags($_planID[(int)$i]);
+
+			$output .='			
+				<td class="package '.$header_class[count($posttags)].'">
+					<h3>';
+					
+			if ($posttags) {
+				$temp_tag =array();
+				foreach($posttags as $tag) {
+				     $temp_tag[] = $tag->name; 
+				}
+				$output .= implode(',' ,$temp_tag );
+			}
+			$output .= '</h3>
+						<div class="price">
+		    				<span class="h4">
+		              			<sup class="dollar-sign">$</sup><span class="dollars">'.$_price[0].'</span><sup class="cents">'.$_price[1].'</sup>
+		                	</span>
+		                	<span class="term">per month for<br>12 <span>months</span></span>
+		    			</div>
+		    		<div class="new-plan"><a href="/" title="Compare New Plan">Compare New Plan</a></div>
+		    		<div class="order-now"><a href="/" title="Order Now">Order Now</a></div>
+				</td>
+			';
+			$i++;
+		}
+		$output .='</tr></thead>';
+		
+		
+		//Special Offers structure
+		 $output .= '<tbody>';
+		 
+		 
+		
+			$_packageFeatures = array(
+				//array('title','tr_class', 'as_col', 'meta_val')
+				array('Special Offers','','th','pgrid_esp_offer'),
+				array('','','', 'pgrid_remarks'),
+				
+				array('TV','type'),
+				array('Plans','label','' ,'pgrid_tv_plans'),
+				array('Channels Packages','label','', 'pgrid_tv_channel_packages'),
+				array('DVR Service','label','', 'pgrid_tv_dvr_service'),
+				array('Equipment','label','', 'pgrid_tv_equipment'),
+				array('TWC TV® App Access','label','', 'pgrid_tv_twc_tv_app_access'),
+				array('TWC TV® Start Over','label','', 'pgrid_tv_start_over'),
+				array('TWC TV® Caller ID on TV','label','', 'pgrid_tv_caller_id_on_tv'),
+				array('TWC TV® On Demand','label','', 'pgrid_tv_on_demand'),
+				
+				array('Internet','type'),
+				array('Plans','label','', 'pgrid_net_plans'),
+				array('Internet - Speeds','label','', 'pgrid_net_speeds'),
+				array('Home WiFi','label','', 'pgrid_net_home_wifi'),
+				array('WiFi Hotspots','label','', 'pgrid_net_wifi_hotspots'),
+				array('Internet Security & Parental Controls','label','', 'pgrid_net_security_parental_controls'),
+				
+				array('Phone','type'),
+				array('Plans','label','', 'pgrid_phone_plans'),
+				array('Included Calls','label','', 'pgrid_phone_includedcalls'),
+				array('Voicemail','label','', 'pgrid_phone_voicemail'),
+				array('13 Calling Features','label','', 'pgrid_phone_13_calling_features'),
+				array('International Calling Plans (for an additional charge)','label','', 'pgrid_phone_international_call'),
+			);
+		
+			foreach($_packageFeatures as $_features){
+			
+				//check if all are same()
+				$_metVal = array();
+				foreach($_planID as $_ID){
+
+					$metVal = $_comparePlans[$_ID]['rb-'.$_features[3]][0];
+
+					if(empty($metVal)){
+						$_metVal[] = "-";
+					} elseif($metVal == "on"){
+						$_metVal[] = '<span class="check"></span>';
+					} else {
+						$_metVal[] = $_comparePlans[$_ID]['rb-'.$_features[3]][0];
+					}
+				}
+				
+				$_totalPackages = count($_planID);
+				
+				$_title = $_features[0];
+				$_class = empty($_features[1]) ? 'label' : $_features[1];
+				$_cols = empty($_features[2]) ? 'td' : $_features[2];
+				
+				if(compare_packages_emptyval($_metVal) == false){
+				
+					if(!empty($_title)){
+						$output .= compare_packages_titleFeatures($_title,$_totalPackages,$_class,$_cols );
+					}
+				
+					if(compare_packages_sameval($_metVal) == true){
+						$output .= compare_packages_rowspan( $_metVal[1],$_totalPackages);
+					} else {
+						$output .= compare_packages_rowspan( $_metVal,$_totalPackages);
+					}
+				}else{
+					//means title as content but check if the meta val is set
+					
+					if(!isset($_features[3]))
+						$output .= compare_packages_titleFeatures($_title,$_totalPackages,$_class,$_cols );
+				}
+			
+			}
+			
+		$output .='</tbody></table>';
+		
+	}
+	else {
+	 	return "No Package Found";
+	}
+			
+	if($_echo) echo $output;	
+	return $output;	
+	wp_reset_postdata();
 }
+
+
+function compare_packages_sameval( $_metaval = array()){
+	if (count(array_unique($_metaval)) === 1 && end($_metaval) === 'true'){
+		return true;
+	}
+	return false;
+}
+
+function compare_packages_emptyval($_metaval = array()){
+	$str_empty = substr('-----------',1,count($_metaval));
+	if (strlen(implode($_metaval)) == 0){
+		return true;
+	}elseif(implode($_metaval) == $str_empty){
+		return true;
+	}
+	return false;
+}
+
+function compare_packages_titleFeatures( $_title , $count = 1, $class='label',$cols = 'td'){
+	return '<tr class="'.sanitize_title($_title).' '. $class .'"><'.$cols.' colspan="'.$count.'">'.$_title.'</'.$cols.'></tr>';
+}
+function compare_packages_rowspan( $_title = array(),$count = 0, $class=''){
+	
+	$_ret = '<tr class="'. $class .'">';
+	if(count($_title) == $count){
+		foreach($_title as $_text){
+			$_ret .= '<td>'.$_text.'</td>';
+		}
+	}elseif(count($_title) == 1){
+		//theres need to colspan = span all total
+		$_ret .= '<td colspan="'.$count .'">'.$_text.'</td>';
+	}else{
+		//theres need to colspan.
+		// i dont know.. hahaha
+	}
+	$_ret .= '</tr>';
+	return $_ret;
+}
+

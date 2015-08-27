@@ -32,17 +32,17 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 	    'fields' => array(
 	        array(
 	            'name' => 'Pay Per View',
-	            'id' => $meta_prefix . 'pay-per-view',
+	            'id' => $prefix . 'pay-per-view',
 	            'type' => 'checkbox'
 	        ),
 	        array(
 	            'name' => 'Banner Text',
-	            'id' => $meta_prefix . 'banner-text',
+	            'id' => $prefix . 'banner-text',
 	            'type' => 'textarea'
 	        ),
 	        array(
 	            'name' => 'Promo Video Url',
-	            'id' => $meta_prefix . 'promo_vid',
+	            'id' => $prefix . 'promo_vid',
 	            'type' => 'text'
 	        )
 	    )
@@ -85,6 +85,132 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'type'    => 'wysiwyg',
 				'options' => array( 'textarea_rows' => 5, ),
 			),
+			array( // TV
+				'name' => __( 'TV', 'cmb' ),
+				'id'   => $prefix . 'tv_title',
+				'type' => 'title',
+			),
+			array(
+				'name'    => __( 'Plans', 'cmb' ),
+				'id'      => $prefix . 'pgrid_tv_plans',
+				'type'    => 'radio_inline',
+				'options' => array(
+					'Starter TV' 	=> __( 'Starter TV', 'cmb' ),
+					'Standard TV' 	=> __( 'Standard TV', 'cmb' ),
+					'Prefered TV'	=> __( 'Prefered TV', 'cmb' ),
+					'none'	=> __( 'None', 'cmb' ),
+				),
+			),
+			array(
+				'name' => 'Channels',
+				'id'   => $prefix . 'pgrid_tv_channels',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Channel Packages',
+				'id'   => $prefix . 'pgrid_tv_channel_packages',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'DVR Service',
+				'id'   => $prefix . 'pgrid_tv_dvr_service',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Equipment',
+				'id'   => $prefix . 'pgrid_tv_equipment',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'TWC TV® App Access',
+				'id'   => $prefix . 'pgrid_tv_twc_tv_app_access',
+				'type' => 'checkbox',
+			),
+			array(
+				'name' => 'Start Over',
+				'id'   => $prefix . 'pgrid_tv_start_over',
+				'type' => 'checkbox',
+			),
+			array(
+				'name' => 'Caller ID on TV',
+				'id'   => $prefix . 'pgrid_tv_caller_id_on_tv',
+				'type' => 'checkbox',
+			),
+			array(
+				'name' => 'On Demand',
+				'id'   => $prefix . 'pgrid_tv_on_demand',
+				'type' => 'text',
+			),
+			array( // Internet
+				'name' => __( 'Internet', 'cmb' ),
+				'id'   => $prefix . 'pgrid_net_title',
+				'type' => 'title',
+			),
+			array(
+				'name'    => __( 'Plans', 'cmb' ),
+				'id'      => $prefix . 'pgrid_net_plans',
+				'type'    => 'radio_inline',
+				'options' => array(
+					'standard' 	=> __( 'Standard', 'cmb' ),
+					'turbo'   	=> __( 'Turbo', 'cmb' ),
+					'extreme' 	=> __( 'Extreme', 'cmb' ),
+					'none' 	=> __( 'None', 'cmb' ),
+				),
+			),
+			array(
+				'name' => 'Internet Speeds',
+				'id'   => $prefix . 'pgrid_net_speeds',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Home WiFi',
+				'id'   => $prefix . 'pgrid_net_home_wifi',
+				'type' => 'checkbox',
+			),
+			array(
+				'name' => 'WiFi Hotspots',
+				'id'   => $prefix . 'pgrid_net_wifi_hotspots',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Internet Security & Parental Controls',
+				'id'   => $prefix . 'pgrid_net_security_parental_controls',
+				'type' => 'checkbox',
+			),
+			array( // Phone
+				'name' => __( 'Phone', 'cmb' ),
+				'id'   => $prefix . 'pgrid_phone_title',
+				'type' => 'title',
+			),
+			array(
+				'name'    => __( 'Plans', 'cmb' ),
+				'id'      => $prefix . 'pgrid_phone_plans',
+				'type'    => 'radio_inline',
+				'options' => array(
+					'Home Phone National' 	=> __( 'Home Phone National', 'cmb' ),					
+				),
+			),
+			array(
+				'name' => 'Included Calls',
+				'id'   => $prefix . 'pgrid_phone_includedcalls',
+				'type' => 'text',
+			),
+
+			array(
+				'name' => 'Voicemail',
+				'id'   => $prefix . 'pgrid_phone_voicemail',
+				'type' => 'checkbox',
+			),
+			array(
+				'name' => '13 Calling Features',
+				'id'   => $prefix . 'pgrid_phone_13_calling_features',
+				'type' => 'checkbox',
+			),
+			array(
+				'name' => 'International Calling Plans (for an additional charge)',
+				'id'   => $prefix . 'pgrid_phone_international_call',
+				'type' => 'text',
+			),			
 		)
 	);
 
