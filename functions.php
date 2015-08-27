@@ -604,7 +604,7 @@ function special_offers($catid, $limit){
 function whats_hot_tabs() {
 	$args = array (
     'type' => 'post',
-    'parent' => 125,
+    'parent' => 80,
     'orderby' => 'slug',
     'taxonomy' => 'category',
     'hide_empty' => 1 //shows empty categories
@@ -641,7 +641,7 @@ function whats_hot_tabs() {
 function whats_hot_tabs_content() {
 	$args = array (
     'type' => 'post',
-    'parent' => 125,
+    'parent' => 80,
     'order' => 'asc',
     'orderby' => 'slug',
     'taxonomy' => 'category',
