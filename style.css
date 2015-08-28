@@ -2496,13 +2496,30 @@ img.mfp-img {
 #pricing-grid .pricing .inner .details .offer { min-height: 55px; background: url(images/bg-offer.png); background-repeat: repeat-y; background-position: center center; font-family: 'twc_roundbook'; background-size: contain; }
 #pricing-grid .pricing .inner .details .offer p { font-size: 20px; line-height: normal; margin-bottom: 0; }
 #pricing-grid .pricing .inner .details .offer small { font-size: xx-small; }
-#pricing-grid .pricing .inner .details .offer > div { float: left; width: 50%; text-align: center; padding-top: 10px; }
+#pricing-grid .pricing .inner .details .offer > div { float: left; width: 50%; text-align: center; }
 #pricing-grid .pricing .inner .details .offer > div h2 { font-weight: normal; color: #333; margin-top: 0; margin-bottom: 0; }
-#pricing-grid .pricing .inner .details .offer .price-before { position: relative; }
+
+#compare-packages .special-offers-data .price-label { padding-top: 10px; }
+#compare-packages .special-offers-data td { font-weight: bold; }
+#compare-packages .special-offers-data td small { font-size: x-small; display: block; font-weight: normal; }
+#compare-packages .special-offers-data td > div,
+#pricing-grid .pricing .inner .details .offer > div { float: left; width: 50%; text-align: center; }
+#compare-packages .special-offers-data td > div h2,
+#pricing-grid .pricing .inner .details .offer > div h2 { font-weight: normal; color: #333; margin-top: 0; margin-bottom: 0; font-weight: normal; }
+#compare-packages .price-before,
+#pricing-grid .pricing .inner .details .offer .price-before { position: relative; font-family: 'twc_roundbook'; }
+#pricing-grid .pricing .inner .details .offer .price-label,
+#compare-packages .price_before .price-label { padding-top: 10px; }
+#compare-packages .price-before p,
+#pricing-grid .pricing .inner .details .offer .price-before p { line-height: normal; font-size: 16px; font-weight: bold; }
 #pricing-grid .pricing .inner .details .offer .price-before .dollar-sign,
-#pricing-grid .pricing .inner .details .offer .price-before .cents { font-size: 16px; position: relative; top: -13px; }
+#pricing-grid .pricing .inner .details .offer .price-before .cents,
+#compare-packages .price-before .dollar-sign,
+#compare-packages .price-before .cents { font-size: 16px; position: relative; top: -13px; font-weight: bold; }
+#compare-packages .price-before .dollars,
 #pricing-grid .pricing .inner .details .offer .price-before .dollars { font-size: 36px; }
-#pricing-grid .pricing .inner .details .offer .price-before .strike { width: 75px; height: 3px; background: red; position: absolute; left: 50%; top: 55%; margin-left: -37px; -ms-transform: rotate(175deg); /* IE 9 */  -webkit-transform: rotate(175deg); /* Safari */ transform: rotate(175deg); }
+#compare-packages .price-before .strike,
+#pricing-grid .pricing .inner .details .offer .price-before .strike { width: 75px; height: 3px; background: red; position: absolute; left: 50%; top: 65%; margin-left: -37px; -ms-transform: rotate(175deg); /* IE 9 */  -webkit-transform: rotate(175deg); /* Safari */ transform: rotate(175deg); }
 
 #pricing-grid .pricing .inner .footer { background: #fff; padding: 13px 20px; overflow: hidden; position: relative; }
 #pricing-grid .pricing .inner .footer a { padding: 8px 13px; border-radius: 3px; font-weight: bold; font-size: small; }
@@ -2515,10 +2532,22 @@ img.mfp-img {
 
 
 /* Compare Packages */
-#compare-packages { text-align: center; }
+#compare-packages { text-align: center; font-size: 15px; color: #333; }
+#compare-packages.col-2 tr td { width: 50%; }
+#compare-packages.col-3 tr td { width: 33.33333333333333%; }
 #compare-packages h3 { font-size: large; padding: 10px 0; color: #fff; margin: 0; }
-#compare-packages th,
-#compare-packages td { text-align: center; }
+#compare-packages th { background-color: #fff; text-align: center; text-transform: none; }
+#compare-packages tr.remarks td { font-size: x-small; padding: 0 0 10px 0; }
+#compare-packages tr.type td { background-color: #fff; }
+#compare-packages tr.special-offers-data td { padding: 15px 10px; }
+#compare-packages td { text-align: center; border: none; line-height: normal; padding: 10px; vertical-align: middle; }
+#compare-packages td:nth-of-type(odd) { background-color: #f8f8f8; }
+#compare-packages td:nth-of-type(even) { background-color: #eee; }
+#compare-packages td .check { background-image: url(images/checkmark-green.png); background-repeat: no-repeat; width: 20px; height: 17px; display: inline-block; }
+#compare-packages td a { font-weight: bold; }
+#compare-packages td p { margin-bottom: 0; }
+#compare-packages td.special-offer p { font-family: 'twc_roundbook'; font-size: 20px; }
+#compare-packages td.special-offer small { font-size: x-small; }
 #compare-packages .single h3 { background: #0352a1; }
 #compare-packages .double h3 { background: #747679; }
 #compare-packages .triple h3 { background: #5b1f69; }
@@ -2532,11 +2561,13 @@ img.mfp-img {
 #compare-packages .package .price .term span { color: #3376b2; border-bottom: 1px dotted #3376b2; cursor: pointer; }
 #compare-packages .package .price .term span:hover { color: #1b405d; border-bottom: 1px dotted #1b405d; }
 #compare-packages .package .new-plan a,
-#compare-packages .package .order-now a { display: inline-block; padding: 3px 15px; font-weight: bold; font-size: 15px; border-radius: 3px; margin-bottom: 10px; }
+#compare-packages .package .order-now a { display: inline-block; padding: 10px 15px; font-weight: bold; font-size: 15px; border-radius: 3px; margin-bottom: 10px; }
+#compare-packages .package .order-now { margin-bottom: 10px; }
 #compare-packages .package .new-plan a { border: 1px solid #00559f; }
 #compare-packages .package .order-now a { background: #00559f; color: #fff; }
 #compare-packages .special-offers th { font-size: 16px; color: #fff; font-weight: bold; background-color: #13446d; }
 #compare-packages .label td { font-size: 14px; color: #fff; font-weight: bold; background-color: #4f6f88; }
+#compare-packages .type td { font-size: 24px; color: #111; text-transform: uppercase; }
 
 /* Accordion Menu */
 #secondary aside[id^="dc_jqaccordion"],

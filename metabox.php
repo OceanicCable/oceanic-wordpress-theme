@@ -98,7 +98,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 					'Starter TV' 	=> __( 'Starter TV', 'cmb' ),
 					'Standard TV' 	=> __( 'Standard TV', 'cmb' ),
 					'Prefered TV'	=> __( 'Prefered TV', 'cmb' ),
-					'none'	=> __( 'None', 'cmb' ),
+					'None'	=> __( 'None', 'cmb' ),
 				),
 			),
 			array(
@@ -151,10 +151,10 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'id'      => $prefix . 'pgrid_net_plans',
 				'type'    => 'radio_inline',
 				'options' => array(
-					'standard' 	=> __( 'Standard', 'cmb' ),
-					'turbo'   	=> __( 'Turbo', 'cmb' ),
-					'extreme' 	=> __( 'Extreme', 'cmb' ),
-					'none' 	=> __( 'None', 'cmb' ),
+					'Standard' 	=> __( 'Standard', 'cmb' ),
+					'Turbo'   	=> __( 'Turbo', 'cmb' ),
+					'Extreme' 	=> __( 'Extreme', 'cmb' ),
+					'None' 	=> __( 'None', 'cmb' ),
 				),
 			),
 			array(
@@ -188,6 +188,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'type'    => 'radio_inline',
 				'options' => array(
 					'Home Phone National' 	=> __( 'Home Phone National', 'cmb' ),					
+					'None' 	=> __( 'None', 'cmb' ),
 				),
 			),
 			array(

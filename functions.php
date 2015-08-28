@@ -1134,6 +1134,7 @@ function pricing_grid($atts){
 	    $output .= '			<div class="offer">';
 	    							if($price_before) {
 		$output .= '					<div class="price-before">';
+		$output .= '						<p>was</p>';
 		$output .= '           				<sup class="dollar-sign">$</sup><span class="dollars">'.$_price_before[0].'</span><sup class="cents">'.$_price_before[1].'</sup><span class="strike"></span>';
 		$output .= '					</div>';
 		$output .= '					<div class="price-label"><h2>New Lower Price</h2></div>';
@@ -1200,7 +1201,6 @@ function compare_packages($id_arr, $_echo = false){
 			//get all the custom meta value and pass to array with the key of POST ID
 			$_comparePlans[$_postID] = get_post_meta($_postID,'',true);
 			$_planID[] = $_postID;
-
 		}
 		
 		//loop base how many package to compare
@@ -1261,8 +1261,9 @@ function compare_packages($id_arr, $_echo = false){
 		
 			$_packageFeatures = array(
 				//array('title','tr_class', 'as_col', 'meta_val')
-				array('Special Offers','','th','pgrid_esp_offer'),
-				array('','','', 'pgrid_remarks'),
+				//array('Special Offers','','th','pgrid_esp_offer'),
+				//array('','','', 'pgrid_price_before'),
+				// array('','','', 'pgrid_remarks'),
 				
 				array('TV','type'),
 				array('Plans','label','' ,'pgrid_tv_plans'),
@@ -1289,6 +1290,40 @@ function compare_packages($id_arr, $_echo = false){
 				array('International Calling Plans (for an additional charge)','label','', 'pgrid_phone_international_call'),
 			);
 		
+			$_packageNoneVal = array(
+				'pgrid_remarks', 'pgrid_price_before'
+			);
+			
+			
+			$output .= compare_packages_titleFeatures('Special Offers', count($_planID),'','th');
+			//checking for price before and remarks.
+		
+			//check if all are same()
+			$_dataDispl = array();
+			foreach($_planID as $_ID){
+				$remarks = $_comparePlans[$_ID]['rb-pgrid_remarks'][0];
+				$price_bef = $_comparePlans[$_ID]['rb-pgrid_price_before'][0];
+				$specialOff = $_comparePlans[$_ID]['rb-pgrid_esp_offer'][0];
+				if(empty($price_bef)){
+					$_dataDispl[] = $specialOff .'<small>'.$remarks.'<small>';
+				}else{
+					$_priceBef =  explode(".",$price_bef);
+					$_dataDispl[] = '
+						<div class="price-before">
+							<p class="was">was</p>
+							<sup class="dollar-sign">$</sup>
+							<span class="dollars">'.$_priceBef[0].'</span>
+							<sup class="cents">'.$_priceBef[1].'</sup>
+							<span class="strike"></span>
+						</div>
+						<div class="price-label">
+							<h2>Lowest Price Online</h2>
+						</div><small>'.$remarks.'</small>';
+				}
+			}
+			$output .= compare_packages_rowspan( $_dataDispl,count($_planID),'special-offers-data');
+			
+			
 			foreach($_packageFeatures as $_features){
 			
 				//check if all are same()
@@ -1297,8 +1332,12 @@ function compare_packages($id_arr, $_echo = false){
 
 					$metVal = $_comparePlans[$_ID]['rb-'.$_features[3]][0];
 
-					if(empty($metVal)){
-						$_metVal[] = "-";
+					if(empty($metVal) || $metVal == "None"){
+						/* if(in_array( $_features[3],$_packageNoneVal)){
+							$_metVal[] = '';//remove - "dash" by array list
+						}else { */
+							$_metVal[] = "-";
+						//}
 					} elseif($metVal == "on"){
 						$_metVal[] = '<span class="check"></span>';
 					} else {
@@ -1311,19 +1350,19 @@ function compare_packages($id_arr, $_echo = false){
 				$_title = $_features[0];
 				$_class = empty($_features[1]) ? 'label' : $_features[1];
 				$_cols = empty($_features[2]) ? 'td' : $_features[2];
+
+				$rowspan_class = substr($_features[3],6);
 				
 				if(compare_packages_emptyval($_metVal) == false){
-				
 					if(!empty($_title)){
 						$output .= compare_packages_titleFeatures($_title,$_totalPackages,$_class,$_cols );
 					}
-				
 					if(compare_packages_sameval($_metVal) == true){
-						$output .= compare_packages_rowspan( $_metVal[1],$_totalPackages);
+						$output .= compare_packages_rowspan( $_metVal[1],$_totalPackages,$rowspan_class);
 					} else {
-						$output .= compare_packages_rowspan( $_metVal,$_totalPackages);
+						$output .= compare_packages_rowspan( $_metVal,$_totalPackages,$rowspan_class);
 					}
-				}else{
+				} else {
 					//means title as content but check if the meta val is set
 					
 					if(!isset($_features[3]))
@@ -1336,12 +1375,13 @@ function compare_packages($id_arr, $_echo = false){
 		
 	}
 	else {
-	 	return "No Package Found";
+	 	$output .= "No Package Found";
 	}
 			
-	if($_echo) echo $output;	
-	return $output;	
+	if($_echo) echo $output;
 	wp_reset_postdata();
+	
+	return $output;	
 }
 
 
@@ -1365,6 +1405,7 @@ function compare_packages_emptyval($_metaval = array()){
 function compare_packages_titleFeatures( $_title , $count = 1, $class='label',$cols = 'td'){
 	return '<tr class="'.sanitize_title($_title).' '. $class .'"><'.$cols.' colspan="'.$count.'">'.$_title.'</'.$cols.'></tr>';
 }
+
 function compare_packages_rowspan( $_title = array(),$count = 0, $class=''){
 	
 	$_ret = '<tr class="'. $class .'">';
