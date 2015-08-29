@@ -646,6 +646,18 @@
 		  return false;
 		});
 
+		jQuery( "#pricing-grid .pricing .inner header .compare-check" ).click(function() {
+			
+			if(jQuery(this).is(':checked')) {
+				jQuery(this).siblings(".compare-label").hide();
+		  		jQuery(this).siblings(".compare-button").show();
+			} else {
+				jQuery(this).siblings(".compare-label").show();
+		  		jQuery(this).siblings(".compare-button").hide();
+			}
+		  	
+		});
+
 		var nav = jQuery('#sort-filter'),
 		animateTime = 500,
 		navLink = jQuery('#sort-filter .toggle');

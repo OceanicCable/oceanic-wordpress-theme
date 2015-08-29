@@ -1112,8 +1112,9 @@ function pricing_grid($atts){
 	    $output .= '	<div class="inner">';
 	    $output .= '		<header class="'.$header_class.'">';
 	    $output .= '			<fieldset>';
-	    $output .= '				<input type="checkbox" />';
-	    $output .= '				<a href="">Compare</a>';
+	    $output .= '				<input type="checkbox" id="compare-'.$post_id.'" pack_id="'.$post_id.'" class="compare-check"/>';
+	    $output .= '				<label for="compare-'.$post_id.'" class="compare-label">Compare</label>';
+	    $output .= '				<a href="/compare-packages/" class="compare-button">Compare</a>';
 	    $output .= '			</fieldset>';
 	    $output .= '			<div class="type">';
 		$output .=					$tags;
@@ -1160,6 +1161,28 @@ function pricing_grid($atts){
 	    $output .= '</div>';
 	  }
 	  $output .= '</div>';
+	  
+	  $output .= '
+	  <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			jQuery(".compare-button").on("click", function(){
+				var compareIDs = [];
+			    $(" input.compare-check:checked").each(function(){
+                    compareIDs.push($(this).attr("pack_id"));
+				});
+				
+				console.log(compareIDs);
+				var comIDLink = compareIDs.join(",");
+				//var comIDLink = "";
+				window.location.href="/compare-packages/?id="+comIDLink;
+				return false;
+			});
+		});
+				
+	        
+	  </script>
+	  ';
+	  
 	  return $output;
 	} else {
 	  return '<h3>No Packages Found<h3>';

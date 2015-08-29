@@ -2475,7 +2475,8 @@ img.mfp-img {
 #pricing-grid .pricing { display: inline-block; vertical-align: top; width: 33.33333333333333%; padding: 7px; box-sizing: border-box; }
 #pricing-grid .pricing .inner { background: #747679; border: 2px solid #acacac; }
 #pricing-grid .pricing .inner header { padding: 10px; overflow: hidden; }
-#pricing-grid .pricing .inner header a { color: #fff; position: relative; top: -1px; }
+#pricing-grid .pricing .inner header label { color: #fff; }
+#pricing-grid .pricing .inner header .compare-button { padding: 7px 10px; background-color: #ededed; font-size: small; font-weight: bold; border-radius: 3px; display: none; }
 #pricing-grid .pricing .inner header fieldset { float: left; }
 #pricing-grid .pricing .inner header.single { background: #0352a1; }
 #pricing-grid .pricing .inner header.double { background: #747679; }
