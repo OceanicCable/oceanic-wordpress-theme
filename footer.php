@@ -581,6 +581,9 @@
 		<a href="http://www.xbox.com/en-US/live/partners/epix" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.xbox.com/en-US/live/partners/epix', '']);" title="Watch EPIX on your XBox 360" target="_blank"><img src="/wp-content/uploads/2014/01/xbox360-btn.png" alt=""></a>
 	</div>
 
+	<!-- Tooltips -->
+	<div class="ttip-epix twc-tooltip">EPIX</div>
+
 <?php } ?>
 
 <?php wp_footer(); ?>
@@ -592,9 +595,10 @@
 <?php } ?>
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.backgroundSize.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-scrolltofixed-min.js"></script>
 
 <script type="text/javascript">
-	jQuery(document).ready(function(){
+	jQuery(document).ready(function($) {
 
 		// Set Background Size
 		jQuery('#header-container').css({backgroundSize:"cover"});
@@ -604,6 +608,9 @@
 
 		// Add breakpoint attribute to main menu
 		jQuery("#menu-main").attr('data-breakpoint','768');
+
+		// Sticky Compare Header
+		jQuery('#compare-packages thead tr').scrollToFixed();
 
 
 		<?php if(is_front_page()) : ?>
@@ -641,12 +648,14 @@
 			directionNav: false,
 		});
 		
+		// Package View Details Toggle
 		jQuery( "#pricing-grid .pricing .inner .footer .view-details" ).click(function() {
 		  jQuery(this).siblings(".includes").slideToggle(400);
 		  return false;
 		});
 
-		jQuery( "#pricing-grid .pricing .inner header .compare-check" ).click(function() {
+		// Compare Button
+		jQuery( "#pricing-grid .pricing .inner header .compare-check" ).live("click",function() {
 			
 			if(jQuery(this).is(':checked')) {
 				jQuery(this).siblings(".compare-label").hide();
@@ -657,17 +666,194 @@
 			}
 		  	
 		});
+		
+		function getSorted(selector, attrName, asc) {
+		    return $($(selector).toArray().sort(function(a, b){
+		        var aVal = parseInt(a.getAttribute(attrName)),
+		            bVal = parseInt(b.getAttribute(attrName));
+		            
+		        if(asc == false){
+		            return bVal - aVal;
+		        }else{
+		            return aVal - bVal;
+				}
+		    }));
+		}
+			
+		jQuery("#sort-items").on("change", function(){
+			var optionSelected = $("option:selected", this);
+                var valueSelected = this.value;
+                
+                if(valueSelected == "desc"){
+                    var sortedData = getSorted(".pricing","price", false);
+                }else if(valueSelected == "recommended"){
+                    var sortedData = getSorted(".pricing","arrange", true);
+                }else{
+                    var sortedData = getSorted(".pricing","price", true);
+                }
+                
+                $("#pricing-grid").empty();
+                $("#pricing-grid").append(sortedData);
+                //console.log(sortedData);
+		});
+		
+		
+		jQuery(".type-filter").on("click", function(){
+		
+			$(".no-package").hide();
+			var is_checked = $(this).is(":checked");
+			
+			var totalType = $("input.type-filter:checked").length;
+			
+			if($(this).attr("name") == "all-filter"){
+				$("input.type-filter:not([name=all-filter])").prop("checked", false);
+				$("input.type-filter[name=all-filter]").prop("checked", true);
+			}else if($(this).attr("name") != "all-filter"){
+				$("input.type-filter[name=all-filter]").prop("checked", false);
+			}
+			
+			//debug the checkbox
+			var all_check = $("input.type-filter[name=all-filter]").is(":checked");
+			if(all_check == true){
+				$("input.type-filter:not([name=all-filter])").prop("checked", false);
+				$("input.type-filter[name=all-filter]").prop("checked", true);
+			}else{
+				$("input.type-filter[name=all-filter]").prop("checked", false);
+			}
+			
+			totalType = $("input.type-filter:checked").length;
+			if(totalType == 0){
+				$("input.type-filter[name=all-filter]").prop("checked", true);
+			}
+			var all_check = $("input.type-filter[name=all-filter]").is(":checked");
+			
+			var all_type_by = ["TV","Internet","Phone"];
+			var type_by = [];
+			
+			$("input.type-filter:checked").each(function(){
+                    type_by.push($(this).val());
+                    all_type_by.splice( $.inArray($(this).val(),all_type_by) ,1 );
+			});
+		
+		
+			var all_select_type = type_by.join(".");
+			$(".pricing").hide();
+			//$(".pricing."+all_select_type).show();
+			
+			//if all package selected, clear the array packages
+			if(all_check == true){
+				var all_type_by = [];
+				//console.log("all daw");
+			}
+			
+			if(all_type_by.length >= 1){
+				var all_type_by_join = all_type_by.join(",.");
+				//console.log(all_type_by_join);
+				$(".pricing."+all_select_type+":not(."+all_type_by_join+")").show();
+			}else{
+				$(".pricing."+all_select_type).show();
+			}
+			
+			//
+			if($(".pricing:visible").length == 0){
+				$(".no-package").show();
+			}
+			
+			
+			$("input.compare-check:checked").prop("checked", false); // will uncheck the checkbox with id check1
+			$(".pricing a.compare-button").css({"display": "none"});
+			$(".pricing label.compare-label").css({"display": "inline"});
+		});
+		
+		
+			
+		//sometimes checked will cache - fix it
+		$("input.compare-check:checked").each(function () {
+			var packID = $(this).val();
+			$(".pricing[pack_id="+packID+"]").addClass("selected");
+			
+			$(".pricing[pack_id="+packID+"] a.compare-button").css({"display": "inline"});
+			$(".pricing[pack_id="+packID+"] label.compare-label").css({"display": "none"});
+		});
+		
+		$("input.type-filter").prop("checked", false);
+		$("input.type-filter[name=all-filter]").prop("checked", true);
+	
+		jQuery(".compare-button").live("click", function(){
+			var compareIDs = [];
+		    $(" input.compare-check:checked").each(function(){
+                    compareIDs.push($(this).attr("pack_id"));
+			});
+			
+			//console.log(compareIDs);
+			var comIDLink = compareIDs.join(",");
+			//var comIDLink = "";
+			window.location.href="/compare-packages/?id="+comIDLink;
+			return false;
+		});
+		
+		
+		$("input.compare-check").live("click",function(){
+            var totalCheck = $("input.compare-check:checked").length;
+                
+            // parent enable disable
+            console.log("checked");
+                
+            var is_checked = $(this).is(":checked");
+            var packID = $(this).val();
+                
+            if(is_checked == true){
+                $(".pricing[pack_id="+packID+"]").addClass("selected");
+            }else{
+                $(".pricing[pack_id="+packID+"]").removeClass("selected");
+            }
+                
+            if(totalCheck == 3){
+                $(".pricing:not(.selected)").addClass("unable-this");
+            }else if(totalCheck > 3){
+                $(this).prop("checked", false); // will uncheck the checkbox with id check1
+                $(".pricing[pack_id="+packID+"]").removeClass("selected");
+                $(".pricing:not(.selected)").addClass("unable-this");
+                return false;
+            }else{
+                $(".pricing:not(.selected)").removeClass("unable-this");
+            }
+		});
+		
 
+		// Sort Filter Toggle
 		var nav = jQuery('#sort-filter'),
 		animateTime = 500,
 		navLink = jQuery('#sort-filter .toggle');
 		navLink.click(function(){
+			jQuery(this).toggleClass('close');
+			jQuery(this).toggleClass('open');
 			if(nav.height() === 24){
 				autoHeightAnimate(nav, animateTime);
 			} else {
 				nav.stop().animate({ height: '24px' }, animateTime);
-			}
+			}			
 		});
+
+		// Tooltip
+		jQuery('.tooltipme').hover(function(){
+			// Hover over code
+            var title = jQuery(this).attr('title');
+            jQuery(this).data('tipText', title).removeAttr('title');
+            jQuery('<div class="twc-tooltip"><div class="ttip-content"><span class="arrow"></span><p><strong></strong><span>'+title+'</span></p></div></div>')
+            .appendTo('body')
+            .fadeIn('slow');
+        }, function() {
+        	// Hover out code
+            jQuery(this).attr('title', jQuery(this).data('tipText'));
+            jQuery('.twc-tooltip').remove();
+        }).mousemove(function(e) {
+        	var mousex = e.pageX - 120; //Get X coordinates
+            var mousey = e.pageY + 20; //Get Y coordinates
+            jQuery('.twc-tooltip')
+            .css({ top: mousey, left: mousex })
+        });
+
 
 		function autoHeightAnimate(element, time){
 		var curHeight = element.height(), // Get Default Height

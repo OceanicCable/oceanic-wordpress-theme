@@ -2466,6 +2466,8 @@ img.mfp-img {
 #sort-filter { padding: 15px; background: #4578af; border-radius: 5px; margin-bottom: 10px; position: relative; overflow: hidden; }
 #sort-filter h2 { color: #fff; font-weight: normal; margin-top: 0; font-size: 24px; }
 #sort-filter .toggle { width: 16px; height: 16px; position: absolute; right: 15px; top: 20px; background: url(images/icon-plus.png) no-repeat; cursor: pointer; }
+#sort-filter .toggle.close { transform: rotate(-45deg); /*transform: rotate(180deg);*/ transition: .3s; }
+#sort-filter .toggle.open { transform: rotate(0deg); transition: .3s; }
 #sort-filter .filter { float: left; }
 #sort-filter .filter label { color: #fff; font-size: 24px; margin-right: 15px; font-family: 'twc_roundlight'; font-weight: lighter; }
 #sort-filter .filter label:last-child { margin-right: 0; }
@@ -2534,6 +2536,7 @@ img.mfp-img {
 
 /* Compare Packages */
 #compare-packages { text-align: center; font-size: 15px; color: #333; }
+#compare-packages thead tr.scroll-to-fixed-fixed { width: 100%; display: inline-table; }
 #compare-packages.col-2 tr td { width: 50%; }
 #compare-packages.col-3 tr td { width: 33.33333333333333%; }
 #compare-packages h3 { font-size: large; padding: 10px 0; color: #fff; margin: 0; }
@@ -2541,7 +2544,7 @@ img.mfp-img {
 #compare-packages tr.remarks td { font-size: x-small; padding: 0 0 10px 0; }
 #compare-packages tr.type td { background-color: #fff; }
 #compare-packages tr.special-offers-data td { padding: 15px 10px; }
-#compare-packages td { text-align: center; border: none; line-height: normal; padding: 10px; vertical-align: middle; }
+#compare-packages td { text-align: center; border: none; line-height: normal; padding: 10px; vertical-align: middle; vertical-align: top; }
 #compare-packages td:nth-of-type(odd) { background-color: #f8f8f8; }
 #compare-packages td:nth-of-type(even) { background-color: #eee; }
 #compare-packages td .check { background-image: url(images/checkmark-green.png); background-repeat: no-repeat; width: 20px; height: 17px; display: inline-block; }
@@ -2603,6 +2606,13 @@ img.mfp-img {
 }
 .widget-area .widget-share-module { margin-bottom: 15px; }
 
+/*Tooltip*/
+.twc-tooltip { display:none; position:absolute;	max-width: 240px; }
+.twc-tooltip .ttip-content { position: relative; color:#333; font-size:small; border: 1px solid #999; background: #fff; padding: 3px; }
+.twc-tooltip .ttip-content .arrow { position: absolute; left: 50%; margin-left: -11px; top: -13px; width: 22px; height: 16px; background: url(images/tooltip-arrow.png) no-repeat; }
+.twc-tooltip .ttip-content p { padding: 10px; background: #e0e7eb; line-height: normal; }
+.tooltipme { color: #3376b2; border-bottom: 1px dotted #3376b2; font-weight: bold; cursor: pointer; }
+
 @media only screen and (max-width: 1023px) {
 	.regular-packages .package-box h3 { font-size: 18px; }
 	.packages .package-box .package-links { padding-left: 0px; clear: both; }
@@ -2618,7 +2628,8 @@ img.mfp-img {
 	.packages .package-box { min-height: 410px; }
 	.packages .package-box .thumbnail { text-align: center; position: relative; width: auto; float: none; }	
 	#post-5682 .packages .package-box .thumbnail { float: none; width: auto; text-align: center; margin-left: 0px; }	
-	.packages .package-box .package-links { padding-bottom: 10px; }
+	.packages .package-box .package-links { padding-bottom: 10px; }	
+	#pricing-grid .pricing { width: 50%; }
 }
 @media only screen and (min-width: 768px) {
 	.special-packages .package:nth-child(odd) { clear: left; }
@@ -2628,4 +2639,16 @@ img.mfp-img {
 }
 @media only screen and (max-width: 767px) {
 	.packages .package-box { min-height: 50px; }
+	#pricing-grid .pricing { width: 100%; }
+	#sort-filter .filter { margin-bottom: 15px; overflow: hidden; }
+	#sort-filter .filter,
+	#sort-filter .sort { float: none; }
+	#sort-filter .filter label { margin-right: 0; width: 50%; float: left; }
+	#sort-filter .sort select { width: 100%; box-sizing: border-box; }
+}
+@media only screen and (max-width: 479px) {
+	#content { padding: 15px; }
+	#main-container .row { width: 100%; }
+	#pricing-grid .pricing .inner .footer { text-align: center; }
+	#pricing-grid .pricing .inner .footer a { float: none!important; display: inline-block; margin-bottom: 10px; }
 }

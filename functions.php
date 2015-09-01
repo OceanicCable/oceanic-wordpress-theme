@@ -1061,24 +1061,25 @@ function pricing_grid($atts){
 	  $output .= '<div id="sort-filter">';
 	  $output .= '	<h2>Select and Compare Services</h2>';
 	  $output .= '	<div class="filter">';
-	  $output .= '		<label><input id="tv-filter" type="checkbox" name="tv-filter" value="tv"> TV</label>';
-	  $output .= '		<label><input id="tv-filter" type="checkbox" name="internet-filter" value="tv"> Internet</label>';
-	  $output .= '		<label><input id="tv-filter" type="checkbox" name="phone-filter" value="tv"> Phone</label>';
-	  $output .= '		<label><input id="tv-filter" type="checkbox" name="all-filter" value="tv"> All Packages</label>';
+	  $output .= '		<label><input class="type-filter" type="checkbox" name="tv-filter" value="TV"> TV</label>';
+	  $output .= '		<label><input class="type-filter" type="checkbox" name="internet-filter" value="Internet"> Internet</label>';
+	  $output .= '		<label><input class="type-filter" type="checkbox" name="phone-filter" value="Phone"> Phone</label>';
+	  $output .= '		<label><input class="type-filter" type="checkbox" name="all-filter" value="all"> All Packages</label>';
 	  $output .= '	</div>';
 	  $output .= '	<div class="sort">';
-	  $output .= '		<select name="sort-items">';
+	  $output .= '		<select name="sort-items" id="sort-items">';
 	  $output .= '			<option value="recommended" selected="">Recommended</option>';
-	  $output .= '			<option value="lowToHigh">Price Low To High</option>';
-	  $output .= '			<option value="highToLow">Price High To Low</option>';
+	  $output .= '			<option value="asc">Price Low To High</option>';
+	  $output .= '			<option value="desc">Price High To Low</option>';
 	  $output .= '		</select>';
 	  $output .= '	</div>';
-	  $output .= '	<span class="toggle"></span>';
+	  $output .= '	<span class="toggle open"></span>';
 	  $output .= '</div>';
 	  $output .= '<div id="pricing-grid">';
 	  while ( $the_query->have_posts() ) {
 	    $the_query->the_post();
 
+		$tags_type = array();
 	    $posttags = get_the_tags();
 		if ($posttags) {
 			$i = 0;
@@ -1088,6 +1089,8 @@ function pricing_grid($atts){
 		  		$i++;		  				  		
 				$tags .= $tag->name;
 				$tags .= ($i < count($posttags) ? ',':'');
+				
+				$tags_type[] = $tag->name;
 		  	}
 		}
 		if($i == 1){
@@ -1107,12 +1110,16 @@ function pricing_grid($atts){
 		$price_before = get_post_meta( get_the_ID(), 'rb-pgrid_price_before', true );
 		$_price_before = explode(".", $price_before);
 		$price = explode(".", $price);
+		//$tags_tmp = explode(",", $tags);
+		$tags_x = implode(" ", $tags_type);
 
-	    $output .= '<div class="pricing">';
+		$x++;
+	    $output .= '<div class="pricing all '.$tags_x.'" pack_id="'.$post_id.'" pack_type="'.$tags.'" price="'.$price[0].'" arrange="'.$x.'">';
+	    $output .= '	<div class="cloddiv"></div>';
 	    $output .= '	<div class="inner">';
 	    $output .= '		<header class="'.$header_class.'">';
 	    $output .= '			<fieldset>';
-	    $output .= '				<input type="checkbox" id="compare-'.$post_id.'" pack_id="'.$post_id.'" class="compare-check"/>';
+	    $output .= '				<input type="checkbox" pack_id="'.$post_id.'" value="'.$post_id.'" id="compare-'.$post_id.'" class="compare-check"/>';
 	    $output .= '				<label for="compare-'.$post_id.'" class="compare-label">Compare</label>';
 	    $output .= '				<a href="/compare-packages/" class="compare-button">Compare</a>';
 	    $output .= '			</fieldset>';
@@ -1129,7 +1136,7 @@ function pricing_grid($atts){
 	    $output .= '				<span class="h4">';
         $output .= '           			<sup class="dollar-sign">$</sup><span class="dollars">'.$price[0].'</span><sup class="cents">'.$price[1].'</sup>';
         $output .= '            	</span>';
-        $output .= '            	<span class="term">per month for<br>12 <span>months</span></span>';
+        $output .= '            	<span class="term">per month for<br>12 <span class="tooltipme" title="After 12 months, retail rates apply. No contract required.">months</span></span>';
 	    $output .= '			</div>';
 	    $output .= '			<hr />';
 	    $output .= '			<div class="offer">';
@@ -1161,26 +1168,25 @@ function pricing_grid($atts){
 	    $output .= '</div>';
 	  }
 	  $output .= '</div>';
+	  $output .= '<div class="no-package">
+					There are no offers available based on the services you selected.
+					<br/>Please try a different combination of services.</div>';
 	  
-	  $output .= '
-	  <script type="text/javascript">
-		jQuery(document).ready(function($) {
-			jQuery(".compare-button").on("click", function(){
-				var compareIDs = [];
-			    $(" input.compare-check:checked").each(function(){
-                    compareIDs.push($(this).attr("pack_id"));
-				});
-				
-				console.log(compareIDs);
-				var comIDLink = compareIDs.join(",");
-				//var comIDLink = "";
-				window.location.href="/compare-packages/?id="+comIDLink;
-				return false;
-			});
-		});
-				
-	        
-	  </script>
+	  $output .= ' 
+	  <style>
+	    .pricing{position: relative;}
+	    .no-package{font-size:24px; display:none;color:#4578af;text-align:center;}
+	    .cloddiv{display:none;position:absolute; top:0;left:0; width: 100%;height:100%;opacity: 0.8;background-color:#fff;z-index: 2;
+			}
+	    .unable-this .cloddiv{display:block;-webkit-transition: 1s linear all;
+			-moz-transition: 1s linear all;
+			-o-transition: 1s linear all;
+			transition: 1s linear all;}
+		.pricing .inner{z-index:1;}
+	    /* .unable-this .inner{background-image:none; background-color:#000;} */
+	    
+	  </style>
+	  
 	  ';
 	  
 	  return $output;

@@ -104,22 +104,22 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 			array(
 				'name' => 'Channels',
 				'id'   => $prefix . 'pgrid_tv_channels',
-				'type' => 'text',
+				'type' => 'textarea_small',
 			),
 			array(
 				'name' => 'Channel Packages',
 				'id'   => $prefix . 'pgrid_tv_channel_packages',
-				'type' => 'text',
+				'type' => 'textarea_small',
 			),
 			array(
 				'name' => 'DVR Service',
 				'id'   => $prefix . 'pgrid_tv_dvr_service',
-				'type' => 'text',
+				'type' => 'textarea_small',
 			),
 			array(
 				'name' => 'Equipment',
 				'id'   => $prefix . 'pgrid_tv_equipment',
-				'type' => 'text',
+				'type' => 'textarea_small',
 			),
 			array(
 				'name' => 'TWC TV® App Access',
@@ -170,7 +170,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 			array(
 				'name' => 'WiFi Hotspots',
 				'id'   => $prefix . 'pgrid_net_wifi_hotspots',
-				'type' => 'text',
+				'type' => 'textarea_small',
 			),
 			array(
 				'name' => 'Internet Security & Parental Controls',
@@ -194,7 +194,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 			array(
 				'name' => 'Included Calls',
 				'id'   => $prefix . 'pgrid_phone_includedcalls',
-				'type' => 'text',
+				'type' => 'textarea_small',
 			),
 
 			array(
@@ -210,7 +210,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 			array(
 				'name' => 'International Calling Plans (for an additional charge)',
 				'id'   => $prefix . 'pgrid_phone_international_call',
-				'type' => 'text',
+				'type' => 'textarea_small',
 			),			
 		)
 	);
