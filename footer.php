@@ -839,8 +839,16 @@
 		jQuery('.tooltipme').hover(function(){
 			// Hover over code
             var title = jQuery(this).attr('title');
+            var title_arr = title.split('~');
+            var theading = title_arr[0];            
+            var output = "";
+            if(title_arr[1] == null) {
+            	output = '<span>'+title_arr[0]+'</span>';
+            } else {
+            	output = '<strong>'+title_arr[0]+'</strong><span>'+title_arr[1]+'</span>';
+            }
             jQuery(this).data('tipText', title).removeAttr('title');
-            jQuery('<div class="twc-tooltip"><div class="ttip-content"><span class="arrow"></span><p><strong></strong><span>'+title+'</span></p></div></div>')
+            jQuery('<div class="twc-tooltip"><div class="ttip-content"><span class="arrow"></span><p>'+output+'</p></div></div>')
             .appendTo('body')
             .fadeIn('slow');
         }, function() {

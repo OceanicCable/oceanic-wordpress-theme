@@ -2611,6 +2611,7 @@ img.mfp-img {
 .twc-tooltip .ttip-content { position: relative; color:#333; font-size:small; border: 1px solid #999; background: #fff; padding: 3px; }
 .twc-tooltip .ttip-content .arrow { position: absolute; left: 50%; margin-left: -11px; top: -13px; width: 22px; height: 16px; background: url(images/tooltip-arrow.png) no-repeat; }
 .twc-tooltip .ttip-content p { padding: 10px; background: #e0e7eb; line-height: normal; }
+.twc-tooltip .ttip-content p strong { font-size: 15px; display: block; margin-bottom: 5px; }
 .tooltipme { color: #3376b2; border-bottom: 1px dotted #3376b2; font-weight: bold; cursor: pointer; }
 
 @media only screen and (max-width: 1023px) {
