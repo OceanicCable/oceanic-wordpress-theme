@@ -1697,7 +1697,10 @@ img#wpstats {
 #hot-deals .tabpage div div strong { margin-bottom: 5px; display: block; }
 #hot-deals .tabpage div div img { max-width: 100%; }
 #hot-deals .tabpage div div a.rm { font-family: 'twc_roundbook'; margin-top: 6px; height: 30px; background: url(images/btn-medium.jpg) repeat-x; border-radius: 3px; font-size: 12px; font-weight: bold; float: right; color: #eee; letter-spacing: 1px; line-height: 30px; padding: 0px 6px 0px 10px; }
-#hot-deals .tabpage div div a.rm .icon { content: ""; width: 12px; height: 12px; background: url(images/rm.png) no-repeat; display: inline-block; position: relative; top: 2px; }
+#hot-deals .tabpage div div a.rm .icon { width: 12px; height: 12px; }
+#hot-deals .tabpage div div a.rm .icon,
+#package-teaser .package a.package-button .icon { content: "";  background: url(images/rm.png) no-repeat; display: inline-block; position: relative; top: 2px; }
+#package-teaser .package a.package-button .icon { width: 9px; height: 9px; background-size: 100%; margin-left: 3px; margin-bottom: 1px; }
 #hot-deals .tabpage div div a.rm:hover { color: #fff; }
 #hot-deals .tabpage div div a.edit-post { color: #0056a9; font-size: 11px; position: absolute; left: 10px; bottom: 10px; }
 .tabscontent .tabpage h2 { margin-top: 15px; font-size: 25px !important; max-height: 30px; }
@@ -2465,6 +2468,7 @@ img.mfp-img {
 
 #sort-filter { padding: 15px; background: #4578af; border-radius: 5px; margin-bottom: 10px; position: relative; overflow: hidden; }
 #sort-filter h2 { color: #fff; font-weight: normal; margin-top: 0; font-size: 24px; }
+#sort-filter .scroll-to-fixed-fixed {  }
 #sort-filter .toggle { width: 16px; height: 16px; position: absolute; right: 15px; top: 20px; background: url(images/icon-plus.png) no-repeat; cursor: pointer; }
 #sort-filter .toggle.close { transform: rotate(-45deg); /*transform: rotate(180deg);*/ transition: .3s; }
 #sort-filter .toggle.open { transform: rotate(0deg); transition: .3s; }
@@ -2503,6 +2507,8 @@ img.mfp-img {
 #pricing-grid .pricing .inner .details .offer > div h2 { font-weight: normal; color: #333; margin-top: 0; margin-bottom: 0; }
 
 #compare-packages .special-offers-data .price-label { padding-top: 10px; }
+#compare-packages tbody tr.home-wifi-remarks.label { display: none; }
+#compare-packages tbody tr.net_home_wifi_remarks td { padding-top: 0 }
 #compare-packages .special-offers-data td { font-weight: bold; }
 #compare-packages .special-offers-data td small { font-size: x-small; display: block; font-weight: normal; }
 #compare-packages .special-offers-data td > div,
@@ -2529,9 +2535,11 @@ img.mfp-img {
 #pricing-grid .pricing .inner .footer .edit { position: absolute; right: 0; bottom: 0; padding: 5px 7px; font-size: x-small; font-weight: normal; background: #acacac; color: #000; border-radius: 0; }
 #pricing-grid .pricing .inner .footer .view-details { border: 1px solid #0252a1; color: #0252a1; float: left; }
 #pricing-grid .pricing .inner .footer .order-now { color: #fff; background-color: #0252a1; float: right; }
-#pricing-grid .pricing .inner .footer .includes { clear: both; overflow: hidden; display: none; }
+#pricing-grid .pricing .inner .footer .includes { clear: both; overflow: hidden; display: none; position: relative; }
+#pricing-grid .pricing .inner .footer .includes .close-parent { padding-right: 15px; background-image: url(images/icon-close-xsm.png); background-repeat: no-repeat; background-position: right center; position: absolute; top: 13px; right: 0; font-size: small; cursor: pointer; }
 #pricing-grid .pricing .inner .footer .includes h3 { margin-top: 15px; font-size: large; font-weight: normal; color: #333; }
 #pricing-grid .pricing .inner .footer .includes ul { font-size: small; margin-bottom: 0; }
+#pricing-grid .pricing .inner .footer .includes ul li a { padding: 0; }
 
 
 /* Compare Packages */
@@ -2613,6 +2621,30 @@ img.mfp-img {
 .twc-tooltip .ttip-content p { padding: 10px; background: #e0e7eb; line-height: normal; }
 .twc-tooltip .ttip-content p strong { font-size: 15px; display: block; margin-bottom: 5px; }
 .tooltipme { color: #3376b2; border-bottom: 1px dotted #3376b2; font-weight: bold; cursor: pointer; }
+
+/*Package Teaser*/
+#package-teaser { overflow: hidden; }
+#package-teaser .package { float: left; width: 25%; border-right: 3px solid #ccc; padding: 5px; font-family: 'twc_roundbook'; box-sizing: border-box; }
+#package-teaser .package:last-child { border-right: none; text-align: center; }
+#package-teaser .package h6 { color: #446B96; text-align: center; margin-bottom: 10px; }
+#package-teaser .package p { font-size: x-small; }
+#package-teaser .package a.package-button,
+#package-teaser .package:last-child a.package-button { color: #fff; background-color: #0252a1; padding: 8px 12px; font-weight: bold; border-radius: 3px; font-size: small; display: inline-block; padding-right: 10px; }
+#package-teaser .package:last-child a.package-button { margin-top: 15px; }
+#package-teaser .package .price,
+#package-teaser .package .action { float: left; width: 50%; padding: 5px; box-sizing: border-box; line-height: normal; }
+#package-teaser .package .price { border-right: 1px solid #ccc; padding-left: 0; padding-top: 0; color: #333; }
+#package-teaser .package .price sup { font-size: 15px; top: -11px; }
+#package-teaser .package .price .dollar-price sup { top: -11px; }
+#package-teaser .package .price .cents-term sup { top: 2px; margin-left: 1px; }
+#package-teaser .package .action { text-align: center; padding-right: 0; }
+
+#package-teaser .package .price .dollar-price,
+#package-teaser .package .price .cents-term { float: left; height: 30px; }
+#package-teaser .package .price .cents-term { width: 65px; }
+#package-teaser .package .price .dollars { font-size: 30px; font-weight: bold; }
+#package-teaser .package .price .term { font-size: x-small; float: left; margin-left: 2px; }
+
 
 @media only screen and (max-width: 1023px) {
 	.regular-packages .package-box h3 { font-size: 18px; }

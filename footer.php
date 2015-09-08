@@ -612,6 +612,9 @@
 		// Sticky Compare Header
 		jQuery('#compare-packages thead tr').scrollToFixed();
 
+		// Sticky Pricing Grid Sort Filter
+		jQuery('#sort-filter').scrollToFixed();
+
 
 		<?php if(is_front_page()) : ?>
 
@@ -650,7 +653,11 @@
 		
 		// Package View Details Toggle
 		jQuery( "#pricing-grid .pricing .inner .footer .view-details" ).click(function() {
-		  jQuery(this).siblings(".includes").slideToggle(400);
+		  jQuery(this).siblings(".includes").slideToggle(300);
+		  return false;
+		});
+		jQuery( ".close-parent" ).click(function() {
+		  jQuery(this).parent(".includes").slideToggle(300);
 		  return false;
 		});
 
@@ -841,7 +848,7 @@
             var title = jQuery(this).attr('title');
             var title_arr = title.split('~');
             var theading = title_arr[0];            
-            var output = "";
+            var output ="";
             if(title_arr[1] == null) {
             	output = '<span>'+title_arr[0]+'</span>';
             } else {

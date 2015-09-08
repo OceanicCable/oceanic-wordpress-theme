@@ -65,6 +65,11 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'type' => 'text_small',
 			),
 			array(
+				'name' => __( 'Lower Price Label', 'cmb' ),
+				'id'   => $prefix . 'pgrid_lower_price_label',
+				'type' => 'text',
+			),
+			array(
 				'name' => __( 'Price Before', 'cmb' ),
 				'id'   => $prefix . 'pgrid_price_before',
 				'type' => 'text_small',
@@ -154,6 +159,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 					'Standard' 	=> __( 'Standard', 'cmb' ),
 					'Turbo'   	=> __( 'Turbo', 'cmb' ),
 					'Extreme' 	=> __( 'Extreme', 'cmb' ),
+					'Ultimate' 	=> __( 'Ultimate', 'cmb' ),
 					'None' 	=> __( 'None', 'cmb' ),
 				),
 			),
@@ -166,6 +172,11 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'name' => 'Home WiFi',
 				'id'   => $prefix . 'pgrid_net_home_wifi',
 				'type' => 'checkbox',
+			),
+			array(
+				'name' => 'Home WiFi Remarks',
+				'id'   => $prefix . 'pgrid_net_home_wifi_remarks',
+				'type' => 'textarea_small',
 			),
 			array(
 				'name' => 'WiFi Hotspots',

@@ -1059,21 +1059,23 @@ function pricing_grid($atts){
 	// The Loop
 	if ( $the_query->have_posts() ) {
 	  $output .= '<div id="sort-filter">';
-	  $output .= '	<h2>Select and Compare Services</h2>';
-	  $output .= '	<div class="filter">';
-	  $output .= '		<label><input class="type-filter" type="checkbox" name="tv-filter" value="TV"> TV</label>';
-	  $output .= '		<label><input class="type-filter" type="checkbox" name="internet-filter" value="Internet"> Internet</label>';
-	  $output .= '		<label><input class="type-filter" type="checkbox" name="phone-filter" value="Phone"> Phone</label>';
-	  $output .= '		<label><input class="type-filter" type="checkbox" name="all-filter" value="all"> All Packages</label>';
+	  $output .= '	<div class="sort-filter-box">';
+	  $output .= '		<h2>Select and Compare Services</h2>';
+	  $output .= '		<div class="filter">';
+	  $output .= '			<label><input class="type-filter" type="checkbox" name="tv-filter" value="TV"> TV</label>';
+	  $output .= '			<label><input class="type-filter" type="checkbox" name="internet-filter" value="Internet"> Internet</label>';
+	  $output .= '			<label><input class="type-filter" type="checkbox" name="phone-filter" value="Phone"> Phone</label>';
+	  $output .= '			<label><input class="type-filter" type="checkbox" name="all-filter" value="all"> All Packages</label>';
+	  $output .= '		</div>';
+	  $output .= '		<div class="sort">';
+	  $output .= '			<select name="sort-items" id="sort-items">';
+	  $output .= '				<option value="recommended" selected="">Recommended</option>';
+	  $output .= '				<option value="asc">Price Low To High</option>';
+	  $output .= '				<option value="desc">Price High To Low</option>';
+	  $output .= '			</select>';
+	  $output .= '		</div>';
+	  $output .= '		<span class="toggle open"></span>';
 	  $output .= '	</div>';
-	  $output .= '	<div class="sort">';
-	  $output .= '		<select name="sort-items" id="sort-items">';
-	  $output .= '			<option value="recommended" selected="">Recommended</option>';
-	  $output .= '			<option value="asc">Price Low To High</option>';
-	  $output .= '			<option value="desc">Price High To Low</option>';
-	  $output .= '		</select>';
-	  $output .= '	</div>';
-	  $output .= '	<span class="toggle open"></span>';
 	  $output .= '</div>';
 	  $output .= '<div id="pricing-grid">';
 	  while ( $the_query->have_posts() ) {
@@ -1106,6 +1108,10 @@ function pricing_grid($atts){
 		$price ="";
 		$price_before ="";
 
+		$lower_price_label = get_post_meta( get_the_ID(), 'rb-pgrid_lower_price_label', true );
+		if(empty($lower_price_label)) {
+			$lower_price_label = "New Lower Price";
+		}
 		$price = get_post_meta( get_the_ID(), 'rb-pgrid_price', true );
 		$price_before = get_post_meta( get_the_ID(), 'rb-pgrid_price_before', true );
 		$_price_before = explode(".", $price_before);
@@ -1145,7 +1151,7 @@ function pricing_grid($atts){
 		$output .= '						<p>was</p>';
 		$output .= '           				<sup class="dollar-sign">$</sup><span class="dollars">'.$_price_before[0].'</span><sup class="cents">'.$_price_before[1].'</sup><span class="strike"></span>';
 		$output .= '					</div>';
-		$output .= '					<div class="price-label"><h2>New Lower Price</h2></div>';
+		$output .= '					<div class="price-label"><h2>'.$lower_price_label.'</h2></div>';
 	    							} else {
 	    $output .= '					<p>'.get_post_meta( $post_id, 'rb-pgrid_esp_offer', true ).'</p>';
 									}
@@ -1161,6 +1167,7 @@ function pricing_grid($atts){
 	    						}
 	    $output .= '			<div class="includes">';
 	    $output .= '			<h3>Includes:</h3>';
+	    $output .= '			<span class="close-parent">Close</span>';
 	    $output .= 				get_post_meta( $post_id, 'rb-pgrid_inclusions', true );
 	    $output .= '			</div>';
 	    $output .= '		</footer>';
@@ -1228,7 +1235,7 @@ function compare_packages($id_arr, $_echo = false){
 			$the_query->the_post();
 			$_postID = (int)$the_query->post->ID;
 			//get all the custom meta value and pass to array with the key of POST ID
-			$_comparePlans[$_postID] = get_post_meta($_postID,'',true);
+			$_comparePlans[$_postID] = get_post_meta($_postID,'',true);			
 			$_planID[] = $_postID;
 		}
 		
@@ -1274,7 +1281,7 @@ function compare_packages($id_arr, $_echo = false){
 		                	</span>
 		                	<span class="term">per month for<br>12 <span>months</span></span>
 		    			</div>
-		    		<div class="new-plan"><a href="/" title="Compare New Plan">Compare New Plan</a></div>
+		    		<div class="new-plan"><a href="'.$_SERVER['HTTP_REFERER'].'" title="Compare New Plan">Compare New Plan</a></div>
 		    		<div class="order-now"><a href="https://www.timewarnercable.com/residential/order?qso=1-GD3OW" target="_blank" title="Order Now">Order Now</a></div>
 				</td>
 			';
@@ -1330,9 +1337,13 @@ function compare_packages($id_arr, $_echo = false){
 			//check if all are same()
 			$_dataDispl = array();
 			foreach($_planID as $_ID){
+				$lower_price_label = $_comparePlans[$_ID]['rb-pgrid_lower_price_label'][0];
 				$remarks = $_comparePlans[$_ID]['rb-pgrid_remarks'][0];
 				$price_bef = $_comparePlans[$_ID]['rb-pgrid_price_before'][0];
 				$specialOff = $_comparePlans[$_ID]['rb-pgrid_esp_offer'][0];
+				if(empty($lower_price_label)){
+					$lower_price_label = "Lowest Price Online";
+				}
 				if(empty($price_bef)){
 					$_dataDispl[] = $specialOff .'<small>'.$remarks.'<small>';
 				}else{
@@ -1346,15 +1357,15 @@ function compare_packages($id_arr, $_echo = false){
 							<span class="strike"></span>
 						</div>
 						<div class="price-label">
-							<h2>Lowest Price Online</h2>
+							<h2>'.$lower_price_label.'</h2>
 						</div><small>'.$remarks.'</small>';
 				}
 			}
 			$output .= compare_packages_rowspan( $_dataDispl,count($_planID),'special-offers-data');
 			
 			
-			foreach($_packageFeatures as $_features){
-			
+			foreach($_packageFeatures as $_features){				
+
 				//check if all are same()
 				$_metVal = array();
 				foreach($_planID as $_ID){
@@ -1368,18 +1379,22 @@ function compare_packages($id_arr, $_echo = false){
 							$_metVal[] = "-";
 						//}
 					} elseif($metVal == "on"){
-						$_metVal[] = '<span class="check"></span>';
+						if($_features[3] == "pgrid_net_home_wifi"){
+							$wifiRemarks = $_comparePlans[$_ID]['rb-pgrid_net_home_wifi_remarks'][0];
+							$_metVal[] = '<span class="check"></span><br>'.$wifiRemarks;
+						} else {
+							$_metVal[] = '<span class="check"></span>';	
+						}
+						
 					} else {
 						$_metVal[] = $_comparePlans[$_ID]['rb-'.$_features[3]][0];
 					}
 				}
 				
-				$_totalPackages = count($_planID);
-				
 				$_title = $_features[0];
 				$_class = empty($_features[1]) ? 'label' : $_features[1];
 				$_cols = empty($_features[2]) ? 'td' : $_features[2];
-
+				$_totalPackages = count($_planID);
 				$rowspan_class = substr($_features[3],6);
 				
 				if(compare_packages_emptyval($_metVal) == false){
@@ -1451,5 +1466,34 @@ function compare_packages_rowspan( $_title = array(),$count = 0, $class=''){
 	}
 	$_ret .= '</tr>';
 	return $_ret;
+	
 }
 
+function package_teaser(){
+	echo '<div id="package-teaser">';
+	for( $i = 0; $i < 3; $i++ ){
+		echo '<div class="package">';
+		echo '	<h6>Internet</h6>';
+		echo '	<p>As Low As</p>';
+		echo '	<div class="price">';
+	    // echo '		<span class="h4">';
+        echo '		<div class="dollar-price">';
+        echo '			<sup class="dollar-sign">$</sup><span class="dollars">44</span>';
+        echo '		</div>';
+        // echo '		</span>';
+        echo '		<div class="cents-term">';
+        echo '			<sup class="cents">99</sup>';
+        echo '			<span class="term">per month<br>for 12 months</span>';
+	    echo '		</div>';
+	    echo '	</div>';
+	    echo '	<div class="action">';
+	    echo '		<a href="" title="" class="package-button">Shop Offers <span class="icon"></span></a>';
+		echo '	</div>';
+		echo '</div>';
+	}
+		echo '<div class="package">';
+		echo '	<h6>Most Popular Deals</h6>';
+	    echo '	<a href="" title="" class="package-button">Learn More <span class="icon"></span></a>';
+		echo '</div>';
+	echo '</div>';
+}
