@@ -1155,7 +1155,7 @@ function pricing_grid($atts){
 	    $output .= '		</div>';
 	    $output .= '		<footer class="footer">';
 	    $output .= '			<a href="" title="View Details" class="view-details">View Details</a>';
-	    $output .= '			<a href="" title="Order Now" class="order-now">Order Now</a>';	    
+	    $output .= '			<a href="https://www.timewarnercable.com/residential/order?qso=1-GD3OW" title="Order Now" tartget="_blank" class="order-now">Order Now</a>';	    
 	    						if(is_user_logged_in()) {
 	    $output .= '				<a href="'. get_edit_post_link($post_id).'" title="" class="edit" target="_blank">Edit</a>';							
 	    						}
@@ -1275,7 +1275,7 @@ function compare_packages($id_arr, $_echo = false){
 		                	<span class="term">per month for<br>12 <span>months</span></span>
 		    			</div>
 		    		<div class="new-plan"><a href="/" title="Compare New Plan">Compare New Plan</a></div>
-		    		<div class="order-now"><a href="/" title="Order Now">Order Now</a></div>
+		    		<div class="order-now"><a href="https://www.timewarnercable.com/residential/order?qso=1-GD3OW" target="_blank" title="Order Now">Order Now</a></div>
 				</td>
 			';
 			$i++;
