@@ -93,7 +93,7 @@ color:#000000;
 				</div>
 				<div id="header-search">
 					<form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
-						<input class="search-text" type="text" value="Search" name="s" id="s" />
+					  	<input class="search-text" type="text" value="Search" name="s" id="s" />
 					</form>
 				</div>
 			</div>

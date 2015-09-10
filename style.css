@@ -2418,7 +2418,7 @@ img.mfp-img {
 .packages .package-box .package-price table td { padding:0; border: none; vertical-align: top; font-size: 1.5em; line-height: 1.5em; }
 .packages .package-box .package-price table td.price-point { text-align: right; }
 .packages .package-box .package-price table td .point { font-size: 24px; line-height: 24px; margin-top: 15px; }
-.packages .package-box .package-price table td .terms { font-size: 13px; line-height: 13px; }
+.packages .package-box .package-price table td .terms { font-size: 13px; line-height: 13px; text-transform: lowercase; }
 .packages .package-box .package-price .price > div { font-size: 3.5em; line-height: 87%; text-align: center; font-weight: bold; }
 .packages .package-box .package-price .currency { font-size: 2.5em; line-height: 1.1em; }
 .packages .package-box .package-description img { vertical-align: bottom; margin-right: 0px; }
@@ -2468,7 +2468,9 @@ img.mfp-img {
 
 #sort-filter { padding: 15px; background: #4578af; border-radius: 5px; margin-bottom: 10px; position: relative; overflow: hidden; }
 #sort-filter h2 { color: #fff; font-weight: normal; margin-top: 0; font-size: 24px; }
-#sort-filter .scroll-to-fixed-fixed {  }
+#sort-filter.scroll-to-fixed-fixed { left: 0!important; right: 0; width: 100%!important }
+#sort-filter.scroll-to-fixed-fixed .sort-filter-box { max-width: 870px; margin: 0 auto; position: relative; overflow: hidden; }
+#sort-filter.scroll-to-fixed-fixed .sort-filter-box .toggle { top: 5px; }
 #sort-filter .toggle { width: 16px; height: 16px; position: absolute; right: 15px; top: 20px; background: url(images/icon-plus.png) no-repeat; cursor: pointer; }
 #sort-filter .toggle.close { transform: rotate(-45deg); /*transform: rotate(180deg);*/ transition: .3s; }
 #sort-filter .toggle.open { transform: rotate(0deg); transition: .3s; }
@@ -2480,6 +2482,7 @@ img.mfp-img {
 #pricing-grid { margin: 0 -7px; }
 #pricing-grid .pricing { display: inline-block; vertical-align: top; width: 33.33333333333333%; padding: 7px; box-sizing: border-box; }
 #pricing-grid .pricing .inner { background: #747679; border: 2px solid #acacac; }
+#pricing-grid .pricing .inner .tooltipme { font-weight: bold; }
 #pricing-grid .pricing .inner header { padding: 10px; overflow: hidden; }
 #pricing-grid .pricing .inner header label { color: #fff; }
 #pricing-grid .pricing .inner header .compare-button { padding: 7px 10px; background-color: #ededed; font-size: small; font-weight: bold; border-radius: 3px; display: none; }
@@ -2497,7 +2500,7 @@ img.mfp-img {
 #pricing-grid .pricing .inner .details .price .h4 .dollar-sign { position: relative; font-size: 20px; top: -18px; }
 #pricing-grid .pricing .inner .details .price .h4 .dollars { font-size: 46px; }
 #pricing-grid .pricing .inner .details .price .h4 .cents { font-size: 20px; position: relative; top: -18px; }
-#pricing-grid .pricing .inner .details .price .term { font-size: 9px; position: relative; left: -20px; top: 2px; display: inline-block; width: 60px; text-align: left; line-height: 9px; }
+#pricing-grid .pricing .inner .details .price .term { font-size: 9px; position: relative; left: -25px; top: 25px; display: inline-block; width: 60px; text-align: left; line-height: 9px; text-transform: lowercase; vertical-align: top; }
 #pricing-grid .pricing .inner .details .price .term span { color: #3376b2; border-bottom: 1px dotted #3376b2; cursor: pointer; }
 #pricing-grid .pricing .inner .details .price .term span:hover { color: #1b405d; border-bottom: 1px dotted #1b405d; }
 #pricing-grid .pricing .inner .details .offer { min-height: 55px; background: url(images/bg-offer.png); background-repeat: repeat-y; background-position: center center; font-family: 'twc_roundbook'; background-size: contain; }
@@ -2616,15 +2619,22 @@ img.mfp-img {
 
 /*Tooltip*/
 .twc-tooltip { display:none; position:absolute;	max-width: 240px; }
+.twc-tooltip.tooltip-compare { max-width: 200px; }
+.twc-tooltip.tooltip-compare .ttip-content p a { text-decoration: underline; }
+.twc-tooltip.tooltip-compare .ttip-content { padding: 0; border: none; box-shadow: 0 5px 10px #888; }
+.twc-tooltip.tooltip-compare .ttip-content .arrow { left: 15%; background-image: none; width: 0; height: 0; border-left: 13px solid transparent; border-right: 13px solid transparent; border-bottom: 13px solid #e0e7eb; }
+.twc-tooltip .close-btn { position:absolute; width: 24px; height: 24px; background-image: url(images/modal_close.png); background-size: 100%; background-repeat: no-repeat; top: -10px; right: -10px; cursor: pointer; }
 .twc-tooltip .ttip-content { position: relative; color:#333; font-size:small; border: 1px solid #999; background: #fff; padding: 3px; }
 .twc-tooltip .ttip-content .arrow { position: absolute; left: 50%; margin-left: -11px; top: -13px; width: 22px; height: 16px; background: url(images/tooltip-arrow.png) no-repeat; }
 .twc-tooltip .ttip-content p { padding: 10px; background: #e0e7eb; line-height: normal; }
+.twc-tooltip .ttip-content p a { font-weight: bold; margin-top: 5px; display: inline-block; }
 .twc-tooltip .ttip-content p strong { font-size: 15px; display: block; margin-bottom: 5px; }
-.tooltipme { color: #3376b2; border-bottom: 1px dotted #3376b2; font-weight: bold; cursor: pointer; }
+.tooltipme { color: #3376b2; border-bottom: 1px dotted #3376b2; cursor: pointer; }
 
 /*Package Teaser*/
 #package-teaser { overflow: hidden; }
-#package-teaser .package { float: left; width: 25%; border-right: 3px solid #ccc; padding: 5px; font-family: 'twc_roundbook'; box-sizing: border-box; }
+#package-teaser .package { float: left; width: 25%; border-right: 3px solid #ccc; padding: 5px; font-family: 'twc_roundbook'; position: relative; box-sizing: border-box; }
+#package-teaser .package .edit-post { font-size: small; position: absolute; left: 5px; bottom: 0; }
 #package-teaser .package:last-child { border-right: none; text-align: center; }
 #package-teaser .package h6 { color: #446B96; text-align: center; margin-bottom: 10px; }
 #package-teaser .package p { font-size: x-small; }
@@ -2634,16 +2644,23 @@ img.mfp-img {
 #package-teaser .package .price,
 #package-teaser .package .action { float: left; width: 50%; padding: 5px; box-sizing: border-box; line-height: normal; }
 #package-teaser .package .price { border-right: 1px solid #ccc; padding-left: 0; padding-top: 0; color: #333; }
-#package-teaser .package .price sup { font-size: 15px; top: -11px; }
+#package-teaser .package .price sup { font-size: 13px; top: -11px; }
 #package-teaser .package .price .dollar-price sup { top: -11px; }
-#package-teaser .package .price .cents-term sup { top: 2px; margin-left: 1px; }
+#package-teaser .package .price .cents-term sup { top: 8px; margin-left: 1px; float: left; }
 #package-teaser .package .action { text-align: center; padding-right: 0; }
 
 #package-teaser .package .price .dollar-price,
 #package-teaser .package .price .cents-term { float: left; height: 30px; }
 #package-teaser .package .price .cents-term { width: 65px; }
 #package-teaser .package .price .dollars { font-size: 30px; font-weight: bold; }
-#package-teaser .package .price .term { font-size: x-small; float: left; margin-left: 2px; }
+#package-teaser .package .price .term { font-size: x-small; float: left; margin-left: 2px; text-transform: lowercase; margin-top: 13px; }
+
+/*Channels Popup*/
+.white-popup.channels-pop { max-width: 768px; }
+.white-popup.channels-pop h1 { font-family: 'twc_roundlight'; margin-bottom: 15px; }
+.white-popup.channels-pop p { margin-bottom: 10px; }
+.white-popup.channels-pop .channels { max-height: 400px; overflow-y: scroll; }
+.white-popup.channels-pop .channels p { -webkit-column-count: 3; /* Chrome, Safari, Opera */ -moz-column-count: 3; /* Firefox */ column-count: 3; }
 
 
 @media only screen and (max-width: 1023px) {

@@ -1119,6 +1119,11 @@ function pricing_grid($atts){
 		//$tags_tmp = explode(",", $tags);
 		$tags_x = implode(" ", $tags_type);
 
+		$term = get_post_meta( $post_id, 'rb-pgrid_term', true );
+		if($term == "Per Month for 12 Months"){
+			$term = 'per month for<br>12 <span class="tooltipme" title="After 12 months, retail rates apply. No contract required.">months</span>';
+		}
+
 		$x++;
 	    $output .= '<div class="pricing all '.$tags_x.'" pack_id="'.$post_id.'" pack_type="'.$tags.'" price="'.$price[0].'" arrange="'.$x.'">';
 	    $output .= '	<div class="cloddiv"></div>';
@@ -1142,7 +1147,7 @@ function pricing_grid($atts){
 	    $output .= '				<span class="h4">';
         $output .= '           			<sup class="dollar-sign">$</sup><span class="dollars">'.$price[0].'</span><sup class="cents">'.$price[1].'</sup>';
         $output .= '            	</span>';
-        $output .= '            	<span class="term">per month for<br>12 <span class="tooltipme" title="After 12 months, retail rates apply. No contract required.">months</span></span>';
+        $output .= '            	<span class="term">'.$term.'</span>';
 	    $output .= '			</div>';
 	    $output .= '			<hr />';
 	    $output .= '			<div class="offer">';
@@ -1221,11 +1226,7 @@ function compare_packages($id_arr, $_echo = false){
 	$no_of_packages = count($id_arr);
 	$the_query = "";
 
-	$the_query = new WP_Query($args);
-
-	
-	
-	
+	$the_query = new WP_Query($args);	
 	
 	if ( $the_query->have_posts() ) {
 		
@@ -1416,12 +1417,68 @@ function compare_packages($id_arr, $_echo = false){
 			}
 			
 		$output .='</tbody></table>';
+
+		// 200+ Chanels
+	$output .= '<div id="channels-200" class="white-popup mfp-hide">
+				<h1>Preferred TV</h1>
+				<p>These channels show a sample of programming by TV plan. All channels may not be available in all locations. <a href="/en/tv/channels-lineup.html">See channels by package in your area.</a></p>
+				<p>A &amp; E*<br>ABC*<br>ABC Family*<br>Al Jazeera America<br>AMC*<br>American Heroes Channel<br>Animal Planet*<br>Aspire<br>
+				Azteca*<br>BBC America*<br>BBC World News<br>BET*<br>Big Ten Network*<br>Bloomberg*<br>Bravo*<br>Cartoon Network*<br>CBS*<br>
+				CCTV News<br>Centric<br>Chiller<br>CLOO<br>CMT*<br>CNBC*<br>CNBC World<br>CNN*<br>Comedy Central*<br>Cooking Channel*<br>C-SPAN*<br>
+				C-SPAN 2*<br>C-SPAN 3*<br>CW*<br>Daystar<br>Destination America*<br>Discovery*<br>Discovery - Fit &amp; Health*<br>Disney*<br>Disney Junior*<br>
+				Disney XD*<br>DIY*<br>E!*<br>Educational Access<br>ESPN*<br>ESPN Deportes*<br>ESPN 2*<br>ESPN News*<br>ESPN University*<br>EVINE Live<br>
+				EWTN*<br>Food Network*<br>Fox*<br>Fox Business Network*<br>Fox Deportes*<br>Fox Movie Channel*<br>Fox News Channel*<br>Fox Sports*<br>Fox Sports 2*<br>
+				FUSE*<br>FX*<br>FXX*<br>FYI*<br>Golf*<br>Government Access<br>GSN*<br>Hallmark*<br>Hallmark Movies &amp; Mysteries*<br>HGTV*<br>History*<br>HLN*<br>
+				HSN*<br>ID*<br>IFC<br>Independent Film Channel*<br>INSP<br>Investigation Discovery*<br>ION<br>Jewelry Television*<br>Leased Access<br>Lifetime*<br>
+				Lifetime Movie Network*<br>Lifetime Real Women*<br>LMN*<br>Logo<br>MLB*<br>MSNBC*<br>MTV*<br>MTV 2*<br>MTV Hits<br>MTV Jams<br>Music Choice^<br>National Geographic*<br>
+				National Geographic Wild*<br>NBA*<br>NBC*<br>NBC Sports Network*<br>NFL NETWORK*<br>Nick JR*<br>Nick Toons*<br>Nickelodeon*<br>On Demand Channels*†<br>Outdoor Channel*<br>
+				Ovation<br>OWN*<br>Oxygen*<br>Palladia*<br>Public Access<br>PBS*<br>QVC*<br>REELZ*<br>SCIENCE*<br>Shop Zeal<br>Smithsonian<br>SoapNet*<br>Speed*<br>
+				Spike TV*<br>Sprout<br>Style*<br>Sundance*<br>SyFy*<br>TBN<br>TBS*<br>TCM*<br>Teen Nick<br>Telemundo*<br>Telemundo 2<br>The Weather Channel*<br>TLC*<br>
+				TNT*<br>Travel Channel*<br>truTV*<br>TV Guide Network*<br>TV Land*<br>TV One*<br>TWC Deportes*<br>TWC News*<br>TWC SportsNet*<br>TWC SportsNet LA*<br>
+				Univision*<br>UP*<br>USA*<br>Velocity*<br>VH 1*<br>VH 1 Classic*<br>WGN America*</p>
+				<p>*Also available in HD.</p>
+				<p>†On Demand may require purchase or subscription.</p>
+				<p>^Lease of a Set-Top Box is required.<br></p>
+				</div>';
+
+	// 70+ Chanels
+	$output .= '<div id="channels-70" class="white-popup mfp-hide">
+				<h1>Standard TV</h1>
+				<p>These channels show a sample of programming by TV plan. All channels may not be available in all locations. <a href="/en/tv/channels-lineup.html">See channels by package in your area.</a></p>
+				<p>A &amp; E*<br>ABC*<br>ABC Family*<br>AMC*<br>Animal Planet*<br>Azteca*<br>BET*<br>Bravo*<br>Cartoon Network*<br>CBS*<br>CNBC*<br>CNN*<br>Comedy Central*<br>C-SPAN*<br>
+				C-SPAN 2*<br>C-SPAN 3*<br>CW*<br>Discovery*<br>Disney*<br>E!*<br>Educational Access<br>ESPN*<br>ESPN 2*<br>EVINE Live<br>Food Network*<br>Fox*<br>
+				Fox Business Network*<br>Fox News Channel*<br>Fox Sports*<br>Fox Sports 1*<br>FX*<br>Galavision*<br>Golf*<br>Government Access<br>HGTV*<br>History*<br>HLN*<br>
+				HSN*<br>Investigation Discovery*<br>Lifetime*<br>LMN*<br>MSNBC*<br>MTV*<br>Music Choice^<br>National Geographic*<br>NBC*<br>Nickelodeon*<br>
+				Oxygen*<br>PAC 12*<br>Palladia*<br>PBS*<br>Public Access<br>QVC*<br>Spike TV*<br>SyFy*<br>TBS*<br>Telemundo*<br>The Weather Channel*<br>TLC*<br>
+				TNT*<br>truTV*<br>TV Guide Network*<br>TV Land*<br>TWC Deportes*<br>TWC News*<br>TWC SportsNet*<br>TWC SportsNet LA*<br>Univision*<br>USA*<br>
+				Velocity<br>VH 1*<br>WGN America*<br></p>
+				<p>*Also available in HD.</p>
+				<p>†On Demand may require purchase or subscription.</p>
+				<p>^Lease of a Set-Top Box is required.<br></p>
+				</div>';
+
+	// 20+ Chanels
+	$output .= '<div id="channels-20" class="white-popup mfp-hide">
+				<h1>Starter TV</h1>
+				<p>These channels show a sample of programming by TV plan. All channels may not be available in all locations. <a href="/en/tv/channels-lineup.html">See channels by package in your area.</a></p>
+				<p>ABC*<br>CBS*<br>C-SPAN<br>C-SPAN 2<br>C-SPAN 3<br>CW*<br>Educational Access<br>EVINE Live<br>Fox*<br>Galavision<br>Government Access<br>HSN*<br>
+				Music Choice^<br>NBC*<br>PBS*<br>Public Access<br>QVC*<br>SHOP NBC<br>TBN<br>TBS*<br>Telemundo*<br>TWC News*<br>Univision*<br>WGN America*</p>
+				<p>*Also available in HD.</p>
+				<p>†On Demand may require purchase or subscription.</p>
+				<p>^Lease of a Set-Top Box is required.<br></p>
+				</div>';
+
+	$output .= "jQuery('a[title='200+ Channels']').magnificPopup({
+				type:'inline'
+			});";
 		
 	}
 	else {
 	 	$output .= "No Package Found";
 	}
-			
+
+	
+
 	if($_echo) echo $output;
 	wp_reset_postdata();
 	
@@ -1469,31 +1526,62 @@ function compare_packages_rowspan( $_title = array(),$count = 0, $class=''){
 	
 }
 
-function package_teaser(){
-	echo '<div id="package-teaser">';
-	for( $i = 0; $i < 3; $i++ ){
-		echo '<div class="package">';
-		echo '	<h6>Internet</h6>';
-		echo '	<p>As Low As</p>';
-		echo '	<div class="price">';
-	    // echo '		<span class="h4">';
-        echo '		<div class="dollar-price">';
-        echo '			<sup class="dollar-sign">$</sup><span class="dollars">44</span>';
-        echo '		</div>';
-        // echo '		</span>';
-        echo '		<div class="cents-term">';
-        echo '			<sup class="cents">99</sup>';
-        echo '			<span class="term">per month<br>for 12 months</span>';
-	    echo '		</div>';
-	    echo '	</div>';
-	    echo '	<div class="action">';
-	    echo '		<a href="" title="" class="package-button">Shop Offers <span class="icon"></span></a>';
-		echo '	</div>';
-		echo '</div>';
-	}
+function package_teaser($id_arr){
+
+	global $post;
+
+	$args = array(
+	'order' => 'asc',
+	'post_type' => 'packages',
+	'post__in' => $id_arr
+	);
+
+	$the_query = "";
+
+	$the_query = new WP_Query($args);	
+	
+	if ( $the_query->have_posts() ) {
+
+		echo '<div id="package-teaser">';
+
+		while ( $the_query->have_posts() ) {
+			$the_query->the_post();
+
+			$price_arr = array();
+
+			$term = get_post_meta( $post->ID, 'rb-pgrid_term', true );
+			if($term == "Per Month for 12 Months"){
+				$term = 'per month for<br>12 <span class="tooltipme" title="After 12 months, retail rates apply. No contract required.">months</span>';
+			}
+
+			$price = get_post_meta( $post->ID, 'rb-pgrid_price', true );
+			$price_arr = explode(".", $price);
+
+	
+			echo '<div class="package">';
+			echo '	<h6>'.get_post_meta($post->ID, "rb-pgrid_teaser_title", true).'</h6>';
+			echo '	<p>'.get_post_meta($post->ID, "rb-pgrid_teaser_tagline", true).'</p>';
+			echo '	<div class="price">';
+	        echo '		<div class="dollar-price">';
+	        echo '			<sup class="dollar-sign">$</sup><span class="dollars">'.$price_arr[0].'</span>';
+	        echo '		</div>';
+	        echo '		<div class="cents-term">';
+	        echo '			<sup class="cents">'.$price_arr[1].'</sup>';
+	        echo '			<span class="term">'.$term.'</span>';
+		    echo '		</div>';
+		    echo '	</div>';
+		    echo '	<div class="action">';
+		    echo '		<a href="'.get_the_permalink($post->ID).'" title="" class="package-button">Shop Offers <span class="icon"></span></a>';
+			echo '	</div>';
+			if ( is_user_logged_in() ) {
+            	echo '<br><a href="'.get_edit_post_link().'" target="_blank" title="Edit '.get_the_title().'" class="edit-post">Edit</a>';
+        	}
+			echo '</div>';
+		}
 		echo '<div class="package">';
 		echo '	<h6>Most Popular Deals</h6>';
-	    echo '	<a href="" title="" class="package-button">Learn More <span class="icon"></span></a>';
+	    echo '	<a href="http://www.timewarnercable.com/residential/order/?iid=hpofferstrip_DEALS_8999_:2:4:learnmore" target="_blank" title="" class="package-button">Learn More <span class="icon"></span></a>';
+	    		echo '</div>';
 		echo '</div>';
-	echo '</div>';
+	}
 }

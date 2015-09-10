@@ -75,6 +75,15 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'type' => 'text_small',
 			),
 			array(
+				'name' => __( 'Term', 'cmb' ),
+				'id'   => $prefix . 'pgrid_term',
+				'type'    => 'radio_inline',
+				'options' => array(
+					'Per Month' 	=> __( 'Per Month', 'cmb' ),
+					'Per Month for 12 Months' 	=> __( 'Per Month for 12 Months', 'cmb' ),
+				),
+			),
+			array(
 				'name' => 'Special Offer',
 				'id'   => $prefix . 'pgrid_esp_offer',
 				'type' => 'textarea_small',
@@ -222,7 +231,22 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'name' => 'International Calling Plans (for an additional charge)',
 				'id'   => $prefix . 'pgrid_phone_international_call',
 				'type' => 'textarea_small',
-			),			
+			),
+			array( // Teaser
+				'name' => __( 'Teaser', 'cmb' ),
+				'id'   => $prefix . 'teaser',
+				'type' => 'title',
+			),
+			array(
+				'name' => 'Title',
+				'id'   => $prefix . 'pgrid_teaser_title',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Tagline',
+				'id'   => $prefix . 'pgrid_teaser_tagline',
+				'type' => 'text',
+			),
 		)
 	);
 
