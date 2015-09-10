@@ -14,7 +14,11 @@
 global $grid_content;
 get_header(); ?>
 
-	<?php package_teaser(array(12308,12352,12353)); ?>
+	<?php
+	$t_ids = get_settings('teaser_ids');
+	$teaser_ids = explode(",", $t_ids);
+	package_teaser($teaser_ids);
+	?>
 	<?php promo(12285); ?>
 
 	<div id="primary" class="site-content col_9 column">

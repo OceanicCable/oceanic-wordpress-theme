@@ -1585,3 +1585,16 @@ function package_teaser($id_arr){
 		echo '</div>';
 	}
 }
+
+// Teaser Package IDS
+add_filter('admin_init', 'my_general_settings_register_fields'); 
+
+function my_general_settings_register_fields() { 
+  register_setting('general', 'teaser_ids', 'esc_attr'); 
+  add_settings_field('teaser_ids', '<label for="teaser_ids">'.__('Teaser Package IDS' , 'teaser_ids' ).'</label>' , 'my_general_teaser_ids', 'general');
+} 
+
+function my_general_teaser_ids() { 
+  $teaser_ids = get_option( 'teaser_ids', '' ); 
+  echo '<input id="teaser_ids" style="width: 35%;" type="text" name="teaser_ids" value="' . $teaser_ids . '" />';
+}
