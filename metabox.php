@@ -107,13 +107,14 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 			array(
 				'name'    => __( 'Plans', 'cmb' ),
 				'id'      => $prefix . 'pgrid_tv_plans',
-				'type'    => 'radio_inline',
-				'options' => array(
-					'Starter TV' 	=> __( 'Starter TV', 'cmb' ),
-					'Standard TV' 	=> __( 'Standard TV', 'cmb' ),
-					'Prefered TV'	=> __( 'Prefered TV', 'cmb' ),
-					'None'	=> __( 'None', 'cmb' ),
-				),
+				'type' => 'text',
+				// 'type'    => 'radio_inline',
+				// 'options' => array(
+				// 	'Starter TV' 	=> __( 'Starter TV', 'cmb' ),
+				// 	'Standard TV' 	=> __( 'Standard TV', 'cmb' ),
+				// 	'Prefered TV'	=> __( 'Prefered TV', 'cmb' ),
+				// 	'None'	=> __( 'None', 'cmb' ),
+				// ),
 			),
 			array(
 				'name' => 'Channels',
