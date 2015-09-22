@@ -637,6 +637,43 @@
 
 <?php } ?>
 
+
+
+
+<!-- begin: Adwords Call Tracking -->
+<script type="text/javascript">
+(function(a,e,c,f,g,b,d){var h={ak:"994297305",cl:"GPbfCP2c9l8Q2YuP2gM"};a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)};a[f]||(a[f]=h.ak);b=e.createElement(g);b.async=1;b.src="//www.gstatic.com/wcm/loader.js";d=e.getElementsByTagName(g)[0];d.parentNode.insertBefore(b,d);a._googWcmGet=function(b,d,e){a[c](2,b,h,d,null,new Date,e)}})(window,document,"_googWcmImpl","_googWcmAk","script");
+</script>
+
+<script type="text/javascript">
+  var callback = function(formatted_number, mobile_number) {                 
+  var c = "strong,p,h2";
+  var c1= c.split(",");
+  for(v=0;v<c1.length;v++)
+  {
+    var m = document.getElementsByTagName(c1[v]);
+var len = m.length;
+for(i=0;i<len;i++)
+{
+var c = m[i].innerHTML.replace("643-2337",formatted_number);
+m[i].innerHTML = c;
+}
+}
+//jQuery('a[]').attr("href","tel:"+mobile_number);
+    };
+    </script>
+<script>
+    window.onload = function()
+    {
+        _googWcmGet(callback,"808-643-2337");
+    }
+</script>
+<!-- end: Adwords Call Tracking -->
+
+
+
+
+
 <?php wp_footer(); ?>
 
 <?php // if (is_page(388)) { ?>
@@ -1404,35 +1441,7 @@
 <a href="http://www.oceanicsurvey.com/WEB/" target="_blank" title="" class="feedback-callout"></a>
 <script type="text/javascript">_satellite.pageBottom();</script>
 
-<!-- begin: Adwords Call Tracking -->
-<script type="text/javascript">
-(function(a,e,c,f,g,b,d){var h={ak:"994297305",cl:"GPbfCP2c9l8Q2YuP2gM"};a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)};a[f]||(a[f]=h.ak);b=e.createElement(g);b.async=1;b.src="//www.gstatic.com/wcm/loader.js";d=e.getElementsByTagName(g)[0];d.parentNode.insertBefore(b,d);a._googWcmGet=function(b,d,e){a[c](2,b,h,d,null,new Date,e)}})(window,document,"_googWcmImpl","_googWcmAk","script");
-</script>
 
-<script type="text/javascript">
-  var callback = function(formatted_number, mobile_number) {                 
-  var c = "strong,p,h2";
-  var c1= c.split(",");
-  for(v=0;v<c1.length;v++)
-  {
-    var m = document.getElementsByTagName(c1[v]);
-var len = m.length;
-for(i=0;i<len;i++)
-{
-var c = m[i].innerHTML.replace("643-2337",formatted_number);
-m[i].innerHTML = c;
-}
-}
-//jQuery('a[]').attr("href","tel:"+mobile_number);
-    };
-    </script>
-<script>
-    window.onload = function()
-    {
-        _googWcmGet(callback,"808-643-2337");
-    }
-</script>
-<!-- end: Adwords Call Tracking -->
 
 </body>
 </html>
