@@ -164,14 +164,14 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 			array(
 				'name'    => __( 'Plans', 'cmb' ),
 				'id'      => $prefix . 'pgrid_net_plans',
-				'type'    => 'radio_inline',
-				'options' => array(
+				'type'    => 'text',
+				/* 'options' => array(
 					'Standard' 	=> __( 'Standard', 'cmb' ),
 					'Turbo'   	=> __( 'Turbo', 'cmb' ),
 					'Extreme' 	=> __( 'Extreme', 'cmb' ),
 					'Ultimate' 	=> __( 'Ultimate', 'cmb' ),
 					'None' 	=> __( 'None', 'cmb' ),
-				),
+				), */
 			),
 			array(
 				'name' => 'Internet Speeds',
@@ -206,11 +206,11 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 			array(
 				'name'    => __( 'Plans', 'cmb' ),
 				'id'      => $prefix . 'pgrid_phone_plans',
-				'type'    => 'radio_inline',
-				'options' => array(
+				'type'    => 'text',
+				/* 'options' => array(
 					'Home Phone National' 	=> __( 'Home Phone National', 'cmb' ),					
 					'None' 	=> __( 'None', 'cmb' ),
-				),
+				), */
 			),
 			array(
 				'name' => 'Included Calls',

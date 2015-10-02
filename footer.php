@@ -740,7 +740,8 @@ m[i].innerHTML = c;
 		});
 		
 		// Package View Details Toggle
-		jQuery( "#pricing-grid .pricing .inner .footer .view-details" ).click(function() {
+		//jQuery( "#pricing-grid .pricing .inner .footer .view-details" ).click(function() {
+		jQuery('body').on('click','.view-details',function(){
 		  jQuery(this).siblings(".includes").slideToggle(300);
 		  return false;
 		});
@@ -750,7 +751,8 @@ m[i].innerHTML = c;
 		});
 
 		// Compare Button
-		jQuery( "#pricing-grid .pricing .inner header .compare-check" ).live("click",function() {
+		//jQuery( "#pricing-grid .pricing .inner header .compare-check" ).live("click",function() {
+		jQuery('body').on('click','.compare-check',function(){
 			
 			if(jQuery(this).is(':checked')) {
 				jQuery(this).siblings(".compare-label").hide();

@@ -1037,8 +1037,8 @@ function autop($raw) {
 function pricing_grid($atts){
 
 	extract(shortcode_atts(array(
-      'order' => 0,
-      'orderby' => 'ID',
+      'order' => 'ASC',
+      'orderby' => 'menu_order',
       'limit' => -1,
    	), $atts));
 
