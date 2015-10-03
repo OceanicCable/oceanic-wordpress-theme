@@ -1097,15 +1097,38 @@ m[i].innerHTML = c;
 		<?php endif; ?>
 		
 		// Channels Pop Trigger
-		jQuery('a#channels-200plus').magnificPopup({
-			type:'inline'
-		});
-		jQuery('a#channels-70plus').magnificPopup({
-			type:'inline'
-		});
-		jQuery('a#channels-20plus').magnificPopup({
-			type:'inline'
-		});
+		// jQuery('a#channels-300plus').magnificPopup({
+		// 	type:'inline'
+		// });
+		// jQuery('a#channels-200plus').magnificPopup({
+		// 	type:'inline'
+		// });
+		// jQuery('a#channels-70plus').magnificPopup({
+		// 	type:'inline'
+		// });
+		// jQuery('a#channels-20plus').magnificPopup({
+		// 	type:'inline'
+		// });
+
+		<?php
+		$popup_script = get_settings('popup_script');
+		// echo $popup_script;
+		echo htmlspecialchars_decode($popup_script);
+
+		
+		// $lines = explode("\n", $popup_script);
+		// $lines = str_replace(" ", "", $lines);
+		// $line_before = 'jQuery("a#';
+		// $line_after = '").magnificPopup({ type:"inline" });';
+		// $format = 'jQuery("a#%s").magnificPopup({ type:"inline" });';
+		// foreach( $lines as $line ) {
+		//   echo sprintf($format, $line);
+		//   // echo 'jQuery("a#'.$line.'").magnificPopup({ type:"inline" });';
+		// }
+		// echo htmlspecialchars_decode($popup_script);
+		// echo htmlentities($channels,ENT_QUOTES);
+		?>
+
 		
 
 		<?php if(is_page(388)) : ?>

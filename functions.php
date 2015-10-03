@@ -1546,6 +1546,9 @@ function my_general_settings_register_fields() {
   	register_setting('general', 'tv_channels', 'esc_attr'); 
 	add_settings_field('tv_channels', '<label for="tv_channels">'.__('Channels Pop up' , 'tv_channels' ).'</label>' , 'tv_channels', 'general');
 
+	register_setting('general', 'popup_script', 'esc_attr'); 
+	add_settings_field('popup_script', '<label for="popup_script">'.__('Pop up Script' , 'popup_script' ).'</label>' , 'popup_script', 'general');
+
  //  	register_setting('general', 'seventy_channels', 'esc_attr'); 
 	// add_settings_field('seventy_channels', '<label for="seventy_channels">'.__('70+ plus Channels' , 'seventy_channels' ).'</label>' , 'seventy_channels', 'general');
 
@@ -1558,11 +1561,15 @@ function my_general_settings_register_fields() {
 
 function my_general_teaser_ids() { 
   $teaser_ids = get_option( 'teaser_ids', '' ); 
-  echo '<input id="teaser_ids" style="width: 35%;" type="text" name="teaser_ids" value="' . $teaser_ids . '" />';
+  echo '<input id="teaser_ids" style="width: 35%;" name="teaser_ids" value="' . $teaser_ids . '" />';
 }
 function tv_channels() { 
   $tv_channels = get_option( 'tv_channels', '' ); 
-  echo '<textarea id="tv_channels" type="text" name="tv_channels" style="width:100%; min-height:300px;">'. $tv_channels .'</textarea>';
+  echo '<textarea id="tv_channels" name="tv_channels" style="width:100%; min-height:300px;">'. $tv_channels .'</textarea>';
+}
+function popup_script() { 
+  $popup_script = get_option( 'popup_script', '' ); 
+  echo '<textarea id="popup_script" name="popup_script" style="width:100%; min-height:200px;">'. $popup_script .'</textarea>';
 }
 // function seventy_channels() { 
 //   $seventy_channels = get_option( 'seventy_channels', '' ); 
