@@ -176,7 +176,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 			array(
 				'name' => 'Internet Speeds',
 				'id'   => $prefix . 'pgrid_net_speeds',
-				'type' => 'text',
+				'type' => 'textarea_small',
 			),
 			array(
 				'name' => 'Home WiFi',

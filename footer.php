@@ -72,9 +72,15 @@
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<?php
+$channels = get_settings('tv_channels');
+echo htmlspecialchars_decode($channels);
+// echo htmlentities($channels,ENT_QUOTES);
+?>
+
 
 <!-- 200+ Chanels -->
-	<div id="channels-200" class="white-popup mfp-hide channels-pop">
+	<!-- <div id="channels-200" class="white-popup mfp-hide channels-pop">
 		<h1>Preferred TV</h1>
 		<p>These channels show a sample of programming by TV plan. All channels may not be available in all locations. <a href="http://www.timewarnercable.com/en/tv/channels-lineup.html">See channels by package in your area.</a></p>
 		<div class="channels"><p>A &amp; E*<br>ABC*<br>ABC Family*<br>Al Jazeera America<br>AMC*<br>American Heroes Channel<br>Animal Planet*<br>Aspire<br>
@@ -94,10 +100,10 @@
 		<p>*Also available in HD.</p>
 		<p>†On Demand may require purchase or subscription.</p>
 		<p>^Lease of a Set-Top Box is required.<br></p>
-	</div>
+	</div> -->
 
 	<!-- 70+ Chanels -->
-	<div id="channels-70" class="white-popup mfp-hide channels-pop">
+	<!-- <div id="channels-70" class="white-popup mfp-hide channels-pop">
 		<h1>Standard TV</h1>
 		<p>These channels show a sample of programming by TV plan. All channels may not be available in all locations. <a href="http://www.timewarnercable.com/en/tv/channels-lineup.html">See channels by package in your area.</a></p>
 		<div class="channels"><p>A &amp; E*<br>ABC*<br>ABC Family*<br>AMC*<br>Animal Planet*<br>Azteca*<br>BET*<br>Bravo*<br>Cartoon Network*<br>CBS*<br>CNBC*<br>CNN*<br>Comedy Central*<br>C-SPAN*<br>
@@ -110,18 +116,7 @@
 		<p>*Also available in HD.</p>
 		<p>†On Demand may require purchase or subscription.</p>
 		<p>^Lease of a Set-Top Box is required.<br></p>
-	</div>
-
-	<!-- 20+ Chanels -->
-	<div id="channels-20" class="white-popup mfp-hide channels-pop">
-		<h1>Starter TV</h1>
-		<p>These channels show a sample of programming by TV plan. All channels may not be available in all locations. <a href="http://www.timewarnercable.com/en/tv/channels-lineup.html">See channels by package in your area.</a></p>
-		<div class="channels"><p>ABC*<br>CBS*<br>C-SPAN<br>C-SPAN 2<br>C-SPAN 3<br>CW*<br>Educational Access<br>EVINE Live<br>Fox*<br>Galavision<br>Government Access<br>HSN*<br>
-		Music Choice^<br>NBC*<br>PBS*<br>Public Access<br>QVC*<br>SHOP NBC<br>TBN<br>TBS*<br>Telemundo*<br>TWC News*<br>Univision*<br>WGN America*</p></div>
-		<p>*Also available in HD.</p>
-		<p>†On Demand may require purchase or subscription.</p>
-		<p>^Lease of a Set-Top Box is required.<br></p>
-	</div>
+	</div> -->
 
 
 <?php if (is_page(388)) { ?>
@@ -753,7 +748,6 @@ m[i].innerHTML = c;
 		// Compare Button
 		//jQuery( "#pricing-grid .pricing .inner header .compare-check" ).live("click",function() {
 		jQuery('body').on('click','.compare-check',function(){
-			
 			if(jQuery(this).is(':checked')) {
 				jQuery(this).siblings(".compare-label").hide();
 		  		jQuery(this).siblings(".compare-button").show();
@@ -1443,7 +1437,35 @@ m[i].innerHTML = c;
 <a href="http://www.oceanicsurvey.com/WEB/" target="_blank" title="" class="feedback-callout"></a>
 <script type="text/javascript">_satellite.pageBottom();</script>
 
+<!-- begin: Adwords Call Tracking -->
+<script type="text/javascript">
+(function(a,e,c,f,g,b,d){var h={ak:"994297305",cl:"GPbfCP2c9l8Q2YuP2gM"};a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)};a[f]||(a[f]=h.ak);b=e.createElement(g);b.async=1;b.src="//www.gstatic.com/wcm/loader.js";d=e.getElementsByTagName(g)[0];d.parentNode.insertBefore(b,d);a._googWcmGet=function(b,d,e){a[c](2,b,h,d,null,new Date,e)}})(window,document,"_googWcmImpl","_googWcmAk","script");
+</script>
 
+<script type="text/javascript">
+  var callback = function(formatted_number, mobile_number) {                 
+  var c = "strong,p,h2";
+  var c1= c.split(",");
+  for(v=0;v<c1.length;v++)
+  {
+    var m = document.getElementsByTagName(c1[v]);
+var len = m.length;
+for(i=0;i<len;i++)
+{
+var c = m[i].innerHTML.replace("643-2337",formatted_number);
+m[i].innerHTML = c;
+}
+}
+//jQuery('a[]').attr("href","tel:"+mobile_number);
+    };
+    </script>
+<script>
+    window.onload = function()
+    {
+        _googWcmGet(callback,"808-643-2337");
+    }
+</script>
+<!-- end: Adwords Call Tracking -->
 
 </body>
 </html>

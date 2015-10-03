@@ -1387,6 +1387,10 @@ function compare_packages($id_arr, $_echo = false){
 							$_metVal[] = '<span class="check"></span>';	
 						}
 						
+					} elseif($_features[3] == "pgrid_tv_plans") {
+						$tvPlans = $_comparePlans[$_ID]['rb-pgrid_tv_plans'][0];
+						$tvChannels = $_comparePlans[$_ID]['rb-pgrid_tv_channels'][0];
+						$_metVal[] = $tvPlans.'<br />'.$tvChannels;
 					} else {
 						$_metVal[] = $_comparePlans[$_ID]['rb-'.$_features[3]][0];
 					}
@@ -1417,61 +1421,7 @@ function compare_packages($id_arr, $_echo = false){
 			}
 			
 		$output .='</tbody></table>';
-
-		// 200+ Chanels
-	$output .= '<div id="channels-200" class="white-popup mfp-hide">
-				<h1>Preferred TV</h1>
-				<p>These channels show a sample of programming by TV plan. All channels may not be available in all locations. <a href="/en/tv/channels-lineup.html">See channels by package in your area.</a></p>
-				<p>A &amp; E*<br>ABC*<br>ABC Family*<br>Al Jazeera America<br>AMC*<br>American Heroes Channel<br>Animal Planet*<br>Aspire<br>
-				Azteca*<br>BBC America*<br>BBC World News<br>BET*<br>Big Ten Network*<br>Bloomberg*<br>Bravo*<br>Cartoon Network*<br>CBS*<br>
-				CCTV News<br>Centric<br>Chiller<br>CLOO<br>CMT*<br>CNBC*<br>CNBC World<br>CNN*<br>Comedy Central*<br>Cooking Channel*<br>C-SPAN*<br>
-				C-SPAN 2*<br>C-SPAN 3*<br>CW*<br>Daystar<br>Destination America*<br>Discovery*<br>Discovery - Fit &amp; Health*<br>Disney*<br>Disney Junior*<br>
-				Disney XD*<br>DIY*<br>E!*<br>Educational Access<br>ESPN*<br>ESPN Deportes*<br>ESPN 2*<br>ESPN News*<br>ESPN University*<br>EVINE Live<br>
-				EWTN*<br>Food Network*<br>Fox*<br>Fox Business Network*<br>Fox Deportes*<br>Fox Movie Channel*<br>Fox News Channel*<br>Fox Sports*<br>Fox Sports 2*<br>
-				FUSE*<br>FX*<br>FXX*<br>FYI*<br>Golf*<br>Government Access<br>GSN*<br>Hallmark*<br>Hallmark Movies &amp; Mysteries*<br>HGTV*<br>History*<br>HLN*<br>
-				HSN*<br>ID*<br>IFC<br>Independent Film Channel*<br>INSP<br>Investigation Discovery*<br>ION<br>Jewelry Television*<br>Leased Access<br>Lifetime*<br>
-				Lifetime Movie Network*<br>Lifetime Real Women*<br>LMN*<br>Logo<br>MLB*<br>MSNBC*<br>MTV*<br>MTV 2*<br>MTV Hits<br>MTV Jams<br>Music Choice^<br>National Geographic*<br>
-				National Geographic Wild*<br>NBA*<br>NBC*<br>NBC Sports Network*<br>NFL NETWORK*<br>Nick JR*<br>Nick Toons*<br>Nickelodeon*<br>On Demand Channels*†<br>Outdoor Channel*<br>
-				Ovation<br>OWN*<br>Oxygen*<br>Palladia*<br>Public Access<br>PBS*<br>QVC*<br>REELZ*<br>SCIENCE*<br>Shop Zeal<br>Smithsonian<br>SoapNet*<br>Speed*<br>
-				Spike TV*<br>Sprout<br>Style*<br>Sundance*<br>SyFy*<br>TBN<br>TBS*<br>TCM*<br>Teen Nick<br>Telemundo*<br>Telemundo 2<br>The Weather Channel*<br>TLC*<br>
-				TNT*<br>Travel Channel*<br>truTV*<br>TV Guide Network*<br>TV Land*<br>TV One*<br>TWC Deportes*<br>TWC News*<br>TWC SportsNet*<br>TWC SportsNet LA*<br>
-				Univision*<br>UP*<br>USA*<br>Velocity*<br>VH 1*<br>VH 1 Classic*<br>WGN America*</p>
-				<p>*Also available in HD.</p>
-				<p>†On Demand may require purchase or subscription.</p>
-				<p>^Lease of a Set-Top Box is required.<br></p>
-				</div>';
-
-	// 70+ Chanels
-	$output .= '<div id="channels-70" class="white-popup mfp-hide">
-				<h1>Standard TV</h1>
-				<p>These channels show a sample of programming by TV plan. All channels may not be available in all locations. <a href="/en/tv/channels-lineup.html">See channels by package in your area.</a></p>
-				<p>A &amp; E*<br>ABC*<br>ABC Family*<br>AMC*<br>Animal Planet*<br>Azteca*<br>BET*<br>Bravo*<br>Cartoon Network*<br>CBS*<br>CNBC*<br>CNN*<br>Comedy Central*<br>C-SPAN*<br>
-				C-SPAN 2*<br>C-SPAN 3*<br>CW*<br>Discovery*<br>Disney*<br>E!*<br>Educational Access<br>ESPN*<br>ESPN 2*<br>EVINE Live<br>Food Network*<br>Fox*<br>
-				Fox Business Network*<br>Fox News Channel*<br>Fox Sports*<br>Fox Sports 1*<br>FX*<br>Galavision*<br>Golf*<br>Government Access<br>HGTV*<br>History*<br>HLN*<br>
-				HSN*<br>Investigation Discovery*<br>Lifetime*<br>LMN*<br>MSNBC*<br>MTV*<br>Music Choice^<br>National Geographic*<br>NBC*<br>Nickelodeon*<br>
-				Oxygen*<br>PAC 12*<br>Palladia*<br>PBS*<br>Public Access<br>QVC*<br>Spike TV*<br>SyFy*<br>TBS*<br>Telemundo*<br>The Weather Channel*<br>TLC*<br>
-				TNT*<br>truTV*<br>TV Guide Network*<br>TV Land*<br>TWC Deportes*<br>TWC News*<br>TWC SportsNet*<br>TWC SportsNet LA*<br>Univision*<br>USA*<br>
-				Velocity<br>VH 1*<br>WGN America*<br></p>
-				<p>*Also available in HD.</p>
-				<p>†On Demand may require purchase or subscription.</p>
-				<p>^Lease of a Set-Top Box is required.<br></p>
-				</div>';
-
-	// 20+ Chanels
-	$output .= '<div id="channels-20" class="white-popup mfp-hide">
-				<h1>Starter TV</h1>
-				<p>These channels show a sample of programming by TV plan. All channels may not be available in all locations. <a href="/en/tv/channels-lineup.html">See channels by package in your area.</a></p>
-				<p>ABC*<br>CBS*<br>C-SPAN<br>C-SPAN 2<br>C-SPAN 3<br>CW*<br>Educational Access<br>EVINE Live<br>Fox*<br>Galavision<br>Government Access<br>HSN*<br>
-				Music Choice^<br>NBC*<br>PBS*<br>Public Access<br>QVC*<br>SHOP NBC<br>TBN<br>TBS*<br>Telemundo*<br>TWC News*<br>Univision*<br>WGN America*</p>
-				<p>*Also available in HD.</p>
-				<p>†On Demand may require purchase or subscription.</p>
-				<p>^Lease of a Set-Top Box is required.<br></p>
-				</div>';
-
-	$output .= "jQuery('a[title='200+ Channels']').magnificPopup({
-				type:'inline'
-			});";
-		
+	
 	}
 	else {
 	 	$output .= "No Package Found";
@@ -1590,11 +1540,39 @@ function package_teaser($id_arr){
 add_filter('admin_init', 'my_general_settings_register_fields'); 
 
 function my_general_settings_register_fields() { 
-  register_setting('general', 'teaser_ids', 'esc_attr'); 
-  add_settings_field('teaser_ids', '<label for="teaser_ids">'.__('Teaser Package IDS' , 'teaser_ids' ).'</label>' , 'my_general_teaser_ids', 'general');
+  	register_setting('general', 'teaser_ids', 'esc_attr'); 
+  	add_settings_field('teaser_ids', '<label for="teaser_ids">'.__('Teaser Package IDS' , 'teaser_ids' ).'</label>' , 'my_general_teaser_ids', 'general');
+
+  	register_setting('general', 'tv_channels', 'esc_attr'); 
+	add_settings_field('tv_channels', '<label for="tv_channels">'.__('Channels Pop up' , 'tv_channels' ).'</label>' , 'tv_channels', 'general');
+
+ //  	register_setting('general', 'seventy_channels', 'esc_attr'); 
+	// add_settings_field('seventy_channels', '<label for="seventy_channels">'.__('70+ plus Channels' , 'seventy_channels' ).'</label>' , 'seventy_channels', 'general');
+
+	// register_setting('general', 'twohundred_channels', 'esc_attr'); 
+	// add_settings_field('twohundred_channels', '<label for="twohundred_channels">'.__('200+ Channels' , 'twohundred_channels' ).'</label>' , 'twohundred_channels', 'general');
+
+	// register_setting('general', 'threehundred_channels', 'esc_attr'); 
+	// add_settings_field('threehundred_channels', '<label for="threehundred_channels">'.__('300+ plus Channels' , 'threehundred_channels' ).'</label>' , 'threehundred_channels', 'general');
 } 
 
 function my_general_teaser_ids() { 
   $teaser_ids = get_option( 'teaser_ids', '' ); 
   echo '<input id="teaser_ids" style="width: 35%;" type="text" name="teaser_ids" value="' . $teaser_ids . '" />';
 }
+function tv_channels() { 
+  $tv_channels = get_option( 'tv_channels', '' ); 
+  echo '<textarea id="tv_channels" type="text" name="tv_channels" style="width:100%; min-height:300px;">'. $tv_channels .'</textarea>';
+}
+// function seventy_channels() { 
+//   $seventy_channels = get_option( 'seventy_channels', '' ); 
+//   echo '<textarea id="seventy_channels" type="text" name="seventy_channels" style="width:100%; min-height:300px;">'. $seventy_channels .'</textarea>';
+// }
+// function twohundred_channels() { 
+//   $twohundred_channels = get_option( 'twohundred_channels', '' ); 
+//   echo '<textarea id="twohundred_channels" type="text" name="twohundred_channels" style="width:100%; min-height:300px;">'. $twohundred_channels .'</textarea>';
+// }
+// function threehundred_channels() { 
+//   $threehundred_channels = get_option( 'threehundred_channels', '' ); 
+//   echo '<textarea id="threehundred_channels" type="text" name="threehundred_channels" style="width:100%; min-height:300px;">'. $threehundred_channels .'</textarea>';
+// }
