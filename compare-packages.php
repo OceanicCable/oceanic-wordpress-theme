@@ -22,11 +22,9 @@ get_header(); ?>
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 				</header>
 
-				<div class="entry-content">					
+				<div class="entry-content">
 					<?php 
-					
 					if(isset($_GET['id'])){
-					
 						$_packageComIDs = explode(',',$_GET['id']);
 						if(is_array($_packageComIDs)){
 							echo compare_packages($_packageComIDs);
@@ -34,18 +32,16 @@ get_header(); ?>
 							echo 'No Package Found';
 						}
 					}else{
-						echo 'No Package Found';
+						//echo 'No Package Found';
+						echo do_shortcode( '[pricing-grid]' );
 					}
-					
-					//echo 'test';
-					
 					?>
 					<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
 				</div><!-- .entry-content -->
 				<footer class="entry-meta">
 					<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
 				</footer><!-- .entry-meta -->
-			</article><!-- #post -->		
+			</article><!-- #post -->
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
