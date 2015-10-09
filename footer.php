@@ -1490,5 +1490,8 @@ m[i].innerHTML = c;
 </script>
 <!-- end: Adwords Call Tracking -->
 
+
+<?php wp_footer();?>
+
 </body>
 </html>
