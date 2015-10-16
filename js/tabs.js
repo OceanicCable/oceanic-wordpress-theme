@@ -1,4 +1,3 @@
-window.onload=function() {
 
   // get tab container
   var container = document.getElementById("hot-deals");
@@ -21,7 +20,7 @@ window.onload=function() {
     for (var i = 0; i < tabs.length; i++) {
       tabs[i].onmouseover=displayPage;
     }
-}
+
 
 // on click of one of tabs
 function displayPage() {

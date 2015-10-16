@@ -680,6 +680,10 @@ m[i].innerHTML = c;
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.backgroundSize.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-scrolltofixed-min.js"></script>
 
+<?php if(is_front_page()) : ?>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/tabs.js"></script>
+<?php endif; ?>
+
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 
