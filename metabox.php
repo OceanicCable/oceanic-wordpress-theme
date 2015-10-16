@@ -233,6 +233,11 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'id'   => $prefix . 'pgrid_phone_international_call',
 				'type' => 'textarea_small',
 			),
+			array(
+				'name' => 'Order Now Button URL',
+				'id'   => $prefix . 'pgrid_ordernow_btn_url',
+				'type' => 'text',
+			),
 			array( // Teaser
 				'name' => __( 'Teaser', 'cmb' ),
 				'id'   => $prefix . 'teaser',

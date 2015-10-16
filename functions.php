@@ -1166,7 +1166,11 @@ function pricing_grid($atts){
 	    $output .= '		</div>';
 	    $output .= '		<footer class="footer">';
 	    $output .= '			<a href="" title="View Details" class="view-details">View Details</a>';
-	    $output .= '			<a href="https://www.timewarnercable.com/residential/order?qso=1-GD3OW" title="Order Now" tartget="_blank" class="order-now">Order Now</a>';	    
+
+	    $deflink = "https://www.timewarnercable.com/residential/order?qso=1-GD3OW";
+	    $btnlink = get_post_meta( $post_id, 'rb-pgrid_ordernow_btn_url', true );
+
+	    $output .= '			<a href="'.(empty($btnlink) ? $deflink : $btnlink).'" title="Order Now" tartget="_blank" class="order-now">Order Now</a>';	    
 	    						if(is_user_logged_in()) {
 	    $output .= '				<a href="'. get_edit_post_link($post_id).'" title="" class="edit" target="_blank">Edit</a>';							
 	    						}
