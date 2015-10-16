@@ -19,7 +19,7 @@ get_header(); ?>
 	$teaser_ids = explode(",", $t_ids);
 	package_teaser($teaser_ids);
 	?>
-	<?php promo(12285); ?>
+	<?php promo(12768); ?>
 
 	<div id="primary" class="site-content col_9 column">
 		<div id="hot-deals-tab">
