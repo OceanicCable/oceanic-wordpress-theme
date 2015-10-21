@@ -1145,16 +1145,16 @@ function pricing_grid($atts){
 	    $output .= '			<hr />';
 	    $output .= '			<div class="price">';
 	    $output .= '				<span class="h4">';
-        $output .= '           			<sup class="dollar-sign">$</sup><span class="dollars">'.$price[0].'</span><sup class="cents">'.$price[1].'</sup>';
-        $output .= '            	</span>';
-        $output .= '            	<span class="term">'.$term.'</span>';
+        $output .= '           			<sup class="dollar-sign">$</sup><span class="dollars">'.$price[0].'</span><sup class="cents">'.(empty($price[1]) ? '00' : $price[1]).'</sup>';
+        $output .= '            		<span class="term">'.$term.'</span>';
+        $output .= '            	</span>';        
 	    $output .= '			</div>';
 	    $output .= '			<hr />';
 	    $output .= '			<div class="offer">';
 	    							if($price_before) {
 		$output .= '					<div class="price-before">';
 		$output .= '						<p>was</p>';
-		$output .= '           				<sup class="dollar-sign">$</sup><span class="dollars">'.$_price_before[0].'</span><sup class="cents">'.$_price_before[1].'</sup><span class="strike"></span>';
+		$output .= '           				<sup class="dollar-sign">$</sup><span class="dollars">'.$_price_before[0].'</span><sup class="cents">'.(empty($_price_before[1]) ? '00' : $_price_before[1]).'</sup><span class="strike"></span>';
 		$output .= '					</div>';
 		$output .= '					<div class="price-label"><h2>'.$lower_price_label.'</h2></div>';
 	    							} else {
@@ -1282,7 +1282,7 @@ function compare_packages($id_arr, $_echo = false){
 			$output .= '</h3>
 						<div class="price">
 		    				<span class="h4">
-		              			<sup class="dollar-sign">$</sup><span class="dollars">'.$_price[0].'</span><sup class="cents">'.$_price[1].'</sup>
+		              			<sup class="dollar-sign">$</sup><span class="dollars">'.$_price[0].'</span><sup class="cents">'.(empty($_price[1]) ? '00' : $_price[1]).'</sup>
 		                	</span>
 		                	<span class="term">per month for<br>12 <span>months</span></span>
 		    			</div>
@@ -1358,7 +1358,7 @@ function compare_packages($id_arr, $_echo = false){
 							<p class="was">was</p>
 							<sup class="dollar-sign">$</sup>
 							<span class="dollars">'.$_priceBef[0].'</span>
-							<sup class="cents">'.$_priceBef[1].'</sup>
+							<sup class="cents">'.(empty($_priceBef[1]) ? '00' : $_priceBef[1]).'</sup>
 							<span class="strike"></span>
 						</div>
 						<div class="price-label">
@@ -1520,7 +1520,7 @@ function package_teaser($id_arr){
 	        echo '			<sup class="dollar-sign">$</sup><span class="dollars">'.$price_arr[0].'</span>';
 	        echo '		</div>';
 	        echo '		<div class="cents-term">';
-	        echo '			<sup class="cents">'.$price_arr[1].'</sup>';
+	        echo '			<sup class="cents">'.(empty($price_arr[1]) ? '00' : $price_arr[1]).'</sup>';
 	        echo '			<span class="term">'.$term.'</span>';
 		    echo '		</div>';
 		    echo '	</div>';
