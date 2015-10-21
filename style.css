@@ -2499,8 +2499,8 @@ img.mfp-img {
 #pricing-grid .pricing .inner .details .price .h4 { font-family: 'twc_roundbook'; }
 #pricing-grid .pricing .inner .details .price .h4 .dollar-sign { position: relative; font-size: 20px; top: -18px; }
 #pricing-grid .pricing .inner .details .price .h4 .dollars { font-size: 46px; }
-#pricing-grid .pricing .inner .details .price .h4 .cents { font-size: 20px; position: relative; top: -18px; display: inline-block; width: 30px; line-height: normal; text-align: left; }
-#pricing-grid .pricing .inner .details .price .term { font-size: 9px; position: relative; left: -31px; top: 21px; display: inline-block; width: 60px; text-align: left; line-height: 9px; text-transform: lowercase; vertical-align: top; }
+#pricing-grid .pricing .inner .details .price .h4 .cents { font-size: 20px; position: relative; top: -18px; display: inline-block; width: 30px; line-height: normal; text-align: left; left: 2px; }
+#pricing-grid .pricing .inner .details .price .term { font-size: 9px; position: relative; left: -29px; top: 21px; display: inline-block; width: 60px; text-align: left; line-height: 9px; text-transform: lowercase; vertical-align: top; }
 #pricing-grid .pricing .inner .details .price .term span { color: #3376b2; border-bottom: 1px dotted #3376b2; cursor: pointer; }
 #pricing-grid .pricing .inner .details .price .term span:hover { color: #1b405d; border-bottom: 1px dotted #1b405d; }
 #pricing-grid .pricing .inner .details .offer { min-height: 55px; background: url(images/bg-offer.png); background-repeat: repeat-y; background-position: center center; font-family: 'twc_roundbook'; background-size: contain; }
