@@ -1534,7 +1534,7 @@ function package_teaser($id_arr){
 		}
 		echo '<div class="package">';
 		echo '	<h6>Most Popular Deals</h6>';
-	    echo '	<a href="http://www.timewarnercable.com/residential/order/?iid=hpofferstrip_DEALS_8999_:2:4:learnmore" target="_blank" title="" class="package-button">Learn More <span class="icon"></span></a>';
+	    echo '	<a href="'.get_settings('deals_link').'" target="_blank" title="" class="package-button">Learn More <span class="icon"></span></a>';
 	    		echo '</div>';
 		echo '</div>';
 	}
@@ -1547,17 +1547,17 @@ function my_general_settings_register_fields() {
   	register_setting('general', 'teaser_ids', 'esc_attr'); 
   	add_settings_field('teaser_ids', '<label for="teaser_ids">'.__('Teaser Package IDS' , 'teaser_ids' ).'</label>' , 'my_general_teaser_ids', 'general');
 
+  	register_setting('general', 'promo_id', 'esc_attr'); 
+	add_settings_field('promo_id', '<label for="promo_id">'.__('Promo ID' , 'promo_id' ).'</label>' , 'promo_id', 'general');
+
   	register_setting('general', 'tv_channels', 'esc_attr'); 
 	add_settings_field('tv_channels', '<label for="tv_channels">'.__('Channels Pop up' , 'tv_channels' ).'</label>' , 'tv_channels', 'general');
 
 	register_setting('general', 'popup_script', 'esc_attr'); 
-	add_settings_field('popup_script', '<label for="popup_script">'.__('Pop up Script' , 'popup_script' ).'</label>' , 'popup_script', 'general');
+	add_settings_field('popup_script', '<label for="popup_script">'.__('Pop up Script' , 'popup_script' ).'</label>' , 'popup_script', 'general');  	
 
- //  	register_setting('general', 'seventy_channels', 'esc_attr'); 
-	// add_settings_field('seventy_channels', '<label for="seventy_channels">'.__('70+ plus Channels' , 'seventy_channels' ).'</label>' , 'seventy_channels', 'general');
-
-	// register_setting('general', 'twohundred_channels', 'esc_attr'); 
-	// add_settings_field('twohundred_channels', '<label for="twohundred_channels">'.__('200+ Channels' , 'twohundred_channels' ).'</label>' , 'twohundred_channels', 'general');
+	register_setting('general', 'deals_link', 'esc_attr'); 
+	add_settings_field('deals_link', '<label for="deals_link">'.__('Popular Deals Link' , 'deals_link' ).'</label>' , 'deals_link', 'general');
 
 	// register_setting('general', 'threehundred_channels', 'esc_attr'); 
 	// add_settings_field('threehundred_channels', '<label for="threehundred_channels">'.__('300+ plus Channels' , 'threehundred_channels' ).'</label>' , 'threehundred_channels', 'general');
@@ -1575,14 +1575,14 @@ function popup_script() {
   $popup_script = get_option( 'popup_script', '' ); 
   echo '<textarea id="popup_script" name="popup_script" style="width:100%; min-height:200px;">'. $popup_script .'</textarea>';
 }
-// function seventy_channels() { 
-//   $seventy_channels = get_option( 'seventy_channels', '' ); 
-//   echo '<textarea id="seventy_channels" type="text" name="seventy_channels" style="width:100%; min-height:300px;">'. $seventy_channels .'</textarea>';
-// }
-// function twohundred_channels() { 
-//   $twohundred_channels = get_option( 'twohundred_channels', '' ); 
-//   echo '<textarea id="twohundred_channels" type="text" name="twohundred_channels" style="width:100%; min-height:300px;">'. $twohundred_channels .'</textarea>';
-// }
+function promo_id() { 
+  $promo_id = get_option( 'promo_id', '' ); 
+  echo '<input type="text" name="promo_id" style="width:35%;" value="'. $promo_id .'">';
+}
+function deals_link() { 
+  $deals_link = get_option( 'deals_link', '' ); 
+  echo '<input id="deals_link" type="text" name="deals_link" style="width:100%" value="'. $deals_link .'" />';
+}
 // function threehundred_channels() { 
 //   $threehundred_channels = get_option( 'threehundred_channels', '' ); 
 //   echo '<textarea id="threehundred_channels" type="text" name="threehundred_channels" style="width:100%; min-height:300px;">'. $threehundred_channels .'</textarea>';

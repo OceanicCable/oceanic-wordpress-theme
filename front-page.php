@@ -16,10 +16,11 @@ get_header(); ?>
 
 	<?php
 	$t_ids = get_settings('teaser_ids');
+	$promo_id = get_settings('promo_id');
 	$teaser_ids = explode(",", $t_ids);
 	package_teaser($teaser_ids);
 	?>
-	<?php promo(12768); ?>
+	<?php promo($promo_id); ?>
 
 	<div id="primary" class="site-content col_9 column">
 		<div id="hot-deals-tab">
