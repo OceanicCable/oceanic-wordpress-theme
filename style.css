@@ -2643,7 +2643,7 @@ img.mfp-img {
 #package-teaser .package:last-child a.package-button { margin-top: 15px; }
 #package-teaser .package .price,
 #package-teaser .package .action { float: left; width: 50%; padding: 5px; box-sizing: border-box; line-height: normal; }
-#package-teaser .package .price { border-right: 1px solid #ccc; padding-left: 0; padding-top: 0; color: #333; }
+#package-teaser .package .price { border-right: 1px solid #ccc; padding-left: 0; color: #333; padding: 0 0 5px 0; }
 #package-teaser .package .price sup { font-size: 13px; top: -11px; }
 #package-teaser .package .price .dollar-price sup { top: -11px; }
 #package-teaser .package .price .cents-term sup { top: 8px; margin-left: 1px; float: left; }
@@ -2680,12 +2680,15 @@ img.mfp-img {
 	#post-5682 .packages .package-box .thumbnail { float: none; width: auto; text-align: center; margin-left: 0px; }	
 	.packages .package-box .package-links { padding-bottom: 10px; }	
 	#pricing-grid .pricing { width: 50%; }
+	#package-teaser .package { width: 50%; margin-bottom: 15px; }
+	#package-teaser .package .package-box { max-width: 245px; margin: 0 auto; }
+	#package-teaser .package:nth-child(even) { border-right: none; }
 }
 @media only screen and (min-width: 768px) {
 	.special-packages .package:nth-child(odd) { clear: left; }
 	.nav-menu li ul li a { min-height: 15px!important; padding: 8px 15px!important; line-height: 20px!important; }
 	.nav-menu li#menu-item-11713 ul.sub-menu { width: 250px; }
-	.nav-menu li#menu-item-3277 ul.sub-menu { width: 225px; }
+	.nav-menu li#menu-item-3277 ul.sub-menu { width: 225px; }	
 }
 @media only screen and (max-width: 767px) {
 	.packages .package-box { min-height: 50px; }
@@ -2695,6 +2698,7 @@ img.mfp-img {
 	#sort-filter .sort { float: none; }
 	#sort-filter .filter label { margin-right: 0; width: 50%; float: left; }
 	#sort-filter .sort select { width: 100%; box-sizing: border-box; }
+	#package-teaser .package { width: 100%; border-right: none;	background: #eee; padding: 15px; }
 }
 @media only screen and (max-width: 479px) {
 	#content { padding: 15px; }

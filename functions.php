@@ -1513,6 +1513,7 @@ function package_teaser($id_arr){
 
 	
 			echo '<div class="package">';
+			echo '<div class="package-box">';
 			echo '	<h6>'.get_post_meta($post->ID, "rb-pgrid_teaser_title", true).'</h6>';
 			echo '	<p>'.get_post_meta($post->ID, "rb-pgrid_teaser_tagline", true).'</p>';
 			echo '	<div class="price">';
@@ -1530,6 +1531,7 @@ function package_teaser($id_arr){
 			if ( is_user_logged_in() ) {
             	echo '<br><a href="'.get_edit_post_link().'" target="_blank" title="Edit '.get_the_title().'" class="edit-post">Edit</a>';
         	}
+			echo '</div>';
 			echo '</div>';
 		}
 		echo '<div class="package">';
