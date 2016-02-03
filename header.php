@@ -84,6 +84,9 @@ color:#000000;
 <body <?php body_class(); ?>>
 
 <div id="page" class="hfeed">
+	<div id="topbar-container" class="container">
+		<?php wp_nav_menu( array( 'menu' => 'top', 'menu_id' => 'top-menu', 'container_class' => 'row' ) ); ?>
+	</div>
 	<div id="header-container" class="container">
 		<header id="masthead" class="site-header row" role="banner">
 			<div id="header-sub" class="column">
@@ -131,15 +134,19 @@ color:#000000;
 	<?php endif; ?>
 
 	<?php if(is_front_page()) : ?>
-	<div id="slider-container" class="container">
-		<div class="row">
-			<div class="col_12 column">
-				<?php custom_flexslider( 'main-slider', 'main-slides', 'asc', 'menu_order', -1 ); ?>
+		<?php if(is_page_template('divi-home.php')) : ?>
+			<?php the_content(); ?>
+		<?php else: ?>
+			<div id="slider-container" class="container">
+				<div class="row">
+					<div class="col_12 column">
+						<?php custom_flexslider( 'main-slider', 'main-slides', 'asc', 'menu_order', -1 ); ?>
+					</div>
+					<span id="ls"></span>
+					<span id="rs"></span>
+				</div>
 			</div>
-			<span id="ls"></span>
-			<span id="rs"></span>
-		</div>
-	</div>
+		<?php endif; ?>
 	<?php endif; ?>
 
 	<?php if(is_page_template('banner-page.php')) : ?>
@@ -190,4 +197,4 @@ color:#000000;
 	<?php endif; ?>
 
 	<div id="main-container" class="container">
-		<div id="main" class="row">
+		<div id="main" class="<?php echo main_class(); ?>">

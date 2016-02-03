@@ -1585,6 +1585,14 @@ function deals_link() {
   $deals_link = get_option( 'deals_link', '' ); 
   echo '<input id="deals_link" type="text" name="deals_link" style="width:100%" value="'. $deals_link .'" />';
 }
+
+function main_class(){
+	if ( is_page_template( 'page-templates/divi.php' ) ) {
+	    return "";
+	} else {
+	    return "row";
+	}
+}
 // function threehundred_channels() { 
 //   $threehundred_channels = get_option( 'threehundred_channels', '' ); 
 //   echo '<textarea id="threehundred_channels" type="text" name="threehundred_channels" style="width:100%; min-height:300px;">'. $threehundred_channels .'</textarea>';

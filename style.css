@@ -2662,6 +2662,11 @@ img.mfp-img {
 .white-popup.channels-pop .channels { max-height: 400px; overflow-y: scroll; }
 .white-popup.channels-pop .channels p { -webkit-column-count: 3; /* Chrome, Safari, Opera */ -moz-column-count: 3; /* Firefox */ column-count: 3; }
 
+#topbar-container { background: #001B45; }
+#top-menu li { display: inline-block; padding: 10px; }
+#top-menu li:hover,
+#top-menu li.current-menu-item { background: #0088ce; }
+#top-menu li a { color: #fff; }
 
 @media only screen and (max-width: 1023px) {
 	.regular-packages .package-box h3 { font-size: 18px; }
