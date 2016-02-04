@@ -4,29 +4,29 @@
 	min-height: 330px;
 	padding-bottom: 15px;
 	/*background: #16599d url(../images/gradient-blue-black.jpg) left bottom repeat-x;*/
-	background: #16599d url(../images/ocean.jpg) left bottom no-repeat;
+	background: #16599d url(../images/ocean.jpg) left bottom no-repeat!important;
 }
 
 .tabs > ul {
-	padding: 15px 0px 15px 15px;
+	padding: 15px 0px 15px 15px!important;
 }
 
 .tabs > ul > li {
-	color: #fff;
+	color: #fff!important;
 	font-size: 13px;
 	cursor: pointer;
 	font-weight: bold;
 	position: relative;
-	padding: 15px 0px 15px 40px;
+	padding: 15px 0px 15px 40px!important;
 	border: 1px solid transparent;
 	border-bottom: 1px dotted #3a444b;
 }
 .tabs > ul > li a {
-	color: #fff;
+	color: #fff!important;
 }
 .tabs > ul > li:hover a,
 .tabs > ul > li.tabActiveHeader a {
-	color: #444;
+	color: #444!important;
 }
 .tabs > ul > li span.icon {
 	float: left;	
@@ -34,31 +34,31 @@
 	height: 20px;
 	top: 50%;
 	left: 10px;	
-	margin-top: -10px;
+	margin-top: -10px!important;
 	position: absolute;
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat!important;	
 }
 
 .tabs > ul > li:hover span.icon,
 .tabs > ul > li.tabActiveHeader span.icon {
-	background-position: 0px -20px;
+	background-position: 0px -20px!important;
 }
 
 .tabs > ul > li:hover {
 	color: #444;
 	border: 1px solid #000;
 	border-right: none;
-	background: #fff url(../images/tabs-active-tab.jpg) repeat-y;
+	background: #fff url(../images/tabs-active-tab.jpg) repeat-y!important;
 }
 
 .tabs > ul > li.tabActiveHeader {
 	color: #444;
 	border: 1px solid #000;
 	border-right: none;
-	background: #fff url(../images/tabs-active-tab.jpg) repeat-y;
+	background: #fff url(../images/tabs-active-tab.jpg) repeat-y!important;
 }
 
-.tabs > ul > li:hover span.icon { background-position: 0px -20px; }
+.tabs > ul > li:hover span.icon { background-position: 0px -20px!important; }
 /*.tabs > ul > li#tabHeader_1 span.icon { background-image: url(../images/hot-star.png); }
 .tabs > ul > li#tabHeader_2 span.icon { background-image: url(../images/hot-movie.png); }
 .tabs > ul > li#tabHeader_3 span.icon { background-image: url(../images/hot-show.png); }

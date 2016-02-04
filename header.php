@@ -134,8 +134,8 @@ color:#000000;
 	<?php endif; ?>
 
 	<?php if(is_front_page()) : ?>
-		<?php if(is_page_template('divi-home.php')) : ?>
-			<?php the_content(); ?>
+		<?php if(is_page_template('page-templates/divi.php')) : ?>
+			<?php //the_content(); ?>
 		<?php else: ?>
 			<div id="slider-container" class="container">
 				<div class="row">
@@ -197,4 +197,4 @@ color:#000000;
 	<?php endif; ?>
 
 	<div id="main-container" class="container">
-		<div id="main" class="<?php echo main_class(); ?>">
+		<div id="main" class="<?php echo main_class(); ?>">			

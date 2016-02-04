@@ -601,18 +601,45 @@ function special_offers($catid, $limit){
     wp_reset_query();  // Restore global post data stomped by the_post().
 }
 
-function whats_hot_tabs() {
+function whats_hot_func($atts) {
+
+	extract(shortcode_atts(array(
+      'parent_cat_id' => 0
+   	), $atts));
+	
+	global $post;
+	$output = "";
+
+	$output .='<div id="hot-deals-tab">';
+	$output .='		<div id="hot-deals" class="purejs-tabs">';
+	$output .='			<div class="tabs">';
+	$output .='				<h1>What\'s Hot</h1>';
+	$output .='				<ul>';
+	$output .=					whats_hot_tabs($parent_cat_id);
+	$output .='				</ul>';
+	$output .='			</div>';
+	$output .='			<div class="tabscontent">';
+	$output .=				whats_hot_tabs_content($parent_cat_id);
+	$output .='			</div>';
+	$output .='		</div><!-- #hot-deals -->';
+	$output .='</div><!-- #hot-deals -->';
+	return $output;
+}
+add_shortcode('whats_hot', 'whats_hot_func');
+
+function whats_hot_tabs($parent) {
 	$args = array (
     'type' => 'post',
-    'parent' => 80,
+    'parent' => $parent,
     'orderby' => 'slug',
     'taxonomy' => 'category',
     'hide_empty' => 1 //shows empty categories
 	);
+	$output = "";
 	$categories = get_categories( $args );
 	$i = 1;
 	foreach ($categories as $category) {
-	    echo '<li id="tabHeader_'.$i.'" title="'.$category->name.'">';
+	    $output .='<li id="tabHeader_'.$i.'" title="'.$category->name.'">';
 	    if (function_exists('z_taxonomy_image_url')) {
 	    	$icon = z_taxonomy_image_url($category->cat_ID);
 	    	if(!empty($icon)){
@@ -631,17 +658,18 @@ function whats_hot_tabs() {
 		} else {
 			$caturl = "/";
 		}
-	    echo '<span class="icon" style="background-image: url('.$url.')"></span>';
-	    echo '<a href="'.$caturl.'" title="'.$category->name.'"><span class="title">'.$category->name.'</span></a>';
-	    echo '</li>';
+	    $output .= '<span class="icon" style="background-image: url('.$url.')"></span>';
+	    $output .= '<a href="'.$caturl.'" title="'.$category->name.'"><span class="title">'.$category->name.'</span></a>';
+	    $output .= '</li>';
 	    $i++;
 	}
+	return $output;
 }
 
-function whats_hot_tabs_content() {
+function whats_hot_tabs_content($parent) {
 	$args = array (
     'type' => 'post',
-    'parent' => 80,
+    'parent' => $parent,
     'order' => 'asc',
     'orderby' => 'slug',
     'taxonomy' => 'category',
@@ -650,9 +678,9 @@ function whats_hot_tabs_content() {
 	$categories = get_categories( $args );
 	$i = 1;
 	foreach ($categories as $category) {
-	    echo '<div class="tabpage" id="tabpage_'.$i.'">';
+	    $output .='<div class="tabpage" id="tabpage_'.$i.'">';
 		//echo '<h2>'.$category->name.'</h2>';
-		echo '<div>';
+		$output .='<div>';
 		$cat_slug = $category->slug;
 		$post_args = array(
 	      	'category_name' => $cat_slug,
@@ -668,7 +696,7 @@ function whats_hot_tabs_content() {
 	    if( $my_query->have_posts() ) {
 
 	        while ($my_query->have_posts()) : $my_query->the_post();
-	            echo '<div>';
+	            $output .='<div>';
 	            // $tab_title = get_the_title();
 	            // $title_len = strlen($tab_title);
 	            // if($title_len > 12 ){
@@ -676,24 +704,25 @@ function whats_hot_tabs_content() {
 	            // } else {
 	            // 	$title = $tab_title;
 	            // }
-	            echo '<h2><a href="'.get_permalink().'" title="'.get_the_title().'">'.get_the_title().'</a></h2>';
-	            echo '<a href="'.get_permalink().'" title="'.get_the_title().'">'.get_the_post_thumbnail($post->ID,'small').'</a>';
+	            $output .='<h2><a href="'.get_permalink().'" title="'.get_the_title().'">'.get_the_title().'</a></h2>';
+	            $output .='<a href="'.get_permalink().'" title="'.get_the_title().'">'.get_the_post_thumbnail($post->ID,'small').'</a>';
 	            $excerpt = get_the_excerpt();
 	            if($excerpt) {
-	            	echo '<p>'.$excerpt.'</p>';
+	            	$output .='<p>'.$excerpt.'</p>';
 	            }
-	            echo '<a href="'.get_permalink().'" title="'.get_the_title().'" id="learn-more-id-'.get_the_id().'" class="rm">Learn More <span class="icon"></span></a>';
+	            $output .='<a href="'.get_permalink().'" title="'.get_the_title().'" id="learn-more-id-'.get_the_id().'" class="rm">Learn More <span class="icon"></span></a>';
 	            if ( is_user_logged_in() ) {
-	            	echo '<a href="'.get_edit_post_link().'" title="Edit '.get_the_title().'" class="edit-post">Edit</a>';
+	            	$output .='<a href="'.get_edit_post_link().'" title="Edit '.get_the_title().'" class="edit-post">Edit</a>';
 	        	}
-	            echo '</div>';
+	            $output .='</div>';
 	        endwhile;
 	    }
 	    wp_reset_query();  // Restore global post data stomped by the_post().
-	    echo '</div>';
+	    $output .='</div>';
 	    $i++;
-	    echo '</div>';
+	    $output .='</div>';
 	}
+	return $output;
 }
 
 function playing_now($atts){
@@ -1480,23 +1509,31 @@ function compare_packages_rowspan( $_title = array(),$count = 0, $class=''){
 	
 }
 
-function package_teaser($id_arr){
+function package_teaser($atts){
 
 	global $post;
 
+	extract(shortcode_atts(array(
+      'packages' => 0,
+      'posttype' => 'packages'
+   	), $atts));
+
+   	$teaser_ids = explode(",", $packages);   	
+
 	$args = array(
 	'order' => 'asc',
-	'post_type' => 'packages',
-	'post__in' => $id_arr
+	'post_type' => $posttype,
+	'post__in' => $teaser_ids
 	);
 
 	$the_query = "";
+	$output = "";
 
 	$the_query = new WP_Query($args);	
 	
 	if ( $the_query->have_posts() ) {
 
-		echo '<div id="package-teaser">';
+		$output .='<div id="package-teaser">';
 
 		while ( $the_query->have_posts() ) {
 			$the_query->the_post();
@@ -1510,37 +1547,39 @@ function package_teaser($id_arr){
 
 			$price = get_post_meta( $post->ID, 'rb-pgrid_price', true );
 			$price_arr = explode(".", $price);
-
 	
-			echo '<div class="package">';
-			echo '<div class="package-box">';
-			echo '	<h6>'.get_post_meta($post->ID, "rb-pgrid_teaser_title", true).'</h6>';
-			echo '	<p>'.get_post_meta($post->ID, "rb-pgrid_teaser_tagline", true).'</p>';
-			echo '	<div class="price">';
-	        echo '		<div class="dollar-price">';
-	        echo '			<sup class="dollar-sign">$</sup><span class="dollars">'.$price_arr[0].'</span>';
-	        echo '		</div>';
-	        echo '		<div class="cents-term">';
-	        echo '			<sup class="cents">'.(empty($price_arr[1]) ? '00' : $price_arr[1]).'</sup>';
-	        echo '			<span class="term">'.$term.'</span>';
-		    echo '		</div>';
-		    echo '	</div>';
-		    echo '	<div class="action">';
-		    echo '		<a href="'.get_the_permalink($post->ID).'" title="" class="package-button">Shop Offers <span class="icon"></span></a>';
-			echo '	</div>';
+			$output .='<div class="package">';
+			$output .='<div class="package-box">';
+			$output .='	<h6>'.get_post_meta($post->ID, "rb-pgrid_teaser_title", true).'</h6>';
+			$output .='	<p>'.get_post_meta($post->ID, "rb-pgrid_teaser_tagline", true).'</p>';
+			$output .='	<div class="price">';
+	        $output .='		<div class="dollar-price">';
+	        $output .='			<sup class="dollar-sign">$</sup><span class="dollars">'.$price_arr[0].'</span>';
+	        $output .='		</div>';
+	        $output .='		<div class="cents-term">';
+	        $output .='			<sup class="cents">'.(empty($price_arr[1]) ? '00' : $price_arr[1]).'</sup>';
+	        $output .='			<span class="term">'.$term.'</span>';
+		    $output .='		</div>';
+		    $output .='	</div>';
+		    $output .='	<div class="action">';
+		    $output .='		<a href="'.get_the_permalink($post->ID).'" title="" class="package-button">Shop Offers <span class="icon"></span></a>';
+			$output .='	</div>';
 			if ( is_user_logged_in() ) {
-            	echo '<br><a href="'.get_edit_post_link().'" target="_blank" title="Edit '.get_the_title().'" class="edit-post">Edit</a>';
+            	$output .='<br><a href="'.get_edit_post_link().'" target="_blank" title="Edit '.get_the_title().'" class="edit-post">Edit</a>';
         	}
-			echo '</div>';
-			echo '</div>';
+			$output .='</div>';
+			$output .='</div>';
 		}
-		echo '<div class="package">';
-		echo '	<h6>Most Popular Deals</h6>';
-	    echo '	<a href="'.get_settings('deals_link').'" target="_blank" title="" class="package-button">Learn More <span class="icon"></span></a>';
-	    		echo '</div>';
-		echo '</div>';
+		$output .='<div class="package">';
+		$output .='	<h6>Most Popular Deals</h6>';
+	    $output .='	<a href="'.get_settings('deals_link').'" target="_blank" title="" class="package-button">Learn More <span class="icon"></span></a>';
+	    		$output .='</div>';
+		$output .='</div>';
+
+		return $output;
 	}
 }
+add_shortcode('package_teasers', 'package_teaser');
 
 // Teaser Package IDS
 add_filter('admin_init', 'my_general_settings_register_fields'); 
@@ -1587,7 +1626,7 @@ function deals_link() {
 }
 
 function main_class(){
-	if ( is_page_template( 'page-templates/divi.php' ) ) {
+	if ( is_page_template( 'page-templates/divi.php' ) || is_page_template( 'page-templates/divi-home.php' ) ) {
 	    return "";
 	} else {
 	    return "row";
