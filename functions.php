@@ -487,6 +487,8 @@ function add_scripts() {
     	wp_enqueue_script('jquery-ui', '//code.jquery.com/ui/1.10.4/jquery-ui.js', '', '1.0', true);
 
 		wp_enqueue_script('flexnav-js', get_template_directory_uri() . '/js/jquery.flexnav.min.js', '', '1.0', true);
+		wp_enqueue_script('validation-js', get_template_directory_uri() . '/js/validation.min.js', '', '1.0', true);
+		wp_enqueue_script('page-js', get_template_directory_uri() . '/js/page.min.js', '', '1.0', true);
 		wp_enqueue_script('flexslider-js', get_template_directory_uri() . '/js/jquery.flexslider.js', '', '1.0', true);
 		wp_enqueue_script('classie-js', get_template_directory_uri() . '/js/classie.js', '', '1.0', true);
 		wp_enqueue_script('modals', get_template_directory_uri() . '/js/modals.js', '', '1.0', true);
@@ -1636,3 +1638,18 @@ function main_class(){
 //   $threehundred_channels = get_option( 'threehundred_channels', '' ); 
 //   echo '<textarea id="threehundred_channels" type="text" name="threehundred_channels" style="width:100%; min-height:300px;">'. $threehundred_channels .'</textarea>';
 // }
+
+function apps_popup_func($id, $links){
+
+	$output = "";
+
+	$output .='	<div id="'.$id.'" class="white-popup mfp-hide">';
+	$output .='		<h1>Download Now</h1>';	
+	foreach ($links as $link) {
+		$button = $link['button'];
+		$output .='		<a title="'.$link['title'].'" href="'.$link['link'].'" onclick="_gaq.push([\'_trackEvent\', \'outbound-article\', \''.$link['link'].'\', \'\']);" target="_blank"><img src="/wp-content/uploads/2014/01/'.$link['button'].'-btn.png" alt=""></a>';
+	}
+	$output .='test</div>';
+
+	return $output;
+}

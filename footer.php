@@ -78,554 +78,407 @@ echo htmlspecialchars_decode($channels);
 // echo htmlentities($channels,ENT_QUOTES);
 ?>
 
-
-<!-- 200+ Chanels -->
-	<!-- <div id="channels-200" class="white-popup mfp-hide channels-pop">
-		<h1>Preferred TV</h1>
-		<p>These channels show a sample of programming by TV plan. All channels may not be available in all locations. <a href="http://www.timewarnercable.com/en/tv/channels-lineup.html">See channels by package in your area.</a></p>
-		<div class="channels"><p>A &amp; E*<br>ABC*<br>ABC Family*<br>Al Jazeera America<br>AMC*<br>American Heroes Channel<br>Animal Planet*<br>Aspire<br>
-		Azteca*<br>BBC America*<br>BBC World News<br>BET*<br>Big Ten Network*<br>Bloomberg*<br>Bravo*<br>Cartoon Network*<br>CBS*<br>
-		CCTV News<br>Centric<br>Chiller<br>CLOO<br>CMT*<br>CNBC*<br>CNBC World<br>CNN*<br>Comedy Central*<br>Cooking Channel*<br>C-SPAN*<br>
-		C-SPAN 2*<br>C-SPAN 3*<br>CW*<br>Daystar<br>Destination America*<br>Discovery*<br>Discovery - Fit &amp; Health*<br>Disney*<br>Disney Junior*<br>
-		Disney XD*<br>DIY*<br>E!*<br>Educational Access<br>ESPN*<br>ESPN Deportes*<br>ESPN 2*<br>ESPN News*<br>ESPN University*<br>EVINE Live<br>
-		EWTN*<br>Food Network*<br>Fox*<br>Fox Business Network*<br>Fox Deportes*<br>Fox Movie Channel*<br>Fox News Channel*<br>Fox Sports*<br>Fox Sports 2*<br>
-		FUSE*<br>FX*<br>FXX*<br>FYI*<br>Golf*<br>Government Access<br>GSN*<br>Hallmark*<br>Hallmark Movies &amp; Mysteries*<br>HGTV*<br>History*<br>HLN*<br>
-		HSN*<br>ID*<br>IFC<br>Independent Film Channel*<br>INSP<br>Investigation Discovery*<br>ION<br>Jewelry Television*<br>Leased Access<br>Lifetime*<br>
-		Lifetime Movie Network*<br>Lifetime Real Women*<br>LMN*<br>Logo<br>MLB*<br>MSNBC*<br>MTV*<br>MTV 2*<br>MTV Hits<br>MTV Jams<br>Music Choice^<br>National Geographic*<br>
-		National Geographic Wild*<br>NBA*<br>NBC*<br>NBC Sports Network*<br>NFL NETWORK*<br>Nick JR*<br>Nick Toons*<br>Nickelodeon*<br>On Demand Channels*†<br>Outdoor Channel*<br>
-		Ovation<br>OWN*<br>Oxygen*<br>Palladia*<br>Public Access<br>PBS*<br>QVC*<br>REELZ*<br>SCIENCE*<br>Shop Zeal<br>Smithsonian<br>SoapNet*<br>Speed*<br>
-		Spike TV*<br>Sprout<br>Style*<br>Sundance*<br>SyFy*<br>TBN<br>TBS*<br>TCM*<br>Teen Nick<br>Telemundo*<br>Telemundo 2<br>The Weather Channel*<br>TLC*<br>
-		TNT*<br>Travel Channel*<br>truTV*<br>TV Guide Network*<br>TV Land*<br>TV One*<br>TWC Deportes*<br>TWC News*<br>TWC SportsNet*<br>TWC SportsNet LA*<br>
-		Univision*<br>UP*<br>USA*<br>Velocity*<br>VH 1*<br>VH 1 Classic*<br>WGN America*</p><div>
-		<p>*Also available in HD.</p>
-		<p>†On Demand may require purchase or subscription.</p>
-		<p>^Lease of a Set-Top Box is required.<br></p>
-	</div> -->
-
-	<!-- 70+ Chanels -->
-	<!-- <div id="channels-70" class="white-popup mfp-hide channels-pop">
-		<h1>Standard TV</h1>
-		<p>These channels show a sample of programming by TV plan. All channels may not be available in all locations. <a href="http://www.timewarnercable.com/en/tv/channels-lineup.html">See channels by package in your area.</a></p>
-		<div class="channels"><p>A &amp; E*<br>ABC*<br>ABC Family*<br>AMC*<br>Animal Planet*<br>Azteca*<br>BET*<br>Bravo*<br>Cartoon Network*<br>CBS*<br>CNBC*<br>CNN*<br>Comedy Central*<br>C-SPAN*<br>
-		C-SPAN 2*<br>C-SPAN 3*<br>CW*<br>Discovery*<br>Disney*<br>E!*<br>Educational Access<br>ESPN*<br>ESPN 2*<br>EVINE Live<br>Food Network*<br>Fox*<br>
-		Fox Business Network*<br>Fox News Channel*<br>Fox Sports*<br>Fox Sports 1*<br>FX*<br>Galavision*<br>Golf*<br>Government Access<br>HGTV*<br>History*<br>HLN*<br>
-		HSN*<br>Investigation Discovery*<br>Lifetime*<br>LMN*<br>MSNBC*<br>MTV*<br>Music Choice^<br>National Geographic*<br>NBC*<br>Nickelodeon*<br>
-		Oxygen*<br>PAC 12*<br>Palladia*<br>PBS*<br>Public Access<br>QVC*<br>Spike TV*<br>SyFy*<br>TBS*<br>Telemundo*<br>The Weather Channel*<br>TLC*<br>
-		TNT*<br>truTV*<br>TV Guide Network*<br>TV Land*<br>TWC Deportes*<br>TWC News*<br>TWC SportsNet*<br>TWC SportsNet LA*<br>Univision*<br>USA*<br>
-		Velocity<br>VH 1*<br>WGN America*<br></p></div>
-		<p>*Also available in HD.</p>
-		<p>†On Demand may require purchase or subscription.</p>
-		<p>^Lease of a Set-Top Box is required.<br></p>
-	</div> -->
-
-
 <?php if (is_page(388)) { ?>
 
-	<div id="nbc-ports-live-extra" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/nbc-sports-live-extra/id542511686?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/nbc-sports-live-extra/id542511686?mt=8', '']);" title="Watch NBC Live Extra on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=air.com.nbcuni.com.nbcsports.liveextra" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=air.com.nbcuni.com.nbcsports.liveextra', '']);" title="Watch NBC Live Extra on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a title="Get it Here" href="http://stream.nbcsports.com/liveextra/" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="fyi" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/fyi-tv/id887597381?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/fyi-tv/id887597381?mt=8', '']);" title="Watch FYI on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://fyi.tv/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://fyi.tv/', '']);" title="Watch FYI online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="phone-2-go" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/phone-2-go/id876009911?ls=1&amp;mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/phone-2-go/id876009911?ls=1&amp;mt=8', '']);" title="Phone 2 Go on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://play.google.com/store/apps/details?id=com.timewarnercable.phone2go" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://play.google.com/store/apps/details?id=com.timewarnercable.phone2go', '']);" title="My TWC on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-	</div>
-
-	<div id="twc-tv" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/twcable-tv/id420455839?mt=8&amp;ls=1" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/twcable-tv/id420455839?mt=8&amp;ls=1', '']);" title="TWC TV on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.TWCableTV" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.TWCableTV', '']);" title="TWC TV on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="https://video.timewarnercable.com" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://video.timewarnercable.com', '']);" title="Watch TWC TV online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-		<a href="http://www.roku.com/channels/#!details/23048/time-warner-cable" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.roku.com/channels/#!details/23048/time-warner-cable', '']);" title="Watch TWC TV on Roku" target="_blank"><img src="/wp-content/uploads/2014/01/roku-btn.png" alt=""></a>
-		<a href="http://www.twcableuntangled.com/2013/07/now-launching-twc-tv-for-samsung-smart-tvs/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.twcableuntangled.com/2013/07/now-launching-twc-tv-for-samsung-smart-tvs/', '']);" title="Watch TWC TV on your Samsung TV" target="_blank"><img src="/wp-content/uploads/2014/01/samsung-smart-tv-btn.png" alt=""></a>
-		<a href="http://www.amazon.com/Time-Warner-Cable-TWC-TV%C2%AE/dp/B00GY1DWUO" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.amazon.com/Time-Warner-Cable-TWC-TV%C2%AE/dp/B00GY1DWUO', '']);" title="TWC TV on your Kindle" target="_blank"><img src="/wp-content/uploads/2014/01/kindle-btn.png" alt=""></a>
-		<a href="http://www.timewarnercable.com/en/residential-home/support/faqs/faqs-tv/twctvapp.html" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.timewarnercable.com/en/residential-home/support/faqs/faqs-tv/twctvapp.html', '']);" title="Frequently Asked Questions" target="_blank"><img src="/wp-content/uploads/2014/01/faq-btn.png" alt=""></a>
-	</div>
-
-	<div id="my-twc" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/my-twc/id498008691?ls=1&amp;mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/my-twc/id498008691?ls=1&amp;mt=8', '']);" title="Use My TWC on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.mytwc.common.resource&amp;feature=search_result#]" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.mytwc.common.resource&amp;feature=search_result#]', '']);" title="My TWC on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-	</div>
-
-	<div id="oceanic-tv" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/oceanic-tv/id601624623?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/oceanic-tv/id601624623?mt=8', '']);" title="Oceanic TV  on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.oceanic.octv" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.oceanic.octv', '']);" title="Oceanic TV on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://oc16.tv/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://oc16.tv/', '']);" title="Watch Oceanic TV online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="intelligent-home" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/oceanic-tv/id601624623?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/oceanic-tv/id601624623?mt=8', '']);" title="Oceanic TV  on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.oceanic.octv" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.oceanic.octv', '']);" title="Oceanic TV on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a><br>
-	</div>
-
-	<div id="twc-wifi-finder" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/wifi-finder/id492768487?ls=1&amp;mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/wifi-finder/id492768487?ls=1&amp;mt=8', '']);" title="TWC WiFi on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.timewarnercable.wififinder&amp;feature=search_result#" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.timewarnercable.wififinder&amp;feature=search_result#', '']);" title="TWC WiFi on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-	</div>
-
-	<div id="social-one" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.twcc.com/socialone" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.twcc.com/socialone', '']);" title="More information on Social One" target="_blank"><img src="/wp-content/uploads/2014/01/learn-more-btn.png" alt=""></a>
-	</div>
-
-	<div id="phone-2-go" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/phone-2-go/id876009911?ls=1&amp;mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/phone-2-go/id876009911?ls=1&amp;mt=8', '']);" title="Phone 2 Go on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.timewarnercable.phone2go" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.timewarnercable.phone2go', '']);" title="Phone 2 Go on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-	</div>
-
-	<div id="hbo-go" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/hbo-go/id429775439?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/hbo-go/id429775439?mt=8', '']);" title="HBO GO on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.HBO&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.HBO&amp;hl=en', '']);" title="HBO GO on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.hbogo.com/geo.html" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.hbogo.com/geo.html', '']);" title="Watch HBO Go online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="max-go" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/max-go/id453560335?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/max-go/id453560335?mt=8', '']);" title="Cinemax on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.MAXGo&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.MAXGo&amp;hl=en', '']);" title="Cinemax on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.maxgo.com/geo.html" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.maxgo.com/geo.html', '']);" title="Watch MAX GO online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="starz-play" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/starz-play/id550221096" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/starz-play/id550221096', '']);" title="STARZ on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.bydeluxe.d3.android.program.starz" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.bydeluxe.d3.android.program.starz', '']);" title="STARZ on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.amazon.com/Starz-Entertainment-LLC-STARZ-Play/dp/B00CJJKO2E/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.amazon.com/Starz-Entertainment-LLC-STARZ-Play/dp/B00CJJKO2E/', '']);" title="Watch STARZ on Kindle" target="_blank"><img src="/wp-content/uploads/2014/01/kindle-btn.png" alt=""></a>
-		<a href="http://www.barnesandnoble.com/w/starz-play-starz-entertainment-llc/1115251406?ean=2940043949554&amp;isbn=2940043949554" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.barnesandnoble.com/w/starz-play-starz-entertainment-llc/1115251406?ean=2940043949554&amp;isbn=2940043949554', '']);" title="Watch STARZ on Nook" target="_blank"><img src="/wp-content/uploads/2014/01/nook-btn.png" alt=""></a>
-		<a href="http://www.starzplay.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.starzplay.com/', '']);" title="Watch STARZ online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="showtime-anytime" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/app/id484232467" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/app/id484232467', '']);" title="Showtime on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.showtime.showtimeanytime" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.showtime.showtimeanytime', '']);" title="Showtime on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.showtimeanytime.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.showtimeanytime.com/', '']);" title="Watch Showitme online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="encore-play" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/encore-play/id556968605" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/encore-play/id556968605', '']);" title="Encore on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.bydeluxe.d3.android.program.encore" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.bydeluxe.d3.android.program.encore', '']);" title="Encore on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.amazon.com/Starz-Entertainment-LLC-ENCORE-Play/dp/B00CJJLX4W/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.amazon.com/Starz-Entertainment-LLC-ENCORE-Play/dp/B00CJJLX4W/', '']);" title="Watch Encore on Kindle Fire" target="_blank"><img src="/wp-content/uploads/2014/01/kindle-btn.png" alt=""></a>
-		<a href="http://www.barnesandnoble.com/w/encore-play-starz-entertainment-llc/1115251404?ean=2940043949523&amp;isbn=2940043949523" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.barnesandnoble.com/w/encore-play-starz-entertainment-llc/1115251404?ean=2940043949523&amp;isbn=2940043949523', '']);" title="Watch Encore on Nook" target="_blank"><img src="/wp-content/uploads/2014/01/nook-btn.png" alt=""></a>
-		<a href="http://www.encoreplay.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.encoreplay.com/', '']);" title="Watch Encore online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="mtv" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.mtv.com/tve/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.mtv.com/tve/', '']);" title="Watch MTV online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="vh1" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.vh1.com/tve" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.vh1.com/tve', '']);" title="Watch VH-1 online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="spike" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.spike.com/tve" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.spike.com/tve', '']);" title="Watch Spike online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="comedy-central" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.comedycentral.com/tve/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.comedycentral.com/tve/', '']);" title="Watch Comedy Central online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="bet" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.bet.com/tve/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.bet.com/tve/', '']);" title="Watch BET online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="hallmark-channel" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.hallmarkchanneleverywhere.com/Home?NodeID=27" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.hallmarkchanneleverywhere.com/Home?NodeID=27', '']);" title="Watch the Hallmark Channel online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="amc" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.amctv.com/full-episodes/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.amctv.com/full-episodes/', '']);" title="Watch AMC online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="we-tv" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.wetv.com/full-episodes/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.wetv.com/full-episodes/', '']);" title="Watch We TV online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="ifc" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.ifc.com/full-episodes/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.ifc.com/full-episodes/', '']);" title="Watch IFC online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="sundance-channel" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.sundancechannel.com/full-episodes/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.sundancechannel.com/full-episodes/', '']);" title="Watch Sundance online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="revolt-tv" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://revolt.tv/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://revolt.tv/', '']);" title="Watch Revolt online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="e-now" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/e!-now/id876520365?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/e!-now/id876520365?mt=8', '']);" title="E! Now on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://www.eonline.com/now" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.eonline.com/now', '']);" title="Watch E! Now online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="cmt" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/cmt-app/id730993656?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/cmt-app/id730993656?mt=8', '']);" title="Get CMT on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-	</div>
-
-	<div id="history" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/history/id576009463" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/history/id576009463', '']);" title="History Channel on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.aetn.history.watch" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.aetn.history.watch', '']);" title="History Channel on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.history.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.history.com/', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-		<a href="http://www.roku.com/channels/#!details/35059/history" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.roku.com/channels/#!details/35059/history', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/roku-btn.png" alt=""></a>
-		<a href="http://www.xbox.com/en-US/Live/Partners" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.xbox.com/en-US/Live/Partners', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/xbox360-btn.png" alt=""></a>
-		<a href="http://www.apple.com/appletv/whats-on/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.apple.com/appletv/whats-on/', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/apple-tv-btn.png" alt=""></a>
-	</div>
-
-	<div id="a-e" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/a-e/id571711580" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/a-e/id571711580', '']);" title="A&amp;E on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.aetn.aetv.watch" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.aetn.aetv.watch', '']);" title="A&amp;E on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.aetv.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.aetv.com/', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-		<a href="http://www.roku.com/channels/#!details/35442/aande" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.roku.com/channels/#!details/35442/aande', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/roku-btn.png" alt=""></a>
-		<a href="http://www.xbox.com/en-US/Live/Partners" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.xbox.com/en-US/Live/Partners', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/xbox360-btn.png" alt=""></a>
-		<a href="http://www.apple.com/appletv/whats-on/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.apple.com/appletv/whats-on/', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/apple-tv-btn.png" alt=""></a>
-	</div>
-
-	<div id="lifetime" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/lifetime/id579966222" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/lifetime/id579966222', '']);" title="Lifetime on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.aetn.lifetime.watch" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.aetn.lifetime.watch', '']);" title="Lifetime on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.mylifetime.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.mylifetime.com/', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-		<a href="http://www.roku.com/channels/#!details/35058/lifetime" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.roku.com/channels/#!details/35058/lifetime', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/roku-btn.png" alt=""></a>
-		<a href="http://www.xbox.com/en-US/Live/Partners" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.xbox.com/en-US/Live/Partners', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/xbox360-btn.png" alt=""></a>
-		<a href="http://www.apple.com/appletv/whats-on/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.apple.com/appletv/whats-on/', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/apple-tv-btn.png" alt=""></a>
-	</div>
-
-	<div id="uvideos" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/uvideos/id545293541?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/uvideos/id545293541?mt=8', '']);" title="UVideos on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.univision&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.univision&amp;hl=en', '']);" title="UVideos" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.uvideos.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.uvideos.com/', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="logo-tv" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/logotv/id795019155?ls=1&amp;mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/logotv/id795019155?ls=1&amp;mt=8', '']);" title="Logo TV on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-	</div>
-
-	<div id="epix" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/epix/id430018488?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/epix/id430018488?mt=8', '']);" title="EPIX on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.epix.epix" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.epix.epix', '']);" title="EPIX on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.amazon.com/EPIX/dp/B0094MNNQ8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.amazon.com/EPIX/dp/B0094MNNQ8', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/amazon-btn.png" alt=""></a>
-		<a href="http://www.epixhd.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.epixhd.com/', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-		<a href="http://apps.microsoft.com/windows/en-us/app/epix/db9d539b-a642-4704-ba70-361433e9513c" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://apps.microsoft.com/windows/en-us/app/epix/db9d539b-a642-4704-ba70-361433e9513c', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/microsoft-btn.png" alt=""></a>
-		<a href="http://www.roku.com/channels/#!details/7767/epix" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.roku.com/channels/#!details/7767/epix', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/roku-btn.png" alt=""></a>
-		<a href="http://www.xbox.com/en-US/live/partners/epix" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.xbox.com/en-US/live/partners/epix', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/xbox360-btn.png" alt=""></a>
-	</div>
-
-	<div id="fox-now" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/fox-now/id571096102?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/fox-now/id571096102?mt=8', '']);" title="FOX Network on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.fox.now&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.fox.now&amp;hl=en', '']);" title="FOX Network on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://apps.microsoft.com/windows/en-us/app/ae8b012f-7354-4d75-bb31-80cd181c2923" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://apps.microsoft.com/windows/en-us/app/ae8b012f-7354-4d75-bb31-80cd181c2923', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/windows-8-btn.png" alt=""></a>
-		<a href="http://www.xbox.com/en-US/live/apps/xbox-one/fox-now#fbid=1Ce9kYZE2ng" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.xbox.com/en-US/live/apps/xbox-one/fox-now#fbid=1Ce9kYZE2ng', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/xbox1-btn.png" alt=""></a>
-		<a href="http://www.roku.com/channels/#!details/20454/fox-now" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.roku.com/channels/#!details/20454/fox-now', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/roku-btn.png" alt=""></a>
-		<a href="http://www.xbox.com/en-US/Live/Partners" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.xbox.com/en-US/Live/Partners', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/xbox360-btn.png" alt=""></a>
-		<a href="http://www.samsung.com/us/appstore/app.do?appId=G00009197740" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.samsung.com/us/appstore/app.do?appId=G00009197740', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/samsung-smart-tv-btn.png" alt=""></a>
-		<a href="http://www.fox.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.fox.com/', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="fxnow" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/fxnow/id767268733?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/fxnow/id767268733?mt=8', '']);" title="FX Now on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://vod.fxnetworks.com/watch" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://vod.fxnetworks.com/watch', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="nat-geo-wild" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://channel.nationalgeographic.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://channel.nationalgeographic.com/', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="music-choice" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/artist/music-choice/id455363505" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/artist/music-choice/id455363505', '']);" title="Music Choice on ITunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.music.choice&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.music.choice&amp;hl=en', '']);" title="Music Choice on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.amazon.com/Music-Choice/dp/B00EW37XOC" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.amazon.com/Music-Choice/dp/B00EW37XOC', '']);" title="Music Choice on Kindle" target="_blank"><img src="/wp-content/uploads/2014/01/kindle-btn.png" alt=""></a>
-		<a href="http://www.musicchoice.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.musicchoice.com/', '']);" title="Music Choice online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="fyi" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/fyi-tv/id887597381?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/fyi-tv/id887597381?mt=8', '']);" title="FYI on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://fyi.tv/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://fyi.tv/', '']);" title="Watch FYI online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="usa-now" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/usa-now/id661695783?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/usa-now/id661695783?mt=8', '']);" title="TWC WiFi on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.usanetwork.watcher" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.usanetwork.watcher', '']);" title="USA NOW on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.xbox.com/en-US/entertainment/xbox-one/live-apps" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.xbox.com/en-US/entertainment/xbox-one/live-apps', '']);" title="X Box One information" target="_blank"><img src="/wp-content/uploads/2014/01/xbox1-btn.png" alt=""></a>
-		<a href="http://www.usanetwork.com/videos" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.usanetwork.com/videos', '']);" title="Watch USA NOW online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="bravo-now" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/bravo-now/id383925190?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/bravo-now/id383925190?mt=8', '']);" title="Bravo Now on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://www.bravotv.com/now/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.bravotv.com/now/', '']);" title="Watch Bravo Now online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="syfy-now" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/syfy-now/id378092432?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/syfy-now/id378092432?mt=8', '']);" title="SyFy Now on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://www.xbox.com/en-US/live/apps/xbox-one" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.xbox.com/en-US/live/apps/xbox-one', '']);" title="X Box One information" target="_blank"><img src="/wp-content/uploads/2014/01/xbox1-btn.png" alt=""></a>
-		<a href="http://www.syfy.com/now/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.syfy.com/now/', '']);" title="Watch SyFy Now online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="oxygen-now" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/oxygen-now/id700797306?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/oxygen-now/id700797306?mt=8', '']);" title="Oxygen Now on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://now.oxygen.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://now.oxygen.com/', '']);" title="Watch Oxygen Now online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="telemundo-now" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a title="# on iTunes" href="#" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a title="# on Android" href="#" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a title="Watch # online" href="#" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="mun2-now" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/mun2-now/id869444353?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/mun2-now/id869444353?mt=8', '']);" title="mun2 Now on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://www.mun2.tv/now/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.mun2.tv/now/', '']);" title="Watch mun2 Now online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="hgtv-watch" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/hgtv-watch/id376038666?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/hgtv-watch/id376038666?mt=8', '']);" title="Watch HGTV on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.hgtv.watcher&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.hgtv.watcher&amp;hl=en', '']);" title="Watch HGTV on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://watch.hgtv.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://watch.hgtv.com/', '']);" title="Watch HGTV online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="watch-food-network" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/watch-food-network/id642410271?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/watch-food-network/id642410271?mt=8', '']);" title="Watch The Food Network on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.foodnetwork.watcher&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.foodnetwork.watcher&amp;hl=en', '']);" title="Watch The Food Newtwork on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://watch.foodnetwork.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://watch.foodnetwork.com/', '']);" title="Watch The Food Network online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="travel-channel" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/watch-travel-channel/id596546023?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/watch-travel-channel/id596546023?mt=8', '']);" title="Watch The Travel Channel on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.travelchannel.watcher&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.travelchannel.watcher&amp;hl=en', '']);" title="Watch The Travel Channel on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://watch.travelchannel.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://watch.travelchannel.com/', '']);" title="Watch The Travel Channel online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="esquire-tv-now" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://tv.esquire.com/now" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://tv.esquire.com/now', '']);" title="Watch Esquite TV online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="watch-cooking-channel" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/watch-cooking-channel/id675276583?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/watch-cooking-channel/id675276583?mt=8', '']);" title="Watch The Cooking Channel on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.cookingchannel.watcher&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.cookingchannel.watcher&amp;hl=en', '']);" title="Watch The Cooking Channel on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://watch.cookingchanneltv.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://watch.cookingchanneltv.com/', '']);" title="Watch The Cooking Channel online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="diy-watch" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/diy-watch/id485756277?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/diy-watch/id485756277?mt=8', '']);" title="Watch DIY on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.diy.watcher&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.diy.watcher&amp;hl=en', '']);" title="Watch DIY on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://watch.diynetwork.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://watch.diynetwork.com/', '']);" title="Watch DIY online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="espn" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/watchespn/id429009175?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/watchespn/id429009175?mt=8', '']);" title="Watch ESPN on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=air.WatchESPN&amp;feature=search_result#" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=air.WatchESPN&amp;feature=search_result#', '']);" title="Watch ESPN on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://espn.go.com/watchespn/index" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://espn.go.com/watchespn/index', '']);" title="Watch ESPN online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-		<a href="https://apple.com/appletv/whats-on/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://apple.com/appletv/whats-on/', '']);" title="Apple TV information" target="_blank"><img src="/wp-content/uploads/2014/01/apple-tv-btn.png" alt=""></a>
-		<a href="http://www.amazon.com/ESPN-Inc-WatchESPN/dp/B008DYK0I2" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.amazon.com/ESPN-Inc-WatchESPN/dp/B008DYK0I2', '']);" title="Kindle Fire information" target="_blank"><img src="/wp-content/uploads/2014/01/kindle-btn.png" alt=""></a>
-		<a href="http://www.xbox.com/en-US/Live/Partners/ESPN" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.xbox.com/en-US/Live/Partners/ESPN', '']);" title="XBox 360 information" target="_blank"><img src="/wp-content/uploads/2014/01/xbox360-btn.png" alt=""></a>
-		<a href="http://www.xbox.com/en-US/live/apps/xbox-one/espn#fbid=WNj6e1TUZKZ" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.xbox.com/en-US/live/apps/xbox-one/espn#fbid=WNj6e1TUZKZ', '']);" title="X Box One information" target="_blank"><img src="/wp-content/uploads/2014/01/xbox1-btn.png" alt=""></a>
-		<a href="http://apps.microsoft.com/windows/en-us/app/watchespn/f5b84ed0-3681-4b75-8d62-164d3898763a?ocid=Apps_O_WOL_FavTile_App_FA_WatchESPN_Pos4" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://apps.microsoft.com/windows/en-us/app/watchespn/f5b84ed0-3681-4b75-8d62-164d3898763a?ocid=Apps_O_WOL_FavTile_App_FA_WatchESPN_Pos4', '']);" title="Windows 8 information" target="_blank"><img src="/wp-content/uploads/2014/01/windows-8-btn.png" alt=""></a>
-	</div>
-
-	<div id="universal-sports-live" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/universal-sports-live/id441549434?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/universal-sports-live/id441549434?mt=8', '']);" title="Watch Universal Sports on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://universalsports.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://universalsports.com/', '']);" title="Watch Universal Sports online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="pac-12" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/pac-12-now/id550252401?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/pac-12-now/id550252401?mt=8', '']);" title="Watch the Pac-12 Network on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://pac-12.com/live" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://pac-12.com/live', '']);" title="Watch the Pac-12 Network online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="bein-sport-play" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.beinsportplay.tv/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.beinsportplay.tv/', '']);" title="Watch beIN Sport online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="btn2go" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/btn2go/id474679690?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/btn2go/id474679690?mt=8', '']);" title="Watch BTN on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.neulion.smartphone.btn2go.android&amp;hl;=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.neulion.smartphone.btn2go.android&amp;hl;=en', '']);" title="Watch BTN on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.btn2go.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.btn2go.com/', '']);" title="Watch BTN online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="mlb-extra-innings" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://secure.mlb.com/tv/activate/?&amp;partnerId=TWCEI" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://secure.mlb.com/tv/activate/?&amp;partnerId=TWCEI', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/mlb-tv-btn.png" alt=""></a>
-	</div>
-
-	<div id="twc-sportsnet" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.twcsportsnet.com/videos/livetv/login" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.twcsportsnet.com/videos/livetv/login', '']);" title="Watch TWC SportsNet online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="willow" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://auth.willow.tv/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://auth.willow.tv/', '']);" title="Watch Willow online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-		<a href="http://cricket.willow.tv./" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://cricket.willow.tv./', '']);" target="_blank"><img src="/wp-content/uploads/2014/01/programming-schedule-btn.png" alt=""></a>
-	</div>
-
-	<div id="fox-sports-go" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/app/id711074743" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/fox-sports-go/id711074743?mt=8', '']);" title="FOX Sports on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.foxsports.videogo&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.foxsports.videogo&amp;hl=en', '']);" title="FOX Sports on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://apps.microsoft.com/windows/en-us/app/fox-sports-go/62b12e13-b298-4679-9639-bbef442710a6" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.foxsports.videogo&amp;hl=en', '']);" title="FOX Sports on Android" target="_blank"><img src="/wp-content/uploads/2014/01/microsoft-btn.png" alt=""></a>
-		<a href="http://www.amazon.com/FOX-Sports-Media-Group-GO/dp/B00I5VT8KY/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1404936403&sr=1-1&keywords=fox+sports+go" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.amazon.com/FOX-Sports-Media-Group-GO/dp/B00I5VT8KY/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1404936403&sr=1-1&keywords=fox+sports+go', '']);" title="FOX Sports on Amazon" target="_blank"><img src="/wp-content/uploads/2014/01/amazon-btn.png" alt=""></a>
-
-
-		<a href="http://msn.foxsports.com/foxsportsgo/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://msn.foxsports.com/foxsportsgo/', '']);" title="FOX Sports on your computer" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="nbc-sports-live-extra" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/nbc-sports-live-extra/id542511686?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/nbc-sports-live-extra/id542511686?mt=8', '']);" title="NBC Sports on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=air.com.nbcuni.com.nbcsports.liveextra" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=air.com.nbcuni.com.nbcsports.liveextra', '']);" title="NBC Sports on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://stream.nbcsports.com/liveextra/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://stream.nbcsports.com/liveextra/', '']);" title="NBC Sports on your computer" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="golf-live-extra" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/golf-live-extra/id586379597?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/golf-live-extra/id586379597?mt=8', '']);" title="Golf Live Extra on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en', '']);" title="Golf Live Extra on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a title="Golf Live Extra online" href="Your favorite Golf Channel content on the go, anytime and anywhere. TWC ID required." target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="ncaa-march-madness-live" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/ncaa-march-madness-live/id423246594" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/ncaa-march-madness-live/id423246594', 'iTunes']);"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.ncaa.mmlive.app" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.ncaa.mmlive.app', 'Google Play']);"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.amazon.com/gp/product/B00IRN4K2Q" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.amazon.com/gp/product/B00IRN4K2Q', 'Kindle Fire']);"><img src="/wp-content/uploads/2014/01/kindle-btn.png" alt=""></a>
-		<a href="http://www.windowsphone.com/en-us/store/app/ncaa-march-madness-live/9c582d19-6189-48dc-8125-05cc5c856c8b" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.windowsphone.com/en-us/store/app/ncaa-march-madness-live/9c582d19-6189-48dc-8125-05cc5c856c8b', 'Windows Phone']);"><img src="/wp-content/uploads/2015/04/win-phone-btn.png" alt=""></a>
-		<a href="http://apps.microsoft.com/windows/en-us/app/ncaa-march-madness-live/1701c6d9-fc79-4fe5-abc5-ff439efeffd9" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://apps.microsoft.com/windows/en-us/app/ncaa-march-madness-live/1701c6d9-fc79-4fe5-abc5-ff439efeffd9', 'Windows Tablet']);"><img src="/wp-content/uploads/2015/04/win-tablet-btn.png" alt=""></a>
-		<a href="http://www.ncaa.com/march-madness-live" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.ncaa.com/march-madness-live', 'Watch Online']);"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>	
-	</div>
-
-	<div id="fox-business" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/fox-business/id333177961?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/fox-business/id333177961?mt=8', '']);" title="Watch Fox Business on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-	</div>
-
-	<div id="fox-news" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/fox-news/id367623543?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/fox-news/id367623543?mt=8', '']);" title="Watch FoxNews on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-	</div>
-
-	<div id="c-span" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.c-span.org/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.c-span.org/', '']);" title="Visit C-SPAN" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="time-warner-cable-news" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/twc-news/id740948885?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/twc-news/id740948885?mt=8', '']);" title="TWC WiFi on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.twcable.twcnews" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.twcable.twcnews', '']);" title="TWC WiFi on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://twcnews.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://twcnews.com/', '']);" title="Watch Time Warner Cable News online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="wnyw-fox-5" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/fox-5-ny/id784596930?mt=8&amp;ign-mpt=uo%3D4%2522%2520target%253D%2522itunes_store" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/fox-5-ny/id784596930?mt=8&amp;ign-mpt=uo%3D4%2522%2520target%253D%2522itunes_store', '']);" title="WNYW Fox 5 on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.syncbak.wnyw&amp;hl=en" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.syncbak.wnyw&amp;hl=en', '']);" title="WNYW Fox 5 on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-	</div>
-
-	<div id="cnbc" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/cnbc-business-news-finance/id398018310?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/cnbc-business-news-finance/id398018310?mt=8', '']);" title="CNBC on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://www.apple.com/appletv/whats-on/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://www.apple.com/appletv/whats-on/', '']);" title="Apple TV information" target="_blank"><img src="/wp-content/uploads/2014/01/apple-tv-btn.png" alt=""></a>
-		<a href="http://www.cnbc.com/live-tv/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.cnbc.com/live-tv/', '']);" title="Watch CNBC online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="msnbc" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/msnbc/id396885309?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/msnbc/id396885309?mt=8', '']);" title="MSNBC on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://now.msnbc.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://now.msnbc.com/', '']);" title="Watch MSNBC online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="nbcnews" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://tve-nbcnews.nbcuni.com/tve/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://tve-nbcnews.nbcuni.com/tve/', '']);" title="Watch NBC News online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="nick" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/id596133590?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/id596133590?mt=8', '']);" title="Watch Nick on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="http://www.nick.com/tve" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.nick.com/tve', '']);" title="Watch Nick Online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="kids-media" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/kids-media/id504932051?ls=1&amp;mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/kids-media/id504932051?ls=1&amp;mt=8', '']);" title="View Kids Media on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-	</div>
-
-	<div id="sprout-now" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.sproutonline.com/now/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.sproutonline.com/now/', '']);" title="Watch Sprout online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="vutopia" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="http://www.vutopia.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.vutopia.com/', '']);" title="Watch Vutopia online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-	</div>
-
-	<div id="epix" class="white-popup mfp-hide">
-		<h1>Download Now</h1>
-		<a href="https://itunes.apple.com/us/app/epix/id430018488?mt=8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/epix/id430018488?mt=8', '']);" title="Watch EPIX on iTunes" target="_blank"><img src="/wp-content/uploads/2014/01/itunes-btn.png" alt=""></a>
-		<a href="https://play.google.com/store/apps/details?id=com.epix.epix" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.epix.epix', '']);" title="Watch EPIX on Android" target="_blank"><img src="/wp-content/uploads/2014/01/google-play-btn.png" alt=""></a>
-		<a href="http://www.amazon.com/EPIX/dp/B0094MNNQ8" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.amazon.com/EPIX/dp/B0094MNNQ8', '']);" title="Watch EPIX on your Kindle" target="_blank"><img src="/wp-content/uploads/2014/01/amazon-btn.png" alt=""></a>
-		<a href="http://www.epixhd.com/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.epixhd.com/', '']);" title="Watch EPIX online" target="_blank"><img src="/wp-content/uploads/2014/01/watch-online-btn.png" alt=""></a>
-		<a href="http://apps.microsoft.com/windows/en-us/app/epix/db9d539b-a642-4704-ba70-361433e9513c" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://apps.microsoft.com/windows/en-us/app/epix/db9d539b-a642-4704-ba70-361433e9513c', '']);" title="Watch EPIX on Windows 8" target="_blank"><img src="/wp-content/uploads/2014/01/microsoft-btn.png" alt=""></a>
-		<a href="http://www.roku.com/channels/#!details/7767/epix" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.roku.com/channels/#!details/7767/epix', '']);" title="Watch EPIX on Roku" target="_blank"><img src="/wp-content/uploads/2014/01/roku-btn.png" alt=""></a>
-		<a href="http://www.xbox.com/en-US/live/partners/epix" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.xbox.com/en-US/live/partners/epix', '']);" title="Watch EPIX on your XBox 360" target="_blank"><img src="/wp-content/uploads/2014/01/xbox360-btn.png" alt=""></a>
-	</div>
+	<?php
+
+		$links = array(	array("title"=>"Phone 2 Go on iTunes", "link"=>"https://itunes.apple.com/us/app/phone-2-go/id876009911?ls=1&amp;mt=8", "button"=>"itunes"),
+					array("title"=>"My TWC on Android", "link"=>"http://play.google.com/store/apps/details?id=com.timewarnercable.phone2go", "button"=>"google-play"));
+	echo apps_popup_func("phone-2-go", $links);
+
+	$links = array(	array("title"=>"HBO GO on iTunes", "link"=>"https://itunes.apple.com/us/app/hbo-go/id429775439?mt=8", "button"=>"itunes"),
+					array("title"=>"HBO GO on Android", "link"=>"https://play.google.com/store/apps/details?id=com.HBO&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"Watch HBO Go online", "link"=>"http://www.hbogo.com/geo.html", "button"=>"watch-online")
+					);
+	echo apps_popup_func("hbo-go", $links);
+
+	$links = array(	array("title"=>"TWC TV on iTunes", "link"=>"https://itunes.apple.com/us/app/twcable-tv/id420455839?mt=8&amp;ls=1", "button"=>"itunes"),
+					array("title"=>"My TWC on Android", "link"=>"https://play.google.com/store/apps/details?id=com.TWCableTV", "button"=>"google-play"),
+					array("title"=>"Watch TWC TV Online", "link"=>"https://video.timewarnercable.com", "button"=>"watch-online"),
+					array("title"=>"Watch TWC TV on Roku", "link"=>"http://www.roku.com/channels/#!details/23048/time-warner-cable", "button"=>"roku"),
+					array("title"=>"Watch TWC TV on your Samsung TV", "link"=>"http://www.twcableuntangled.com/2013/07/now-launching-twc-tv-for-samsung-smart-tvs/", "button"=>"samsung-smart-tv"),
+					array("title"=>"Watch TWC TV on your Kindle", "link"=>"http://www.amazon.com/Time-Warner-Cable-TWC-TV%C2%AE/dp/B00GY1DWUO", "button"=>"kindle"),
+					array("title"=>"Frequently Asked Questions", "link"=>"http://www.timewarnercable.com/en/residential-home/support/faqs/faqs-tv/twctvapp.html", "button"=>"faq")
+					);
+	echo apps_popup_func("twc-tv", $links);
+
+	$links = array(	array("title"=>"TWC TV on iTunes", "link"=>"https://itunes.apple.com/us/app/my-twc/id498008691?ls=1&amp;mt=8", "button"=>"itunes"),
+					array("title"=>"My TWC on Android", "link"=>"https://play.google.com/store/apps/details?id=com.mytwc.common.resource&amp;feature=search_result#]", "button"=>"google-play")
+					);
+	echo apps_popup_func("my-twc", $links);
+
+	$links = array(	array("title"=>"Oceanic TV on iTunes", "link"=>"https://itunes.apple.com/us/app/oceanic-tv/id601624623?mt=8", "onclick"=>"_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/oceanic-tv/id601624623?mt=8', '']);", "button"=>"itunes"),
+					array("title"=>"Oceanic TV on Android", "link"=>"https://play.google.com/store/apps/details?id=com.oceanic.octv", "onclick"=>"_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.oceanic.octv', '']);", "button"=>"google-play"),
+					array("title"=>"Watch Oceanic TV Online", "link"=>"http://oc16.tv/", "onclick"=>"_gaq.push(['_trackEvent', 'outbound-article', 'http://oc16.tv/', '']);", "button"=>"watch-online")
+					);
+	echo apps_popup_func("oceanic-tv", $links);
+
+	$links = array(	array("title"=>"Oceanic TV on iTunes", "link"=>"https://itunes.apple.com/us/app/oceanic-tv/id601624623?mt=8", "onclick"=>"_gaq.push(['_trackEvent', 'outbound-article', 'https://itunes.apple.com/us/app/oceanic-tv/id601624623?mt=8', '']);", "button"=>"itunes"),
+					array("title"=>"Oceanic TV on Android", "link"=>"https://play.google.com/store/apps/details?id=com.oceanic.octv", "onclick"=>"_gaq.push(['_trackEvent', 'outbound-article', 'https://play.google.com/store/apps/details?id=com.oceanic.octv', '']);", "button"=>"google-play"),
+					array("title"=>"Watch Oceanic TV Online", "link"=>"http://oc16.tv/", "onclick"=>"_gaq.push(['_trackEvent', 'outbound-article', 'http://oc16.tv/', '']);", "button"=>"watch-online")
+					);
+	echo apps_popup_func("intelligent-home", $links);
+
+	$links = array(	array("title"=>"TWC WiFi on iTunes", "link"=>"https://itunes.apple.com/us/app/wifi-finder/id492768487?ls=1&amp;mt=8", "button"=>"itunes"),
+					array("title"=>"TWC WiFi on Android", "link"=>"https://play.google.com/store/apps/details?id=com.timewarnercable.wififinder&amp;feature=search_result#", "button"=>"google-play")
+					);
+	echo apps_popup_func("twc-wifi-finder", $links);
+
+	$links = array(	array("title"=>"More information on Social One", "link"=>"http://www.twcc.com/socialone", "button"=>"learn-more")
+					);
+	echo apps_popup_func("social-one", $links);
+
+	$links = array(	array("title"=>"Phone 2 Go on iTunes", "link"=>"https://itunes.apple.com/us/app/phone-2-go/id876009911?ls=1&amp;mt=8", "button"=>"itunes"),
+					array("title"=>"Phone 2 Go on Android", "link"=>"https://play.google.com/store/apps/details?id=com.timewarnercable.phone2go", "button"=>"google-play")
+					);
+	echo apps_popup_func("phone-2-go-2", $links);
+
+	$links = array(	array("title"=>"Cinemax on iTunes", "link"=>"https://itunes.apple.com/us/app/max-go/id453560335?mt=8", "button"=>"itunes"),
+					array("title"=>"Cinemax on Android", "link"=>"https://play.google.com/store/apps/details?id=com.MAXGo&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"Watch MAX GO Online", "link"=>"http://www.maxgo.com/geo.html", "button"=>"watch-online")
+					);
+	echo apps_popup_func("max-go", $links);
+
+	$links = array(	array("title"=>"STARZ on iTunes", "link"=>"https://itunes.apple.com/us/app/starz-play/id550221096", "button"=>"itunes"),
+					array("title"=>"Cinemax on Android", "link"=>"https://play.google.com/store/apps/details?id=com.bydeluxe.d3.android.program.starz", "button"=>"google-play"),
+					array("title"=>"Watch STARZ on Kindle", "link"=>"http://www.amazon.com/Starz-Entertainment-LLC-STARZ-Play/dp/B00CJJKO2E/", "button"=>"kindle"),
+					array("title"=>"Watch STARZ on Nook", "link"=>"http://www.barnesandnoble.com/w/starz-play-starz-entertainment-llc/1115251406?ean=2940043949554&amp;isbn=2940043949554", "button"=>"nook"),
+					array("title"=>"Watch STARZ Online", "link"=>"http://www.starzplay.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("starz-play", $links);
+
+	$links = array(	array("title"=>"Showtime on iTunes", "link"=>"https://itunes.apple.com/app/id484232467", "button"=>"itunes"),
+					array("title"=>"Showtime on Android", "link"=>"https://play.google.com/store/apps/details?id=com.showtime.showtimeanytime", "button"=>"google-play"),
+					array("title"=>"Watch Showtime Online", "link"=>"http://www.showtimeanytime.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("showtime-anytime", $links);
+
+	$links = array(	array("title"=>"Encore on iTunes", "link"=>"https://itunes.apple.com/us/app/encore-play/id556968605", "button"=>"itunes"),
+					array("title"=>"Encore on Android", "link"=>"https://play.google.com/store/apps/details?id=com.bydeluxe.d3.android.program.encore", "button"=>"google-play"),
+					array("title"=>"Watch Encore on Kindle", "link"=>"http://www.amazon.com/Starz-Entertainment-LLC-ENCORE-Play/dp/B00CJJLX4W/", "button"=>"kindle"),
+					array("title"=>"Watch Encore on Nook", "link"=>"http://www.barnesandnoble.com/w/encore-play-starz-entertainment-llc/1115251404?ean=2940043949523&amp;isbn=2940043949523", "button"=>"nook"),
+					array("title"=>"Watch Encore Online", "link"=>"http://www.encoreplay.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("encore-play", $links);
+
+	$links = array(	array("title"=>"Watch MTV online", "link"=>"http://www.mtv.com/tve/", "button"=>"watch-online"));
+	echo apps_popup_func("mtv", $links);
+
+	$links = array(	array("title"=>"Watch VH-1 Online", "link"=>"http://www.vh1.com/tve", "button"=>"watch-online"));
+	echo apps_popup_func("vh1", $links);
+
+	$links = array(	array("title"=>"Watch Spike Online", "link"=>"http://www.spike.com/tve", "button"=>"watch-online"));
+	echo apps_popup_func("spike", $links);
+
+	$links = array(	array("title"=>"Watch Comedy Central Online", "link"=>"http://www.comedycentral.com/tve/", "button"=>"watch-online"));
+	echo apps_popup_func("comedy-central", $links);
+
+	$links = array(	array("title"=>"Watch BET Online", "link"=>"http://www.bet.com/tve/", "button"=>"watch-online"));
+	echo apps_popup_func("bet", $links);
+
+	$links = array(	array("title"=>"Watch Hallmark Channel Online", "link"=>"http://www.hallmarkchanneleverywhere.com/Home?NodeID=27", "button"=>"watch-online"));
+	echo apps_popup_func("hallmark-channel", $links);
+
+	$links = array(	array("title"=>"Watch AMC Online", "link"=>"http://www.amctv.com/full-episodes/", "button"=>"watch-online"));
+	echo apps_popup_func("amc", $links);
+
+	$links = array(	array("title"=>"Watch We TV Online", "link"=>"http://www.wetv.com/full-episodes/", "button"=>"watch-online"));
+	echo apps_popup_func("we-tv", $links);
+
+	$links = array(	array("title"=>"Watch IFC Online", "link"=>"http://www.ifc.com/full-episodes/", "button"=>"watch-online"));
+	echo apps_popup_func("ifc", $links);
+
+	$links = array(	array("title"=>"Watch Sundance Online", "link"=>"http://www.sundancechannel.com/full-episodes/", "button"=>"watch-online"));
+	echo apps_popup_func("sundance-channel", $links);
+
+	$links = array(	array("title"=>"Watch Revolt Online", "link"=>"http://revolt.tv/", "button"=>"watch-online"));
+	echo apps_popup_func("revolt-tv", $links);
+
+		 $links = array(array("title"=>"E! Now on iTunes", "link"=>"https://itunes.apple.com/us/app/e!-now/id876520365?mt=8", "button"=>"itunes"),
+						array("title"=>"Watch E! Now Online", "link"=>"http://www.eonline.com/now", "button"=>"watch-online"));
+	echo apps_popup_func("e-now", $links);
+
+		 $links = array(	array("title"=>"Get CMT on iTunes", "link"=>"https://itunes.apple.com/us/app/cmt-app/id730993656?mt=8", "button"=>"itunes"));
+	echo apps_popup_func("cmt", $links);
+
+	$links = array(	array("title"=>"History Channel on iTunes", "link"=>"https://itunes.apple.com/us/app/history/id576009463", "button"=>"itunes"),
+					array("title"=>"History Channel on Android", "link"=>"https://play.google.com/store/apps/details?id=com.aetn.history.watch", "button"=>"google-play"),
+					array("title"=>"Watch History Channel Online", "link"=>"http://www.history.com/", "button"=>"watch-online"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.roku.com/channels/#!details/35059/history", "button"=>"roku"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.xbox.com/en-US/Live/Partners", "button"=>"xbox360"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.apple.com/appletv/whats-on/", "button"=>"apple-tv")
+					);
+	echo apps_popup_func("history", $links);
+
+	$links = array(	array("title"=>"A-E Channel on iTunes", "link"=>"https://itunes.apple.com/us/app/a-e/id571711580", "button"=>"itunes"),
+					array("title"=>"A-E on Android", "link"=>"https://play.google.com/store/apps/details?id=com.aetn.aetv.watch", "button"=>"google-play"),
+					array("title"=>"Watch A-E Channel Online", "link"=>"http://www.aetv.com/", "button"=>"watch-online"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.roku.com/channels/#!details/35442/aande", "button"=>"roku"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.xbox.com/en-US/Live/Partners", "button"=>"xbox360"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.apple.com/appletv/whats-on/", "button"=>"apple-tv")
+					);
+	echo apps_popup_func("a-e", $links);
+
+	$links = array(	array("title"=>"History Channel on iTunes", "link"=>"https://itunes.apple.com/us/app/lifetime/id579966222", "button"=>"itunes"),
+					array("title"=>"History Channel on Android", "link"=>"https://play.google.com/store/apps/details?id=com.aetn.lifetime.watch", "button"=>"google-play"),
+					array("title"=>"Watch History Channel Online", "link"=>"http://www.mylifetime.com/", "button"=>"watch-online"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.roku.com/channels/#!details/35058/lifetime", "button"=>"roku"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.xbox.com/en-US/Live/Partners", "button"=>"xbox360"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.apple.com/appletv/whats-on/", "button"=>"apple-tv")
+					);
+	echo apps_popup_func("lifetime", $links);
+
+	$links = array(	array("title"=>"UVideos on iTunes", "link"=>"https://itunes.apple.com/us/app/nbc-sports-live-extra/id542511686?mt=8", "button"=>"itunes"),
+					array("title"=>"Watch UVideos on Android", "link"=>"https://play.google.com/store/apps/details?id=com.univision&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"Watch UVideos Online", "link"=>"http://www.uvideos.com/", "button"=>"watch-online")	);
+	echo apps_popup_func("uvideos", $links);
+
+	$links = array(	array("title"=>"Logo TV on iTunes", "link"=>"https://itunes.apple.com/us/app/logotv/id795019155?ls=1&amp;mt=8", "button"=>"itunes"));
+	echo apps_popup_func("logo-tv", $links);
+
+	$links = array(	array("title"=>"EPIX on iTunes", "link"=>"https://itunes.apple.com/us/app/epix/id430018488?mt=8", "button"=>"itunes"),
+					array("title"=>"EPIX on Android", "link"=>"https://play.google.com/store/apps/details?id=com.epix.epix", "button"=>"google-play"),
+					array("title"=>"Watch EPIX Online", "link"=>"http://www.amazon.com/EPIX/dp/B0094MNNQ8", "button"=>"amazon"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.epixhd.com/", "button"=>"watch-online"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://apps.microsoft.com/windows/en-us/app/epix/db9d539b-a642-4704-ba70-361433e9513c", "button"=>"microsoft"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.roku.com/channels/#!details/7767/epix", "button"=>"roku"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.xbox.com/en-US/live/partners/epix", "button"=>"xbox360")
+					);
+	echo apps_popup_func("epix", $links);
+
+	$links = array(	array("title"=>"EPIX on iTunes", "link"=>"https://itunes.apple.com/us/app/fox-now/id571096102?mt=8", "button"=>"itunes"),
+					array("title"=>"EPIX on Android", "link"=>"https://play.google.com/store/apps/details?id=com.fox.now&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"Watch EPIX Online", "link"=>"http://apps.microsoft.com/windows/en-us/app/ae8b012f-7354-4d75-bb31-80cd181c2923", "button"=>"windows-8"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.xbox.com/en-US/live/apps/xbox-one/fox-now#fbid=1Ce9kYZE2ng", "button"=>"xbox1"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.roku.com/channels/#!details/20454/fox-now", "button"=>"roku"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.xbox.com/en-US/Live/Partners", "button"=>"xbox360"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.samsung.com/us/appstore/app.do?appId=G00009197740", "button"=>"samsung-smart-tv"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.fox.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("fox-now", $links);
+
+	$links = array(	array("title"=>"NBC Sports on iTunes", "link"=>"https://itunes.apple.com/us/app/fxnow/id767268733?mt=8", "button"=>"itunes"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://vod.fxnetworks.com/watch", "button"=>"watch-online")
+					);
+	echo apps_popup_func("fxnow", $links);
+
+		 $links = array(	array("title"=>"", "link"=>"http://channel.nationalgeographic.com", "button"=>"watch-online"));
+	echo apps_popup_func("nat-geo-wild", $links);
+
+	$links = array(	array("title"=>"NBC Sports on iTunes", "link"=>"https://itunes.apple.com/us/artist/music-choice/id455363505", "button"=>"itunes"),
+					array("title"=>"Watch NBC Live Extra on Android", "link"=>"https://play.google.com/store/apps/details?id=com.music.choice&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"Watch NBC Live Extra on Android", "link"=>"http://www.amazon.com/Music-Choice/dp/B00EW37XOC", "button"=>"kindle"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.musicchoice.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("music-choice", $links);
+
+	$links = array(	array("title"=>"NBC Sports on iTunes", "link"=>"https://itunes.apple.com/us/app/fyi-tv/id887597381?mt=8", "button"=>"itunes"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://fyi.tv/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("fyi", $links);
+
+	$links = array(	array("title"=>"NBC Sports on iTunes", "link"=>"https://itunes.apple.com/us/app/usa-now/id661695783?mt=8", "button"=>"itunes"),
+					array("title"=>"NBC Sports on your computer", "link"=>"https://play.google.com/store/apps/details?id=com.usanetwork.watcher", "button"=>"google-play"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.xbox.com/en-US/entertainment/xbox-one/live-apps", "button"=>"xbox1"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.usanetwork.com/videos", "button"=>"watch-online")
+					);
+	echo apps_popup_func("usa-now", $links);
+
+	$links = array(	array("title"=>"NBC Sports on iTunes", "link"=>"https://itunes.apple.com/us/app/bravo-now/id383925190?mt=8", "button"=>"itunes"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.bravotv.com/now/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("bravo-now", $links);
+
+	$links = array(	array("title"=>"NBC Sports on iTunes", "link"=>"https://itunes.apple.com/us/app/syfy-now/id378092432?mt=8", "button"=>"itunes"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.xbox.com/en-US/live/apps/xbox-one", "button"=>"xbox1"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://www.syfy.com/now/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("syfy-now", $links);
+
+	$links = array(	array("title"=>"NBC Sports on iTunes", "link"=>"https://itunes.apple.com/us/app/oxygen-now/id700797306?mt=8", "button"=>"itunes"),
+					array("title"=>"NBC Sports on your computer", "link"=>"http://now.oxygen.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("oxygen-now", $links);
+
+	$links = array(	array("title"=>"Telemundo Now on iTunes", "link"=>"#", "button"=>"itunes"),
+					array("title"=>"Telemundo Now on Android", "link"=>"#", "button"=>"google-play"),
+					array("title"=>"Watch Telemundo Online", "link"=>"#", "button"=>"watch-online")
+					);
+	echo apps_popup_func("telemundo-now", $links);
+
+	$links = array(	array("title"=>"mun2 Now on iTunes", "link"=>"https://itunes.apple.com/us/app/mun2-now/id869444353?mt=8", "button"=>"itunes"),
+					array("title"=>"Watch mun2 Now Online", "link"=>"http://www.mun2.tv/now/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("mun2-now", $links);
+
+	$links = array(	array("title"=>"HGTV Watch on iTunes", "link"=>"https://itunes.apple.com/us/app/hgtv-watch/id376038666?mt=8", "button"=>"itunes"),
+					array("title"=>"HGTV Watch on Android", "link"=>"https://play.google.com/store/apps/details?id=com.hgtv.watcher&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"Watch HGTV Online", "link"=>"http://watch.hgtv.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("hgtv-watch", $links);
+
+	$links = array(	array("title"=>"Food Network on iTunes", "link"=>"https://itunes.apple.com/us/app/watch-food-network/id642410271?mt=8", "button"=>"itunes"),
+					array("title"=>"Food Network on Android", "link"=>"https://play.google.com/store/apps/details?id=com.foodnetwork.watcher&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"Watch Food Network Online", "link"=>"http://watch.foodnetwork.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("watch-food-network", $links);
+
+	$links = array(	array("title"=>"Travel Channel  on iTunes", "link"=>"https://itunes.apple.com/us/app/watch-travel-channel/id596546023?mt=8", "button"=>"itunes"),
+					array("title"=>"Travel Channel  on Android", "link"=>"https://play.google.com/store/apps/details?id=com.travelchannel.watcher&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"Watch Travel Channel Online", "link"=>"http://watch.travelchannel.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("travel-channel", $links);
+
+		 $links = array(	array("title"=>"Watch Esquire TV Now Online", "link"=>"http://tv.esquire.com/now", "button"=>"watch-online"));
+	echo apps_popup_func("esquire-tv-now", $links);
+
+	$links = array(	array("title"=>"Travel Channel  on iTunes", "link"=>"https://itunes.apple.com/us/app/watch-travel-channel/id596546023?mt=8", "button"=>"itunes"),
+					array("title"=>"Travel Channel  on Android", "link"=>"https://play.google.com/store/apps/details?id=com.travelchannel.watcher&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"Watch Travel Channel Online", "link"=>"http://watch.travelchannel.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("travel-channel", $links);
+
+	$links = array(	array("title"=>"Cooking Channel on iTunes", "link"=>"https://itunes.apple.com/us/app/watch-cooking-channel/id675276583?mt=8", "button"=>"itunes"),
+					array("title"=>"Cooking Channel on Android", "link"=>"https://play.google.com/store/apps/details?id=com.cookingchannel.watcher&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"Watch Cooking Channel Online", "link"=>"http://watch.cookingchanneltv.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("watch-cooking-channel", $links);
+
+	$links = array(	array("title"=>"DIY Watch on iTunes", "link"=>"https://itunes.apple.com/us/app/diy-watch/id485756277?mt=8", "button"=>"itunes"),
+					array("title"=>"DIY Watch on Android", "link"=>"https://play.google.com/store/apps/details?id=com.diy.watcher&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"Watch DIY Online", "link"=>"http://watch.diynetwork.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("diy-watch", $links);
+
+	$links = array(	array("title"=>"ESPN on iTunes", "link"=>"https://itunes.apple.com/us/app/watchespn/id429009175?mt=8", "button"=>"itunes"),
+					array("title"=>"ESPN on Android", "link"=>"https://play.google.com/store/apps/details?id=air.WatchESPN&amp;feature=search_result#", "button"=>"google-play"),
+					array("title"=>"Watch ESPN Online", "link"=>"http://espn.go.com/watchespn/index", "button"=>"watch-online"),
+					array("title"=>"Apple TV Information", "link"=>"https://apple.com/appletv/whats-on/", "button"=>"apple-tv"),
+					array("title"=>"Kindle Fire Information", "link"=>"http://www.amazon.com/ESPN-Inc-WatchESPN/dp/B008DYK0I2", "button"=>"kindle"),
+					array("title"=>"XBox 360 Information", "link"=>"http://www.xbox.com/en-US/Live/Partners/ESPN", "button"=>"xbox360"),
+					array("title"=>"XBox One Information", "link"=>"http://www.xbox.com/en-US/live/apps/xbox-one/espn#fbid=WNj6e1TUZKZ", "button"=>"xbox1"),
+					array("title"=>"Windows 8 Information", "link"=>"http://apps.microsoft.com/windows/en-us/app/watchespn/f5b84ed0-3681-4b75-8d62-164d3898763a?ocid=Apps_O_WOL_FavTile_App_FA_WatchESPN_Pos4", "button"=>"windows-8")
+					);
+	echo apps_popup_func("espn", $links);
+
+	$links = array(	array("title"=>"Watch Universal Sports on iTunes", "link"=>"https://itunes.apple.com/us/app/universal-sports-live/id441549434?mt=8", "button"=>"itunes"),
+					array("title"=>"Watch Universal Sports Online", "link"=>"http://universalsports.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("universal-sports-live", $links);
+
+	$links = array(	array("title"=>"PAC-12 on iTunes", "link"=>"https://itunes.apple.com/us/app/pac-12-now/id550252401?mt=8", "button"=>"itunes"),
+					array("title"=>"Watch PAC-12 Online", "link"=>"http://pac-12.com/live", "button"=>"watch-online")
+					);
+	echo apps_popup_func("pac-12", $links);
+
+	$links = array(	array("title"=>"Watch beIN Sports Play Online", "link"=>"http://www.beinsportplay.tv/", "button"=>"watch-online"));
+	echo apps_popup_func("bein-sport-play", $links);
+
+	$links = array(	array("title"=>"BTN2GO on iTunes", "link"=>"https://itunes.apple.com/us/app/btn2go/id474679690?mt=8", "button"=>"itunes"),
+					array("title"=>"BTN2GO Android", "link"=>"https://play.google.com/store/apps/details?id=com.neulion.smartphone.btn2go.android&amp;hl;=en", "button"=>"google-play"),
+					array("title"=>"Watch BTN2GO Online", "link"=>"http://www.btn2go.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("btn2go", $links);
+
+	$links = array(	array("title"=>"", "link"=>"https://secure.mlb.com/tv/activate/?&amp;partnerId=TWCEI", "button"=>"mlb-tv"));
+	echo apps_popup_func("mlb-extra-innings", $links);
+
+	$links = array(	array("title"=>"Watch TWC Sportsnet Online", "link"=>"http://www.twcsportsnet.com/videos/livetv/login", "button"=>"watch-online"));
+	echo apps_popup_func("twc-sportsnet", $links);
+
+	$links = array(	array("title"=>"Watch Willow Online", "link"=>"https://auth.willow.tv/", "button"=>"watch-online"),
+					array("title"=>"", "link"=>"http://cricket.willow.tv./", "button"=>"programming-schedule")
+					);
+	echo apps_popup_func("willow", $links);
+
+	$links = array(	array("title"=>"FOX Sports on iTunes", "link"=>"https://itunes.apple.com/app/id711074743", "button"=>"itunes"),
+					array("title"=>"FOX Sports Android", "link"=>"https://play.google.com/store/apps/details?id=com.foxsports.videogo&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"FOX Sports Android", "link"=>"http://apps.microsoft.com/windows/en-us/app/fox-sports-go/62b12e13-b298-4679-9639-bbef442710a6", "button"=>"microsoft"),
+					array("title"=>"FOX Sports Amazon", "link"=>"http://www.amazon.com/FOX-Sports-Media-Group-GO/dp/B00I5VT8KY/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1404936403&sr=1-1&keywords=fox+sports+go", "button"=>"amazon"),
+					array("title"=>"FOX Sports on your Computer", "link"=>"http://msn.foxsports.com/foxsportsgo/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("fox-sports-go", $links);
+
+	$links = array(	array("title"=>"NBC Sports Live Extra on iTunes", "link"=>"https://itunes.apple.com/us/app/nbc-sports-live-extra/id542511686?mt=8", "button"=>"itunes"),
+					array("title"=>"NBC Sports Live Extra Android", "link"=>"https://play.google.com/store/apps/details?id=air.com.nbcuni.com.nbcsports.liveextra", "button"=>"google-play"),
+					array("title"=>"Watch NBC Sports Live Extra Online", "link"=>"http://stream.nbcsports.com/liveextra/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("nbc-sports-live-extra", $links);
+
+	$links = array(	array("title"=>"Golf Live Extra on iTunes", "link"=>"https://itunes.apple.com/us/app/golf-live-extra/id586379597?mt=8", "button"=>"itunes"),
+					array("title"=>"Golf Live Extra Android", "link"=>"https://play.google.com/store/apps/details?id=air.com.golfchannel.gcliveextra&amp;hl=en", "button"=>"google-play"),
+					array("title"=>"Watch Golf Live Extra Online", "link"=>"", "button"=>"watch-online")
+					);
+	echo apps_popup_func("golf-live-extra", $links);
+
+	$links = array(	array("title"=>"", "link"=>"https://itunes.apple.com/us/app/ncaa-march-madness-live/id423246594", "button"=>"itunes"),
+					array("title"=>"", "link"=>"https://play.google.com/store/apps/details?id=com.ncaa.mmlive.app", "button"=>"google-play"),
+					array("title"=>"", "link"=>"http://www.amazon.com/gp/product/B00IRN4K2Q", "button"=>"kindle"),
+					array("title"=>"", "link"=>"http://www.windowsphone.com/en-us/store/app/ncaa-march-madness-live/9c582d19-6189-48dc-8125-05cc5c856c8b", "button"=>"win-phone"),
+					array("title"=>"", "link"=>"http://apps.microsoft.com/windows/en-us/app/ncaa-march-madness-live/1701c6d9-fc79-4fe5-abc5-ff439efeffd9", "button"=>"win-tablet"),
+					array("title"=>"", "link"=>"http://www.ncaa.com/march-madness-live", "button"=>"watch-online")
+					);
+	echo apps_popup_func("ncaa-march-madness-live", $links);
+
+	$links = array(	array("title"=>"FOX Business on iTunes", "link"=>"https://itunes.apple.com/us/app/fox-business/id333177961?mt=8", "button"=>"itunes"));
+	echo apps_popup_func("fox-business", $links);
+
+	$links = array(	array("title"=>"FOX News on iTunes", "link"=>"https://itunes.apple.com/us/app/fox-news/id367623543?mt=8", "button"=>"itunes"));
+	echo apps_popup_func("fox-news", $links);
+
+	$links = array(	array("title"=>"Visit C-SPAN", "link"=>"http://www.c-span.org/", "button"=>"watch-online"));
+	echo apps_popup_func("c-span", $links);
+
+	$links = array(	array("title"=>"Time Warner Cable on iTunes", "link"=>"https://itunes.apple.com/us/app/twc-news/id740948885?mt=8", "button"=>"itunes"),
+					array("title"=>"Time Warner Cable on Android", "link"=>"https://play.google.com/store/apps/details?id=com.twcable.twcnews", "button"=>"google-play"),
+					array("title"=>"Watch Time Warner Cable Online", "link"=>"http://twcnews.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("time-warner-cable-news", $links);
+
+	$links = array(	array("title"=>"WNYW FOX 5 on iTunes", "link"=>"https://itunes.apple.com/us/app/fox-5-ny/id784596930?mt=8&amp;ign-mpt=uo%3D4%2522%2520target%253D%2522itunes_store", "button"=>"itunes"),
+					array("title"=>"WNYW FOX 5 on Android", "link"=>"https://play.google.com/store/apps/details?id=com.syncbak.wnyw&amp;hl=en", "button"=>"google-play")
+					);
+	echo apps_popup_func("wnyw-fox-5", $links);
+
+	$links = array(	array("title"=>"CNBC on iTunes", "link"=>"https://itunes.apple.com/us/app/cnbc-business-news-finance/id398018310?mt=8", "button"=>"itunes"),
+					array("title"=>"CNBC on Android", "link"=>"https://www.apple.com/appletv/whats-on/", "button"=>"google-play"),
+					array("title"=>"Watch CNBC Online", "link"=>"http://www.cnbc.com/live-tv/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("cnbc", $links);
+
+	$links = array(	array("title"=>"MSNBC on iTunes", "link"=>"https://itunes.apple.com/us/app/msnbc/id396885309?mt=8", "button"=>"itunes"),
+					array("title"=>"Watch MSNBC Online", "link"=>"http://now.msnbc.com/", "button"=>"watch-online")
+					);
+	echo apps_popup_func("msnbc", $links);
+
+	$links = array(array("title"=>"Watch NBCNEWS Online", "link"=>"http://now.msnbc.com/", "button"=>"watch-online"));
+	echo apps_popup_func("nbcnews", $links);
+
+	$links = array(	array("title"=>"NICK on iTunes", "link"=>"https://itunes.apple.com/us/app/id596133590?mt=8", "button"=>"itunes"),
+					array("title"=>"Watch NICK Online", "link"=>"http://www.nick.com/tve", "button"=>"watch-online")
+					);
+	echo apps_popup_func("nick", $links);
+
+	$links = array(	array("title"=>"Kids Media on iTunes", "link"=>"https://itunes.apple.com/us/app/kids-media/id504932051?ls=1&amp;mt=8", "button"=>"itunes"));
+	echo apps_popup_func("kids-media", $links);
+
+	$links = array(	array("title"=>"Watch Sprout Now Online", "link"=>"http://www.sproutonline.com/now/", "button"=>"watch-online"));
+	echo apps_popup_func("sprout-now", $links);
+
+	$links = array(	array("title"=>"Watch Vutopia Online", "link"=>"http://www.vutopia.com/", "button"=>"watch-online"));
+	echo apps_popup_func("vutopia", $links);
+
+	$links = array(	array("title"=>"", "link"=>"https://itunes.apple.com/us/app/epix/id430018488?mt=8", "button"=>"itunes"),
+					array("title"=>"", "link"=>"https://play.google.com/store/apps/details?id=com.epix.epix", "button"=>"google-play"),
+					array("title"=>"", "link"=>"http://www.amazon.com/EPIX/dp/B0094MNNQ8", "button"=>"amazon"),
+					array("title"=>"", "link"=>"http://www.epixhd.com/", "button"=>"watch-online"),
+					array("title"=>"", "link"=>"http://apps.microsoft.com/windows/en-us/app/epix/db9d539b-a642-4704-ba70-361433e9513c", "button"=>"microsoft"),
+					array("title"=>"", "link"=>"http://www.roku.com/channels/#!details/7767/epix", "button"=>"roku"),
+					array("title"=>"", "link"=>"http://www.xbox.com/en-US/live/partners/epix", "button"=>"xbox360")
+					);
+	echo apps_popup_func("epix", $links);
+	
+	?>
 
 	<!-- Tooltips -->
 	<div class="ttip-epix twc-tooltip">EPIX</div>
@@ -941,7 +794,7 @@ m[i].innerHTML = c;
                 $(".pricing:not(.selected)").removeClass("unable-this");
             }
 		});
-		
+
 
 		// Sort Filter Toggle
 		var nav = jQuery('#sort-filter'),
@@ -1095,40 +948,10 @@ m[i].innerHTML = c;
 
 		<?php endif; ?>
 		
-		// Channels Pop Trigger
-		// jQuery('a#channels-300plus').magnificPopup({
-		// 	type:'inline'
-		// });
-		// jQuery('a#channels-200plus').magnificPopup({
-		// 	type:'inline'
-		// });
-		// jQuery('a#channels-70plus').magnificPopup({
-		// 	type:'inline'
-		// });
-		// jQuery('a#channels-20plus').magnificPopup({
-		// 	type:'inline'
-		// });
-
 		<?php
 		$popup_script = get_settings('popup_script');
-		// echo $popup_script;
 		echo htmlspecialchars_decode($popup_script);
-
-		
-		// $lines = explode("\n", $popup_script);
-		// $lines = str_replace(" ", "", $lines);
-		// $line_before = 'jQuery("a#';
-		// $line_after = '").magnificPopup({ type:"inline" });';
-		// $format = 'jQuery("a#%s").magnificPopup({ type:"inline" });';
-		// foreach( $lines as $line ) {
-		//   echo sprintf($format, $line);
-		//   // echo 'jQuery("a#'.$line.'").magnificPopup({ type:"inline" });';
-		// }
-		// echo htmlspecialchars_decode($popup_script);
-		// echo htmlentities($channels,ENT_QUOTES);
-		?>
-
-		
+		?>		
 
 		<?php if(is_page(388)) : ?>
 			// package details collapsible
@@ -1149,305 +972,23 @@ m[i].innerHTML = c;
 				return false;
 			});
 
-			jQuery('a[title="NBC Sports Live Extra"]').magnificPopup({
+			var popup_selectors = 	'a[href="#phone-2-go"], a[href="#hbo-go"], a[href="#twc-tv"], a[href="#my-twc"], a[href="#oceanic-tv"],'+
+									'a[href="#intelligent-home"], a[href="#twc-wifi-finder"], a[href="#social-one"], a[href="#phone-2-go-2"],'+
+									'a[href="#hbo-go-2"], a[href="#max-go"], a[href="#starz-play"], a[href="#showtime-anytime"], a[href="#encore-play"],'+
+									'a[href="#mtv"], a[href="#vh1"], a[href="#spike"], a[href="#comedy-central"], a[href="#bet"], a[href="#hallmark-channel"],'+
+									'a[href="#amc"], a[href="#we-tv"], a[href="#ifc"], a[href="#sundance-channel"], a[href="#revolt-tv"], a[href="#e-now"],'+
+									'a[href="#cmt"], a[href="#history"], a[href="#a-e"], a[href="#lifetime"], a[href="#uvideos"], a[href="#logo-tv"],'+
+									'a[href="#epix"], a[href="#fox-now"], a[href="#fxnow"], a[href="#nat-geo-wild"], a[href="#music-choice"], a[href="#fyi"],'+
+									'a[href="#usa-now"], a[href="#bravo-now"], a[href="#syfy-now"], a[href="#oxygen-now"], a[href="#telemundo-now"], a[href="#mun2-now"],'+
+									'a[href="#hgtv-watch"], a[href="#watch-food-network"], a[href="#travel-channel"], a[href="#esquire-tv-now"], a[href="#watch-cooking-channel"], a[href="#diy-watch"],'+
+									'a[href="#espn"], a[href="#universal-sports-live"], a[href="#pac-12"], a[href="#bein-sport-play"], a[href="#btn2go"], a[href="#mlb-extra-innings"],'+
+									'a[href="#twc-sportsnet"], a[href="#willow"], a[href="#fox-sports-go"], a[href="#nbc-sports-live-extra"], a[href="#golf-live-extra"], a[href="#ncaa-march-madness-live"],'+
+									'a[href="#fox-business"], a[href="#fox-news"], a[href="#c-span"], a[href="#time-warner-cable-news"], a[href="#wnyw-fox-5"], a[href="#cnbc"],'+
+									'a[href="#msnbc"], a[href="#nbcnews"], a[href="#nick"], a[href="#kids-media"], a[href="#sprout-now"], a[href="#vutopia"]';
+			jQuery(popup_selectors).magnificPopup({
 				type:'inline'
 			});
 
-			jQuery('a[title="FYI"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="TWC TV"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="MY TWC"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Oceanic TV"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Intelligent Home"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="TWC WiFi Finder"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Social One"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Phone 2 Go"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="HBO GO"]').magnificPopup({
-				type:'inline'
-			});
-			  
-			jQuery('a[title="MAX GO"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="STARZ Play"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Showtime Anytime"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Encore Play"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="MTV"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="VH1"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Spike"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Comedy Central"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="BET"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Hallmark Channel"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="AMC"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="We TV"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="IFC"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Sundance Channel"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Revolt TV"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="E! Now"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="CMT"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="History"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="A&E"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Lifetime"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="UVideos"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Logo TV"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="EPIX"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="FOX Now"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="FXNOW"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Nat Geo Wild"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Music Choice"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="FYI"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="USA NOW"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Bravo Now"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="SyFy Now"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Oxygen Now"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Telemundo Now"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="mun2 Now"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="HGTV Watch"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Watch Food Network"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Travel Channel"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Esquire TV Now"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Watch Cooking Channel"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="DIY Watch"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="ESPN"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Universal Sports Live"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="PAC-12"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="beIN SPORT Play"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="BTN2GO"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="MLB Extra Innings with MLB.TV"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="TWC SportsNet"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Willow"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="FOX Sports Go"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="NBC Sports Live Extra"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Golf Live Extra"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="NCAA March Madness Live"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Fox Business"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Fox News"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="C-SPAN"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Time Warner Cable News"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="WNYW Fox 5"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="CNBC"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="MSNBC"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="NBC News"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Nick"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Kids Media"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="Sprout Now"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="VUTOPIA"]').magnificPopup({
-				type:'inline'
-			});
-
-			jQuery('a[title="EPIX"]').magnificPopup({
-				type:'inline'
-			});
 		<?php endif; ?>
 	});
 </script>
